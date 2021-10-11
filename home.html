@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>oh,man</title>
+    <link rel="stylesheet" href="/font.css">
+    <link rel="stylesheet" href="reset.css">
+    <style>
+        section{
+            max-width: 100%;
+            margin: auto;
+            font-family: 'Noto Sans', '微軟正黑體', sans-serif;
+            /* border: red 1px solid; */
+        }
+
+
+
+
+        .banner-bg img{
+            width: 100%;
+            position: relative;
+            z-index: 1;           
+        }
+
+        .header{
+            /* border:1px solid red; */
+            width: 1200px;
+            margin: auto;
+            margin-bottom: -100px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            top: 20px;
+            z-index: 2;                
+        }
+
+        .header-nav a{
+            color: #ab7738;
+            font-size: 18px;
+            text-decoration: none;
+            padding: 0 25px;      
+        }
+
+        .member{ 
+            display: flex;           
+        }
+
+        .member img{
+            width: 70%;
+            vertical-align: top;
+            
+        }
+
+        .logo img{
+            width: 70%;
+            vertical-align: top;
+        }
+
+        .ban-button{
+            background-color:transparent;
+            font-size: 30px;
+            border: rgba(255,255, 255, 0.3) 1.5px solid;
+            padding: 5px;
+            position: relative;
+            top: -100px;
+            left: 50px;
+            z-index: 3;
+        }
+
+        .ban-button a{
+            color: rgba(255,255, 255, 0.5) ;
+            text-decoration: none;
+        }
+
+        .good-product{
+            width: 100%;
+            border: #ab7738 1px solid;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .gd-prod-pic{
+            margin-top: -50px;
+        }
+
+
+        .gd-prod-pic img{
+            width: 100%;            
+        }
+
+        .gd-row{
+            display: flex;
+        }
+
+        .gd-item{
+            border: 1px #ab7738 solid;
+            padding: 20px;
+            margin: 10px;
+        }
+
+        .gd-item img{
+            width: 100%;
+        }
+
+     
+
+        .all-prd-icon{
+            width: 1000px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            padding: 150px 80px 0 80px;
+        }
+
+        .all-prd-icon .icon img{
+            width: 75%;
+        }
+
+        .all-product h2{
+            color: #ab7738;
+            font-size: 36px;
+            text-align: center;
+            margin: 150px 0 0 0;
+        }
+
+
+        .note-row{
+            display: flex;
+            align-items: center;
+        }
+
+        .note h2{
+            color: #ab7738;
+            font-size: 36px;
+            text-align: center;
+            margin: 200px 0 100px 0;
+
+        }
+
+        .nav-area{
+            text-align: center;
+            margin: 0 0 80px 0;
+        }
+
+        .nav-area a{
+            text-decoration: none;
+            font-size: 20px;
+            color: #caae88;;
+            font-weight:normal;
+            padding: 0 100px;
+        }
+
+        .note-container{
+            width: 1200px;
+            margin: auto;
+        }
+
+        .note-txt{
+            margin: auto;
+            font-size: 20px;
+            font-weight: lighter;
+            color:#caae88;;
+            text-align: center;
+            line-height: 45px;
+
+        }
+
+        .note-txt h3{
+            font-size: 28px;
+            color: #ab7738;;
+            font-weight: normal;
+        }
+
+
+        .note-btu{
+            background-color: transparent;
+            border: #ab7738 1px solid;
+            padding: 5px;
+            margin-top: 30px;
+        }
+
+        .note-btu a{
+            font-size: 18px;
+            color: #ab7738;
+            text-decoration: none;
+
+        }
+
+
+
+        .trip{
+            width: 1200px;
+            margin: auto;
+        }
+
+        .trip h2{
+            color: #ab7738;
+            font-size: 36px;
+            text-align: center;
+            margin: 250px 0 100px 0;
+
+        }
+
+        .trip-content .title{
+            display: flex;
+            align-items: center;
+        }
+
+       .title h3{
+            color: #ab7738;
+            font-size: 30px;
+            font-weight: normal;
+            text-align: center;
+            padding: 0 15px;
+            margin: 10px 0;
+        }
+
+        .title-more a{
+            font-size: 18px;
+            font-weight: bolder;
+            color: #ab7738;
+            text-decoration: none;
+        }
+
+        .trip-txt{
+            display: flex;
+        }
+
+        .trip-p{
+            width: 80%;
+            font-size: 18px;
+            line-height: 34px;
+            color:#caae88;
+            padding: 10px;
+        }
+
+        .trip-price{
+            font-size: 36px;
+            font-weight: bold;
+            color: #ab7738;
+            display: flex;
+            flex-direction: column;
+            width: 20%;
+            align-items: center;            
+        }
+
+        .trip-price-but{
+            width: 160px;
+            background-color: transparent;
+            border: #ab7738 1px solid;
+            padding: 5px;
+            margin-top: 5px;
+        }
+
+        .trip-price-but a{
+            font-size: 18px;
+            color: #ab7738;
+            text-decoration: none;
+            
+        }
+
+        .slog{
+            width: 1200px;
+            margin: auto;
+            text-align: center;
+            margin: 300px 0 200px 0;
+        }
+
+        .slog span{
+            font-size: 20px;
+            color:#caae88;;           
+        }
+
+        .social{
+            width: 1200px;
+            margin: auto;
+        }
+
+        .social h2{
+            color: #ab7738;
+            font-size: 50px;
+            text-align: center;
+            margin: 250px 0 0 0;
+        }
+
+
+        .social p{
+            color:#caae88;;
+            font-size: 20px;
+            text-align: center;
+            margin: 30px 0 100px 0;
+            
+        }
+
+        .soc-pic{
+            display: flex; 
+            justify-content: center;          
+        }
+        
+        .soc-pic img{
+            padding: 0 10px;
+
+        }
+
+        .soc-but{
+            background-color: transparent;
+            display: flex;
+            justify-content: center;            
+        }
+
+        .soc-but a{
+            text-decoration: none;
+            color: #ab7738;
+        }
+
+        .social button{
+            font-size: 26px;
+            color: #ab7738;
+            border:#ab7738 1.5px solid;
+            padding: 10px;            
+            margin: 50px 0 0 0;
+        }
+
+
+        .more-story h2{
+            color: #ab7738;
+            font-size: 50px;
+            text-align: center;
+            margin: 250px 0 150px 0;
+
+        }
+
+        .story-pic {
+            width: 1200px;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 10px;            
+        }
+
+        footer{
+            border-top: #ab7738 1.5px solid;
+            margin-top: 150px;
+        }
+
+
+
+        .footer-content{
+            width: 1000px;
+            margin: auto;
+            margin-top: 20px;
+            margin-bottom: 120px;
+            font-size: 24px;
+            color: #ab7738;
+            font-size: 24px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+
+        .footer-row{
+            display: flex;            
+        }
+
+
+        .soc-media{
+            display:flex;
+        }
+
+        .soc-media img{
+            width: 70%;
+        }
+
+        .info{
+            margin: 0 100px 0 0;
+        }
+
+   
+ 
+
+        .info ul{
+            list-style: none;
+        }
+
+        .info a{
+            color: #caae88;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 16px;
+            text-decoration: none;
+            
+        }
+
+
+        .about ul{
+            list-style: none;
+        }
+
+        .about a{
+            color: #caae88;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 16px;
+            text-decoration: none;
+        }
+
+
+
+       
+
+        
+
+ 
+
+
+    </style>
+</head>
+<body>
+    
+    <section class="banner">
+        <div class="banner-bg">           
+            <div class="header">
+                <div class="logo">
+                    <a href="#"><img src="/pic/icon/fontpage-logo.png" alt="oh-man"></a>
+                </div>
+                <nav class="header-nav">
+                    <a href="#">特選歐物</a>
+                    <a href="#">商品分類</a>
+                    <a href="#">戶外筆記</a>
+                    <a href="#">歐人故事</a>
+                    <a href="#">主題開團</a>
+                </nav>
+                <div class="member">
+                    <a href="#"><img src="/pic/icon/fontpage-singn.png" alt="singn"></a>
+                    <a href="#"><img src="/pic/icon/fontpage-shopping.png" alt="shopping"></a>
+                </div>
+            </div>
+            <img src="/pic/images/banner-bg.jpg" alt="oh-man">
+        </div>               
+        <button class="ban-button"><a href="">shop</a></button>
+    </section>
+
+
+    <section class="good-product">
+        <div class="gd-prod-pic">
+            <img src="/pic/images/fontpage-1007_10.jpg" alt="good-product">
+        </div>
+        <div class="gd-row">
+            <div class="gd-item">
+                <div class="gd-item-pic">
+                    <a href="#"><img src="/pic/images/fontpage-1007_23.jpg" alt="神秘農場背包"></a>
+                </div>
+                <div class="gd-item-txt">
+                    <div class="h4">Mystery Ranch</div>
+                    <p>coulee25<br>登山背包</p>                    
+                </div>
+            </div>
+            <div class="gd-item">
+                <div class="gd-item-pic">
+                    <a href="#"><img src="/pic/images/fontpage-1007_23-25.jpg" alt="迪卡農登山鞋"></a>
+                </div>
+                <div class="gd-item-txt">
+                    <div class="h4">迪卡農</div>
+                    <p>抓地防滑中筒<br>登山鞋</p>                    
+                </div>
+            </div>            
+        </div>        
+    </section>
+    <section class="all-product">
+        <h2>商品分類</h2>
+        <div class="all-prd-icon">
+            <div class="icon"><a href="#"><img src="/pic/icon/cloth.jpg" alt="
+                cloth"></a>
+            </div>
+            <div class="icon"><a href="#"><img src="/pic/icon/bag.jpg" alt="
+                bag"></a>
+            </div>
+            <div class="icon"><a href="#"><img src="/pic/icon/shose.jpg" alt="
+                shose"></a>
+            </div>         
+            <div class="icon"><a href="#"><img src="/pic/icon/new-bie.jpg" alt="
+                new-bie"></a>
+            </div>
+        </div>
+    </section>
+    <section class="note">
+        <h2>戶外筆記</h2>
+        <nav class="nav-area">
+            <a href="#">北區</a>
+            <a href="#">中區</a>
+            <a href="#">南區</a>
+        </nav>
+        <div class="note-container">
+            <div class="note-row">
+                <div class="note-pic"><img src="/pic/images/fontpage-1007-切_29.jpg" alt="水社大山"></div>
+                <div class="note-txt">
+                    <h3>日月潭最高峰<br>
+                        水社大山</h3>
+                    <p>路線近況:優 <br>
+                        等級:中級山</p>
+                    <button class="note-btu"><a href="#">more</a></button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="trip">
+        <h2>主題開團</h2>
+        <div class="trip-pic"><img src="/pic/images/fontpage-1007-切_32.jpg" alt="加里山"></div>
+        <div class="trip-content">
+            <div class="title">
+                <h3>GOGO! 台版富士山-加里山</h3>
+                <div class="title-more">
+                    <a href="#">more ></a>
+                </div>
+            </div>
+            <div class="trip-txt">
+                <div class="trip-p">
+                    <p>加里山登山步道沿途為柳杉人工造林及闊葉林，風美溪從中穿越，有豐富的動植物生態。小百岳加里山為中北台名山，山頂一等三角點，視野遼闊，可遠眺氣勢磅礡的雪山聖稜線和鄰近的鹿場大山。盛產台灣特有一葉蘭，每年3、4月總吸引許多登山客尋芳賞花。</p>
+                </div>            
+                <div class="trip-price">
+                    <span>NT$1500</span>
+                    <button class="trip-price-but"><a href="#">放入購物車</a></button>
+                </div>
+
+            </div>
+            
+        </div>
+        <div class="slog"><span>深呼吸，走出戶外其實一點也不難。</span></div>
+    </section>
+        
+    
+    <section class="social">
+        <div class="soc-title">
+            <h2># oh,man.</h2>
+            <p>沾沾歐氣，看看大家也都買了什麼?</p>
+        </div>
+        <div class="soc-pic">
+            <div class="soc-pic-img"><a href="#"><img src="/pic/images/fontpage-1007_31.jpg" alt="#oh,man."></a>                
+            </div>
+            
+            <div class="soc-pic-img"><a href="#"><img src="/pic/images/fontpage-1007_33.jpg" alt="#oh,man."></a></div>
+
+            <div class="soc-pic-img"><a href="#"><img src="/pic/images/fontpage-1007_35.jpg" alt="#oh,man."></a></div>            
+        </div>
+        <div class="soc-but"><button><a href="#">more</button></a></div>      
+        
+    </section>
+    <section class="more-story">
+        <h2>歐人故事</h2>
+        <div class="story-pic">
+            <a href="#"><img src="/pic/images/fontpage-1007_41.jpg" alt="求婚記"></a>          
+        </div>
+        <div class="story-pic">
+            <a href="#"><img src="/pic/images/fontpage-1007-切_59.jpg" alt="遇見好夥伴"></a>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-row">
+                <div class="info">
+                    <h4>info</h4>
+                    <ul>
+                        <li><a href="#" title="產品分類">Product</a></li>
+                        <li><a href="#" title="如何買">How to buy</a></li>
+                        <li><a href="#" title="運費計算">Shipping</a></li>
+                        <li><a href="#" title="退貨處理">Returns</a></li>
+                    </ul>
+                </div>
+                <div class="about">
+                    <h4>oh,man</h4>
+                    <ul>
+                        <li><a href="#" title="品牌故事">About us</a></li>
+                        <li><a href="#" title="歐人故事">Story</a></li>
+                        <li><a href="#" title="合作品牌">Affiliates</a></li>
+                        <li><a href="#" title="隱私權">Privacy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="soc-media">
+                <div class="media-icon"><a href="#"><img src="/pic/icon/fontpage-1007_ig.png" alt="ig"></a></div>
+                <div class="media-icon"><a href="#"><img src="/pic/icon/fontpage-1007_fb.jpg" alt="fb"></a></div>
+                <div class="media-icon"><a href="#"><img src="/pic/icon/fontpage-1007_47-ilne.png" alt="line"></a></div>               
+            </div>
+        </div>
+       
+        
+    </footer>
+   
+</body>
+</html>
