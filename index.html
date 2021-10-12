@@ -7,34 +7,21 @@
     <title>oh,man</title>
     <link rel="stylesheet" href="/font.css">
     <link rel="stylesheet" href="reset.css">
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:300' rel='stylesheet' type='text/css'>
     <style>
         section{
-            max-width: 100%;
-            margin: auto;
+            width: auto;
             font-family: 'Noto Sans', '微軟正黑體', sans-serif;
-            /* border: red 1px solid; */
-        }
-
-
-
-
-        .banner-bg img{
-            width: 100%;
-            position: relative;
-            z-index: 1;           
         }
 
         .header{
-            /* border:1px solid red; */
             width: 1200px;
             margin: auto;
-            margin-bottom: -100px;
             display: flex;
             justify-content: space-between;
             align-items: center;
             position: relative;
-            top: 20px;
-            z-index: 2;                
+            top: 20px;  
         }
 
         .header-nav a{
@@ -59,25 +46,55 @@
             vertical-align: top;
         }
 
-        .ban-button{
+
+
+        .banner-bg{
+            position: relative;
+            top: -50px;
+            z-index: -1;
+            
+        }
+
+        .banner-bg img{
+            width: 100%;
+        }
+
+        .banner-slog{
+            position: absolute;
+            bottom: 100px;
+            left: 50px;
+        }
+
+
+
+        .banner-slog p{
+            font-size: 55px;
+            color: rgba(255,255, 255, 0.5) ;
+            line-height: 70px;
+            padding: 0 0 50px 0;
+            font-family: Lora, serif
+        }
+
+   
+
+        .banner-button{
             background-color:transparent;
             font-size: 30px;
             border: rgba(255,255, 255, 0.3) 1.5px solid;
             padding: 5px;
-            position: relative;
-            top: -100px;
-            left: 50px;
-            z-index: 3;
         }
 
-        .ban-button a{
-            color: rgba(255,255, 255, 0.5) ;
+        .banner-button a{
+            color: rgba(255,255, 255, 0.3) ;
             text-decoration: none;
         }
 
+
+
+
         .good-product{
             width: 100%;
-            border: #ab7738 1px solid;
+            border:r 1px solid;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -407,42 +424,38 @@
             text-decoration: none;
         }
 
-
-
-       
-
-        
-
- 
-
-
     </style>
 </head>
 <body>
     
-    <section class="banner">
-        <div class="banner-bg">           
-            <div class="header">
-                <div class="logo">
-                    <a href="https://tpjpvup.github.io/oh-man/"><img src="image/fontpage-logo.png" alt="oh-man"></a>
+    <section class="banner">   
+        <div class="header">
+            <div class="logo">
+                <a href="https://tpjpvup.github.io/oh-man/"><img src="image/fontpage-logo.png" alt="oh-man"></a>
                 </div>
-                <nav class="header-nav">
-                    <a href="https://tpjpvup.github.io/oh-man/oh,man-01.html">特選歐物</a>
-                    <a href="https://tpjpvup.github.io/oh-man/oh,man-01.html">商品分類</a>
-                    <a href="https://tpjpvup.github.io/oh-man/oh,man-03.html">戶外筆記</a>
-                    <a href="https://tpjpvup.github.io/oh-man/oh,man-04.html">歐人故事</a>
-                    <a href="https://tpjpvup.github.io/oh-man/oh,man-05.html">主題開團</a>
-                    <a href="https://tpjpvup.github.io/oh-man/oh,man-06.html">#oh,man.</a>
-                </nav>
-                <div class="member">
-                    <a href="#"><img src="image/fontpage-singn.png" alt="singn"></a>
-                    <a href="#"><img src="image/fontpage-shopping.png" alt="shopping"></a>
-                </div>
+            <nav class="header-nav">
+                <a href="https://tpjpvup.github.io/oh-man/oh,man-01.html">特選歐物</a>
+                <a href="https://tpjpvup.github.io/oh-man/oh,man-01.html">商品分類</a>
+                <a href="https://tpjpvup.github.io/oh-man/oh,man-03.html">戶外筆記</a>
+                <a href="https://tpjpvup.github.io/oh-man/oh,man-04.html">歐人故事</a>
+                <a href="https://tpjpvup.github.io/oh-man/oh,man-05.html">主題開團</a>
+                <a href="https://tpjpvup.github.io/oh-man/oh,man-06.html">#oh,man.</a>
+            </nav>
+            <div class="member">
+                <a href="#"><img src="image/fontpage-singn.png" alt="singn"></a>
+                <a href="#"><img src="image/fontpage-shopping.png" alt="shopping"></a>
             </div>
-            <img src="image/banner-bg.jpg" alt="oh-man">
-        </div>               
-        <button class="ban-button"><a href="">shop</a></button>
+        </div>
+        <div class="banner-bg">
+            <img src="image/index-banner.png" alt="oh-man">
+            <div class="banner-slog">
+                <p>To get more lucky<br>
+                    and more impressed</p>
+                <button class="banner-button"><a href="#">shop</a></button> 
+            </div>          
+        </div>                
     </section>
+
 
 
     <section class="good-product">
@@ -473,16 +486,16 @@
     <section class="all-product">
         <h2>商品分類</h2>
         <div class="all-prd-icon">
-            <div class="icon"><a href="#"><img src="image/cloth.jpg" alt="
+            <div class="icon"><a href="https://tpjpvup.github.io/oh-man/oh,man-01.html"><img src="image/cloth.jpg" alt="
                 cloth"></a>
             </div>
-            <div class="icon"><a href="#"><img src="image/bag.jpg" alt="
+            <div class="icon"><a href="https://tpjpvup.github.io/oh-man/oh,man-01.html"><img src="image/bag.jpg" alt="
                 bag"></a>
             </div>
-            <div class="icon"><a href="#"><img src="image/shose.jpg" alt="
+            <div class="icon"><a href="https://tpjpvup.github.io/oh-man/oh,man-01.html"><img src="image/shose.jpg" alt="
                 shose"></a>
             </div>         
-            <div class="icon"><a href="#"><img src="image/new-bie.jpg" alt="
+            <div class="icon"><a href="https://tpjpvup.github.io/oh-man/oh,man-01.html"><img src="image/new-bie.jpg" alt="
                 new-bie"></a>
             </div>
         </div>
@@ -502,7 +515,7 @@
                         水社大山</h3>
                     <p>路線近況:優 <br>
                         等級:中級山</p>
-                    <button class="note-btu"><a href="#">more</a></button>
+                    <button class="note-btu"><a href="https://tpjpvup.github.io/oh-man/oh,man-03.html">more</a></button>
                 </div>
             </div>
         </div>
@@ -514,7 +527,7 @@
             <div class="title">
                 <h3>GOGO! 台版富士山-加里山</h3>
                 <div class="title-more">
-                    <a href="#">more ></a>
+                    <a href="https://tpjpvup.github.io/oh-man/oh,man-05.html">more ></a>
                 </div>
             </div>
             <div class="trip-txt">
@@ -546,16 +559,16 @@
 
             <div class="soc-pic-img"><a href="#"><img src="image/fontpage-1007_35.jpg" alt="#oh,man."></a></div>            
         </div>
-        <div class="soc-but"><button><a href="#">more</button></a></div>      
+        <div class="soc-but"><button><a href="https://tpjpvup.github.io/oh-man/oh,man-06.html">more</button></a></div>      
         
     </section>
     <section class="more-story">
         <h2>歐人故事</h2>
         <div class="story-pic">
-            <a href="#"><img src="image/fontpage-1007_41.jpg" alt="求婚記"></a>          
+            <a href="https://tpjpvup.github.io/oh-man/oh,man-04.html"><img src="image/fontpage-1007_41.jpg" alt="求婚記"></a>          
         </div>
         <div class="story-pic">
-            <a href="#"><img src="image/fontpage-1007-切_59.jpg" alt="遇見好夥伴"></a>
+            <a href="https://tpjpvup.github.io/oh-man/oh,man-04.html"><img src="image/fontpage-1007-切_59.jpg" alt="遇見好夥伴"></a>
         </div>
     </section>
     <footer class="footer">

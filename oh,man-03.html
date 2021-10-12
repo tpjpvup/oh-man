@@ -17,6 +17,8 @@
 
 
     .header{
+            width: 1200px;
+            margin: auto;
             margin-bottom: 40px;
             display: flex;
             justify-content: space-between;
@@ -45,7 +47,9 @@
     }
      /* ----------------------------------------- */
     
-    .cont-title h1{
+
+
+     .cont-title h1{
         color: #ab7738;
         font-size: 36px;
         font-weight: 600;
@@ -79,15 +83,12 @@
 
     .cont-top-pic::after{
         content: '';
-        font-size: 30px;
-        text-align: center;
         background-color:rgba(163, 115, 36, 0.2);
-        width: 680px;
+        width: 400px;
         height: 180px;
         position: absolute;
-        right: -800px;
+        right: -200px;
         bottom: -120px;
-        z-index: 2;
     }
 
     
@@ -112,6 +113,7 @@
         writing-mode: vertical-rl;             
         font-family: 'Noto Serif TC', serif;
     }
+
     .cont-top-txt h2{
         font-size: 32px;
         font-weight: 600;
@@ -123,7 +125,118 @@
         font-weight: 400;
         margin-top: 180px;
     }
+
+    
+    .cont-body{
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    .wrap{
+        font-family: 'Noto Sans', '微軟正黑體', sans-serif;
+        margin-top: 200px;
+        display: flex;
+        align-items: center;
+    }
+
+    .cont-body span{
+        font-size: 30px;
+        color: #ab7738;
+        text-align: center;
+        margin-top: 200px;
         
+    }
+    
+
+    .item-pic img{
+        width: 100%;
+    }
+
+    .item-txt{
+        width: 40%;
+        padding: 0 100px
+    }
+
+    .item-txt p{
+        font-size: 20px;
+        color: #7a7a7a;
+        line-height: 36px;
+    }
+
+    .wrap-auther{
+        margin-top: 200px;
+        margin-bottom: 150px;
+        display: flex;
+        align-items: flex-end;
+    }
+
+    .auther-item{
+        display: flex;
+        flex-direction: column;
+
+    }
+
+   
+
+    .auther-item-pic img{
+        width: 100%;
+    }
+    .auther-txt p{
+        font-size: 20px;
+        color: #7a7a7a;
+        line-height: 40px;
+        padding: 20px 0 0 50px;
+    }
+
+
+    .auther{
+        margin-left: 150px;
+    }
+
+    .auther-pic img{
+        width: 100%;
+    }
+
+
+    .contribute{
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-items: center; 
+    }
+
+    .contribute p{
+        font-size: 16px;
+        color: #7a7a7a;
+        text-align: center;
+        line-height: 30px;
+        
+    }
+
+
+    .contri-but{
+        width: 200px;
+        height: 3em;
+        background-color: #ab7738;
+        border:#ab7738 1px solid;
+        margin: auto;
+        margin-bottom: 20px;
+
+    }
+
+
+    .contri-but a{
+        font-size: 20px;
+        color: #fff;
+        text-decoration: none;           
+    }
+
+
+
+
+    
+
 
 
     /* ----------------------------------------- */
@@ -214,6 +327,7 @@
             </div>
         </div>   
     </section>
+    <div class="cont">
         <div class="cont-title">
             <h1>戶外筆記</h1>
         </div>
@@ -222,7 +336,6 @@
             <a href="#">中區</a>
             <a href="#">南區</a>            
         </nav>
-       
         <div class="cont-top">
             <div class="cont-top-pic">
                 <img src="image/p03-1.jpg" alt="水社大山"></div>
@@ -233,8 +346,69 @@
                 </div>    
             </div>
         </div>
+        <div class="cont-body">
+            <div class="wrap">
+                <div class="item-txt">
+                    <p> 出發日期   10-08 <br>
+                        回程日期   10-08 <br>
+                        相關山岳   水社大山登山步道 <br>
+                        難度  中高等<br>
+                        # 單日行程  #鐵腿<br><br></p>
+                        
+                    <p>注意事項<br>
+                        戶外活動皆有危險性<br>
+                        登山時盡量不應一人獨行<br>
+                        登山口前雖有入山QR碼登記<br>
+                        但，此處網路訊號不穩，請小心注意。</p>
+                </div>
+                <div class="item-pic"><img src="/image/03-1.png" alt="水社大山"></div>
+            </div>
+            <span>一路上小黑陪伴，真開心</span>
+            <div class="wrap">
+                <div class="item-pic"><img src="/image/03-2.png" alt="水社大山"></div>
+                <div class="item-txt">
+                    <p> 一路上，大家嘻笑歡樂上山，沿途還有小黑狗守護，果然是天天把跑山當便飯的人，
+                        小黑都來回跑了兩趟，一行人還在這氣喘吁吁。
+                        隨著走過一個個休息點，同行間開始有人承受不住，這時大家確認隊友狀態還可以後，讓其快快折返休息。而眼前這個休息點是最後的反悔處，等等會有「惡魔5km」在等待大家。<br>
+                        </p>
+                </div>
+            </div>
+            <span>爬山量力而為，不逞強才是重點。</span>
+            <div class="wrap">
+                <div class="item-txt">
+                    <p> 
+                        最後的5km真的是考驗自己，想要撐一口氣一次登頂，還是敵不過前面積累的疲累，即使是同行中有運動習慣的夥伴們，也停在路邊，哀號不已，感覺腳已經快要離家出走了。</p>
+                </div>
+                <div class="item-pic"><img src="/image/03-3.png" alt="水社大山"></div>
+            </div>
+            <span>雖三等三角點，還是值得一爬。</span>
+            <div class="wrap-auther">
+                <div class="auther-item">
+                    <div class="auther-item-pic">
+                        <img src="/image/03-44.png" alt="水社大山"></div>
+                    <div class="auther-txt">
+                        <p> 水社大山曾是台灣小百岳之一，後因山高路遠而被除名；無論哪個登山口開始，都有超過1000多公尺的爬升，氣喘吁吁地上山後，等待的是三等三角點，想起來似乎很沒意義。但，征服一座大山，有著相互幫助的夥伴，沿途嘻笑拍照的回憶，說嘴一輩子驕傲，拍拍小胸，我棒棒!。</p>
+                        
+                    </div>
+                </div>
+                <div class="auther">
+                    <div class="auther-pic">
+                        <img src="/image/03-55.png" alt="水社大山">
+                    </div>
+                </div>
+            </div>
+            <div class="contribute">
+                <button class="contri-but"><a href="#">投稿筆記</a></button>
+                <p>喜歡啾啾的分享嗎?<br>
+                    你也有很棒的戶外經驗嗎?<br>
+                    投稿自己的歐地經驗，就能獲取100元折價卷，<br>
+                如順利獲選，可以獲得500元購物金，<br>
+                更有可能成為下一期的歐人主人翁。</p>
+            </div>
+        </div>
+    </div>
 
-        
+
 
 
    
