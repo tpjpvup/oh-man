@@ -45,25 +45,85 @@
     }
      /* ----------------------------------------- */
     
-    .container{
-        width: 1200px;
-        font-family: 'Noto Sans', '微軟正黑體', sans-serif;
+    .cont-title h1{
+        color: #ab7738;
+        font-size: 36px;
+        font-weight: 600;
+        text-align: center;
+        margin: 100px 0 50px 0;
+    }
+
+    .cont-nav {
+        margin: auto;
+        text-align: center;
+        margin: 50px 0 100px 0;
+    }
+
+
+
+    .cont-nav a{
+        color: #ab7738;
+        font-size: 24px;
+        text-decoration: none;
+        border-bottom: 2px #ab7738 solid;
+        padding: 0 5px 5px 5px;
+        margin: 0 50px;
+    }
+    
+
+
+     .cont-top{
+        display: flex;
+        margin: auto;            
+    }
+
+    .cont-top-pic::after{
+        content: '';
+        font-size: 30px;
+        text-align: center;
+        background-color:rgba(163, 115, 36, 0.2);
+        width: 680px;
+        height: 180px;
+        position: absolute;
+        right: -800px;
+        bottom: -120px;
+        z-index: 2;
+    }
+
+    
+    
+    .cont-top-pic{
+         position: relative;
+    }
+
+    .cont-top img{
+            width: 95%;
+    }
+
+    .cont-top-txt{
+        font-size: 26px;
+        color: #7a7a7a;
+        line-height: 70px;
+        padding: 0 30px 0 0;
+        margin: auto;
         display: flex;
         flex-direction: column;
-
+        -webkit-writing-mode: vertical-rl;
+        writing-mode: vertical-rl;             
+        font-family: 'Noto Serif TC', serif;
+    }
+    .cont-top-txt h2{
+        font-size: 32px;
+        font-weight: 600;
+        margin-bottom: 180px;
     }
 
-    .item-3{
-        margin: auto;
-        display: flex;
+    .cont-top-txt p{
+        font-size: 22px;
+        font-weight: 400;
+        margin-top: 180px;
+    }
         
-    }
-
-    .item-2{
-        margin: auto;
-        display: flex;
-
-    }
 
 
     /* ----------------------------------------- */
@@ -133,8 +193,6 @@
     </style>
 
 <body>
-        
-
     <section class="banner">
         <div class="banner-bg">           
             <div class="header">
@@ -156,6 +214,28 @@
             </div>
         </div>   
     </section>
+        <div class="cont-title">
+            <h1>戶外筆記</h1>
+        </div>
+        <nav class="cont-nav">
+            <a href="#">北區</a>
+            <a href="#">中區</a>
+            <a href="#">南區</a>            
+        </nav>
+       
+        <div class="cont-top">
+            <div class="cont-top-pic">
+                <img src="image/p03-1.jpg" alt="水社大山"></div>
+                <div class="cont-top-txt">         
+                    <h2>日月潭最高峰</h2>
+                    <h2>水社大山</h2>
+                    <p>鐵腳勇夫--啾啾</p>
+                </div>    
+            </div>
+        </div>
+
+        
+
 
    
 
