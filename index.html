@@ -5,9 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>oh,man</title>
-    <link rel="stylesheet" href="/font.css">
     <link rel="stylesheet" href="reset.css">
-    <link href='https://fonts.googleapis.com/css?family=Merriweather:300' rel='stylesheet' type='text/css'>
+    <!-- <link rel="stylesheet" href="grid.css"> -->
     <style>
         section{
             width: auto;
@@ -90,59 +89,193 @@
         }
 
 
+     
 
 
-        .good-product{
-            width: 100%;
-            border:r 1px solid;
+
+        .gd-wrap{
+            margin-top: -53px;
             display: flex;
-            justify-content: space-between;
-            align-items: center;
+            position: relative;
         }
 
-        .gd-prod-pic{
-            margin-top: -50px;
+        .auther-pic{
+            width: 48%;
+
+         
         }
 
 
-        .gd-prod-pic img{
-            width: 100%;            
+        .auther-pic img{
+            width: 100%;
+            position: sticky;
+            top:-40px;
         }
 
         .gd-row{
+            width: 600px;
+            margin-top: 150px;
+            padding: 180px 0px 200px 100px;
             display: flex;
+            
         }
 
-        .gd-item{
-            border: 1px #ab7738 solid;
-            padding: 20px;
-            margin: 10px;
+        .gd-title h3{
+            font-size: 22px;
+            color: #7a7a7a;
+            margin-bottom: 15px;
+        }
+        
+        .gd-title h4{
+            font-size: 16px;
+            color: #7a7a7a;
         }
 
-        .gd-item img{
+        .gd-pic img{
             width: 100%;
         }
 
+        
+
+        .gd-price h4{
+            font-size: 30px;
+            color: #7a7a7a;
+            margin-bottom: 20px;
+            margin-top: 20px;
+
+        }
+        .gd-price p{
+            font-size: 24px;
+            color: #7a7a7a;
+        }
+
+
+        .col-pic{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;           
+        }
+
+        .col-intro{
+            padding: 0 0 0 30px;
+
+        }
+
+
+
+        .intro h3{
+            font-size: 20px;
+            color: #ab7738;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .intro p{
+            font-size: 18px;
+            color: #7a7a7a;
+            line-height: 36px;
+            padding: 0 10px 0 0;
+        }
+
+
+        .item-price{
+            width: 260px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .price-but{
+            background-color: #ab7738;
+            border: #ab7738 1px solid;
+            padding: 5px;
+            margin-top: 10px;
+        }
+
+        .price-but a{
+            font-size: 20px;
+            color: #fff;
+            text-decoration: none;
+        }
+        .want-but{
+            background-color: transparent;
+            border: #ab7738 1px solid;
+            padding: 5px;
+            margin-top: 10px;
+        }
+
+        .want-but a{
+            font-size: 16px;
+            color: #ab7738;
+            text-decoration: none;
+        }
+
+
+
+
+
+
+        .item-filter select {
+            border: 1.5px #ab7738 solid;
+            font-size: 16px;
+            color:#ab7738;
+            margin: 55px 0 0 0;
+            width: 260px;
+            height: 2.25em;
+            padding: 5px;
+            position: relative;
+            appearance: none;
+            -moz-appearance: none;
+            -webkit-appearance: none;
+            background-image:url(image/sec-arrowdown.svg);
+            background-position: right 0.5em top 50%, 0 0;
+            background-size: contain, cover;
+            background-repeat: no-repeat, repeat;
+        }
+
+
+        .all-prod-wrap{
+            padding: 120px 0;
+        }
+
+        
+    
+   
+    
      
 
         .all-prd-icon{
-            width: 1000px;
+            width: 1200px;
             margin: auto;
             display: flex;
-            justify-content: space-between;
-            padding: 150px 80px 0 80px;
         }
 
-        .all-prd-icon .icon img{
-            width: 75%;
+
+        .icon{
+            display: flex;
+            flex-direction: column;
+            align-items: center;         
+        }
+
+
+        .icon .pic img{
+            width: 100%;
+        }
+
+        .icon h3{
+            font-size: 30px;
+            color: #575757;
         }
 
         .all-product h2{
-            color: #ab7738;
+            color: #575757;
             font-size: 36px;
+            font-weight: 600;
+            margin-bottom: 50px;
             text-align: center;
-            margin: 150px 0 0 0;
         }
+
+
+
 
 
         .note-row{
@@ -151,10 +284,11 @@
         }
 
         .note h2{
-            color: #ab7738;
+            color: #575757;
             font-size: 36px;
+            font-weight: 600;
             text-align: center;
-            margin: 200px 0 100px 0;
+            margin: 200px 0 80px 0;
 
         }
 
@@ -166,7 +300,7 @@
         .nav-area a{
             text-decoration: none;
             font-size: 20px;
-            color: #caae88;;
+            color: #7a7a7a;
             font-weight:normal;
             padding: 0 100px;
         }
@@ -180,16 +314,17 @@
             margin: auto;
             font-size: 20px;
             font-weight: lighter;
-            color:#caae88;;
+            color:#9e5f13;
             text-align: center;
             line-height: 45px;
 
         }
 
         .note-txt h3{
-            font-size: 28px;
-            color: #ab7738;;
-            font-weight: normal;
+            font-size: 30px;
+            color: #ab7738;
+            font-weight: 400;
+            margin-bottom: 20px;
         }
 
 
@@ -215,10 +350,11 @@
         }
 
         .trip h2{
-            color: #ab7738;
+            color: #575757;
             font-size: 36px;
+            font-weight: 600;
             text-align: center;
-            margin: 250px 0 100px 0;
+            margin: 250px 0 80px 0;
 
         }
 
@@ -228,7 +364,7 @@
         }
 
        .title h3{
-            color: #ab7738;
+            color: #575757;
             font-size: 30px;
             font-weight: normal;
             text-align: center;
@@ -251,8 +387,12 @@
             width: 80%;
             font-size: 18px;
             line-height: 34px;
-            color:#caae88;
+            color:#7a7a7a;
             padding: 10px;
+        }
+
+        .trip-price span{
+            padding-bottom: 10px;
         }
 
         .trip-price{
@@ -289,7 +429,7 @@
 
         .slog span{
             font-size: 20px;
-            color:#caae88;;           
+            color:#ab7738;           
         }
 
         .social{
@@ -300,6 +440,7 @@
         .social h2{
             color: #ab7738;
             font-size: 50px;
+            font-weight: 600;
             text-align: center;
             margin: 250px 0 0 0;
         }
@@ -324,7 +465,6 @@
         }
 
         .soc-but{
-            background-color: transparent;
             display: flex;
             justify-content: center;            
         }
@@ -338,6 +478,7 @@
             font-size: 26px;
             color: #ab7738;
             border:#ab7738 1.5px solid;
+            background-color: transparent;
             padding: 10px;            
             margin: 50px 0 0 0;
         }
@@ -345,9 +486,10 @@
 
         .more-story h2{
             color: #ab7738;
-            font-size: 50px;
+            font-size: 36px;
+            font-weight: 600;
             text-align: center;
-            margin: 250px 0 150px 0;
+            margin: 250px 0 80px 0;
 
         }
 
@@ -431,7 +573,7 @@
     <section class="banner">   
         <div class="header">
             <div class="logo">
-                <a href="https://tpjpvup.github.io/oh-man/"><img src="image/fontpage-logo.png" alt="oh-man"></a>
+                <a href="https://tpjpvup.github.io/oh-man/"><img src="image/logo.png" alt="oh-man"></a>
                 </div>
             <nav class="header-nav">
                 <a href="https://tpjpvup.github.io/oh-man/oh,man-01.html">特選歐物</a>
@@ -442,8 +584,8 @@
                 <a href="https://tpjpvup.github.io/oh-man/oh,man-06.html">#oh,man.</a>
             </nav>
             <div class="member">
-                <a href="#"><img src="image/fontpage-singn.png" alt="singn"></a>
-                <a href="#"><img src="image/fontpage-shopping.png" alt="shopping"></a>
+                <a href="#"><img src="image/sign2.png" alt="singn"></a>
+                <a href="#"><img src="image/shopping.png" alt="shopping"></a>
             </div>
         </div>
         <div class="banner-bg">
@@ -459,44 +601,325 @@
 
 
     <section class="good-product">
-        <div class="gd-prod-pic">
-            <img src="image/fontpage-1007_10.jpg" alt="good-product">
+        <div class="gd-wrap">
+            <div class="auther-pic">
+                <img src="image/005.jpg" alt="good-product">
+            </div>
+            <div class="gd-content">
+                <div class="gd-row">
+                    <div class="col-pic">
+                        <div class="gd-pic">
+                            <img src="/image/bag-1.jpg" alt="登山包">
+                        </div>
+                        <div class="gd-title">
+                            <h3>Mystery Ranch</h3>
+                            <h4>Coulee 25 登山背包 </h4>
+                        </div>
+                        <div class="gd-price">
+                            <h4>NT$5860</h4>
+                            <p>推薦指數 ● ● ● ● ◐</p>                            
+                         </div>
+                    </div>
+                    <div class="col-intro">
+                        <div class="intro">
+                            <h3>毆人真心說</h3>
+                            <p>最講究耐用、實用和美觀，超好用的Y字拉鏈，就算把筷子放在包底，也不用翻出所有家當，全場第一個安心吃泡麵。<br>
+                            包型日常戶外雙情境都可使用，肩膀省力又時尚，
+                            一個好包包，舒服又能賺到他人稱讚，何樂不為?<br>
+                            是我踏入登山圈第一個剁手商品，買到現在不後悔!
+                            </p>
+                        </div>
+                        <div class="shopping">
+                            <div class="item-filter">
+                                <select name="item" id="">
+                                <option value="數量 value">數量</option>
+                                <option value="1 value">1</option>
+                                <option value="2 value">2</option>
+                                <option value="3 value">3</option>
+                                <option value="4 value">4</option>
+                                <option value="5 value">5</option>
+                                <option value="6 value">6</option>
+                                <option value="7 value">7</option>
+                                <option value="8 value">8</option>
+                                <option value="9 value">9</option>
+                                <option value="10件以上，揪團價 value">10件以上，揪團價<option>
+                                </select>                            
+                                </div>
+                            <div class="item-price">
+                                <button class="want-but"><a href="#">放入慾望清單</a></button>
+                                <button class="price-but"><a href="#">放入購物車</a></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="gd-row">
+                    <div class="col-pic">
+                        <div class="gd-pic">
+                            <img src="/image/bag-1.jpg" alt="登山包">
+                        </div>
+                        <div class="gd-title">
+                            <h3>Mystery Ranch</h3>
+                            <h4>Coulee 25 登山背包 </h4>
+                        </div>
+                        <div class="gd-price">
+                            <h4>NT$5860</h4>
+                            <p>推薦指數 ● ● ● ● ◐</p>                            
+                         </div>
+                    </div>
+                    <div class="col-intro">
+                        <div class="intro">
+                            <h3>毆人真心說</h3>
+                            <p>最講究耐用、實用和美觀，超好用的Y字拉鏈，就算把筷子放在包底，也不用翻出所有家當，全場第一個安心吃泡麵。<br>
+                            包型日常戶外雙情境都可使用，肩膀省力又時尚，
+                            一個好包包，舒服又能賺到他人稱讚，何樂不為?<br>
+                            是我踏入登山圈第一個剁手商品，買到現在不後悔!
+                            </p>
+                        </div>
+                        <div class="shopping">
+                            <div class="item-filter">
+                                <select name="item" id="">
+                                <option value="數量 value">數量</option>
+                                <option value="1 value">1</option>
+                                <option value="2 value">2</option>
+                                <option value="3 value">3</option>
+                                <option value="4 value">4</option>
+                                <option value="5 value">5</option>
+                                <option value="6 value">6</option>
+                                <option value="7 value">7</option>
+                                <option value="8 value">8</option>
+                                <option value="9 value">9</option>
+                                <option value="10件以上，揪團價 value">10件以上，揪團價<option>
+                                </select>                            
+                                </div>
+                            <div class="item-price">
+                                <button class="want-but"><a href="#">放入慾望清單</a></button>
+                                <button class="price-but"><a href="#">放入購物車</a></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="gd-row">
+                    <div class="col-pic">
+                        <div class="gd-pic">
+                            <img src="/image/bag-1.jpg" alt="登山包">
+                        </div>
+                        <div class="gd-title">
+                            <h3>Mystery Ranch</h3>
+                            <h4>Coulee 25 登山背包 </h4>
+                        </div>
+                        <div class="gd-price">
+                            <h4>NT$5860</h4>
+                            <p>推薦指數 ● ● ● ● ◐</p>                            
+                         </div>
+                    </div>
+                    <div class="col-intro">
+                        <div class="intro">
+                            <h3>毆人真心說</h3>
+                            <p>最講究耐用、實用和美觀，超好用的Y字拉鏈，就算把筷子放在包底，也不用翻出所有家當，全場第一個安心吃泡麵。<br>
+                            包型日常戶外雙情境都可使用，肩膀省力又時尚，
+                            一個好包包，舒服又能賺到他人稱讚，何樂不為?<br>
+                            是我踏入登山圈第一個剁手商品，買到現在不後悔!
+                            </p>
+                        </div>
+                        <div class="shopping">
+                            <div class="item-filter">
+                                <select name="item" id="">
+                                <option value="數量 value">數量</option>
+                                <option value="1 value">1</option>
+                                <option value="2 value">2</option>
+                                <option value="3 value">3</option>
+                                <option value="4 value">4</option>
+                                <option value="5 value">5</option>
+                                <option value="6 value">6</option>
+                                <option value="7 value">7</option>
+                                <option value="8 value">8</option>
+                                <option value="9 value">9</option>
+                                <option value="10件以上，揪團價 value">10件以上，揪團價<option>
+                                </select>                            
+                                </div>
+                            <div class="item-price">
+                                <button class="want-but"><a href="#">放入慾望清單</a></button>
+                                <button class="price-but"><a href="#">放入購物車</a></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="gd-row">
+                    <div class="col-pic">
+                        <div class="gd-pic">
+                            <img src="/image/bag-1.jpg" alt="登山包">
+                        </div>
+                        <div class="gd-title">
+                            <h3>Mystery Ranch</h3>
+                            <h4>Coulee 25 登山背包 </h4>
+                        </div>
+                        <div class="gd-price">
+                            <h4>NT$5860</h4>
+                            <p>推薦指數 ● ● ● ● ◐</p>                            
+                         </div>
+                    </div>
+                    <div class="col-intro">
+                        <div class="intro">
+                            <h3>毆人真心說</h3>
+                            <p>最講究耐用、實用和美觀，超好用的Y字拉鏈，就算把筷子放在包底，也不用翻出所有家當，全場第一個安心吃泡麵。<br>
+                            包型日常戶外雙情境都可使用，肩膀省力又時尚，
+                            一個好包包，舒服又能賺到他人稱讚，何樂不為?<br>
+                            是我踏入登山圈第一個剁手商品，買到現在不後悔!
+                            </p>
+                        </div>
+                        <div class="shopping">
+                            <div class="item-filter">
+                                <select name="item" id="">
+                                <option value="數量 value">數量</option>
+                                <option value="1 value">1</option>
+                                <option value="2 value">2</option>
+                                <option value="3 value">3</option>
+                                <option value="4 value">4</option>
+                                <option value="5 value">5</option>
+                                <option value="6 value">6</option>
+                                <option value="7 value">7</option>
+                                <option value="8 value">8</option>
+                                <option value="9 value">9</option>
+                                <option value="10件以上，揪團價 value">10件以上，揪團價<option>
+                                </select>                            
+                                </div>
+                            <div class="item-price">
+                                <button class="want-but"><a href="#">放入慾望清單</a></button>
+                                <button class="price-but"><a href="#">放入購物車</a></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="gd-row">
+                    <div class="col-pic">
+                        <div class="gd-pic">
+                            <img src="/image/bag-1.jpg" alt="登山包">
+                        </div>
+                        <div class="gd-title">
+                            <h3>Mystery Ranch</h3>
+                            <h4>Coulee 25 登山背包 </h4>
+                        </div>
+                        <div class="gd-price">
+                            <h4>NT$5860</h4>
+                            <p>推薦指數 ● ● ● ● ◐</p>                            
+                         </div>
+                    </div>
+                    <div class="col-intro">
+                        <div class="intro">
+                            <h3>毆人真心說</h3>
+                            <p>最講究耐用、實用和美觀，超好用的Y字拉鏈，就算把筷子放在包底，也不用翻出所有家當，全場第一個安心吃泡麵。<br>
+                            包型日常戶外雙情境都可使用，肩膀省力又時尚，
+                            一個好包包，舒服又能賺到他人稱讚，何樂不為?<br>
+                            是我踏入登山圈第一個剁手商品，買到現在不後悔!
+                            </p>
+                        </div>
+                        <div class="shopping">
+                            <div class="item-filter">
+                                <select name="item" id="">
+                                <option value="數量 value">數量</option>
+                                <option value="1 value">1</option>
+                                <option value="2 value">2</option>
+                                <option value="3 value">3</option>
+                                <option value="4 value">4</option>
+                                <option value="5 value">5</option>
+                                <option value="6 value">6</option>
+                                <option value="7 value">7</option>
+                                <option value="8 value">8</option>
+                                <option value="9 value">9</option>
+                                <option value="10件以上，揪團價 value">10件以上，揪團價<option>
+                                </select>                            
+                                </div>
+                            <div class="item-price">
+                                <button class="want-but"><a href="#">放入慾望清單</a></button>
+                                <button class="price-but"><a href="#">放入購物車</a></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="gd-row">
+                    <div class="col-pic">
+                        <div class="gd-pic">
+                            <img src="/image/bag-1.jpg" alt="登山包">
+                        </div>
+                        <div class="gd-title">
+                            <h3>Mystery Ranch</h3>
+                            <h4>Coulee 25 登山背包 </h4>
+                        </div>
+                        <div class="gd-price">
+                            <h4>NT$5860</h4>
+                            <p>推薦指數 ● ● ● ● ◐</p>                            
+                         </div>
+                    </div>
+                    <div class="col-intro">
+                        <div class="intro">
+                            <h3>毆人真心說</h3>
+                            <p>最講究耐用、實用和美觀，超好用的Y字拉鏈，就算把筷子放在包底，也不用翻出所有家當，全場第一個安心吃泡麵。<br>
+                            包型日常戶外雙情境都可使用，肩膀省力又時尚，
+                            一個好包包，舒服又能賺到他人稱讚，何樂不為?<br>
+                            是我踏入登山圈第一個剁手商品，買到現在不後悔!
+                            </p>
+                        </div>
+                        <div class="shopping">
+                            <div class="item-filter">
+                                <select name="item" id="">
+                                <option value="數量 value">數量</option>
+                                <option value="1 value">1</option>
+                                <option value="2 value">2</option>
+                                <option value="3 value">3</option>
+                                <option value="4 value">4</option>
+                                <option value="5 value">5</option>
+                                <option value="6 value">6</option>
+                                <option value="7 value">7</option>
+                                <option value="8 value">8</option>
+                                <option value="9 value">9</option>
+                                <option value="10件以上，揪團價 value">10件以上，揪團價<option>
+                                </select>                            
+                                </div>
+                            <div class="item-price">
+                                <button class="want-but"><a href="#">放入慾望清單</a></button>
+                                <button class="price-but"><a href="#">放入購物車</a></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            
         </div>
-        <div class="gd-row">
-            <div class="gd-item">
-                <div class="gd-item-pic">
-                    <a href="#"><img src="image/fontpage-1007_23.jpg" alt="神秘農場背包"></a>
-                </div>
-                <div class="gd-item-txt">
-                    <div class="h4">Mystery Ranch</div>
-                    <p>coulee25<br>登山背包</p>                    
-                </div>
-            </div>
-            <div class="gd-item">
-                <div class="gd-item-pic">
-                    <a href="#"><img src="image/fontpage-1007_23-25.jpg" alt="迪卡農登山鞋"></a>
-                </div>
-                <div class="gd-item-txt">
-                    <div class="h4">迪卡農</div>
-                    <p>抓地防滑中筒<br>登山鞋</p>                    
-                </div>
-            </div>            
-        </div>        
+           
     </section>
-    <section class="all-product">
-        <h2>商品分類</h2>
-        <div class="all-prd-icon">
-            <div class="icon"><a href="https://tpjpvup.github.io/oh-man/oh,man-01.html"><img src="image/cloth.jpg" alt="
-                cloth"></a>
-            </div>
-            <div class="icon"><a href="https://tpjpvup.github.io/oh-man/oh,man-01.html"><img src="image/bag.jpg" alt="
-                bag"></a>
-            </div>
-            <div class="icon"><a href="https://tpjpvup.github.io/oh-man/oh,man-01.html"><img src="image/shose.jpg" alt="
-                shose"></a>
-            </div>         
-            <div class="icon"><a href="https://tpjpvup.github.io/oh-man/oh,man-01.html"><img src="image/new-bie.jpg" alt="
-                new-bie"></a>
+    <section class="all-product" style="background-color: #f0e8de;">
+        <div class="all-prod-wrap">
+            <h2>商品分類</h2>
+            <div class="all-prd-icon">
+                <div class="icon">
+                    <div class="pic">
+                        <a href="https://tpjpvup.github.io/oh-man/oh,man-01.html"><img src="image/icon-12.svg" alt="
+                            cloth"></a>
+                    </div>               
+                <h3>服飾配件</h3>
+                </div>
+                <div class="icon">
+                    <div class="pic">
+                        <a href="https://tpjpvup.github.io/oh-man/oh,man-01.html"><img src="image/icon-13.svg" alt="
+                        bag"></a>
+                    </div>
+                <h3>背包</h3>
+                </div>
+                <div class="icon">
+                    <div class="pic">
+                        <a href="https://tpjpvup.github.io/oh-man/oh,man-01.html"><img src="image/icon-14.svg" alt="
+                        shose"></a>
+                    </div>
+                <h3>登山鞋</h3>
+                </div>         
+                <div class="icon">
+                    <div class="pic">
+                        <a href="https://tpjpvup.github.io/oh-man/oh,man-01.html"><img src="image/icon-15.svg" alt="
+                        new-bie"></a>
+                    </div>
+                <h3>新手專區</h3>
+                </div>
             </div>
         </div>
     </section>
