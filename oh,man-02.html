@@ -7,50 +7,21 @@
     <title>Product-oh,man</title>
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="grid.css">
+    <link rel="stylesheet" href="header.css">
     <style>
-     section{
-            max-width: 1200px;
+        section{
+            width: 100%;
+            max-width: 1000px;
             margin: auto;
             font-family: 'Noto Sans ', '微軟正黑體', sans-serif;
         }
 
+        
 
-        .header{
-            width: 1200px;
-            margin: auto;
-            margin-bottom: 40px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: relative;
-            top: 20px;           
-        }
-
-        .header-nav a{
-            color: #ab7738;
-            font-size: 18px;
-            text-decoration: none;
-            padding: 0 25px;      
-        }
-
-        .member{ 
-            display: flex;           
-        }
-
-        .member img{
-            width: 70%;
-            vertical-align: top;
-            
-        }
-
-        .logo img{
-            width: 70%;
-            vertical-align: top;
-        }
-
-        /* header選單 */
+        /* 內容 */
         .container{
             font-family: 'Noto Sans', '微軟正黑體', sans-serif;
+            width: 80%;
             position: relative;
         }
 
@@ -59,6 +30,15 @@
             font-weight: 600;
             margin: 0 0 5px 0 ;
         }  
+
+        .type li{
+            transition:.5s;
+        }
+        .type li a:hover{
+            color: rgba(156, 85, 19, 0.4);
+        }
+
+        
 
         .col-3 ul{
             font-size: 20px;
@@ -70,7 +50,6 @@
             color: #ab7738;
             text-decoration: none;
             line-height: 33px;
-
         }
 
         .col-3 li{
@@ -85,7 +64,8 @@
         }
 
         .prod-pic{
-            margin-bottom: 30px;
+            margin-bottom: 15px;
+            border: 1px rgba(224, 205, 176, 0.7) solid;
         }
 
         .prod-pic img{
@@ -93,28 +73,26 @@
         }
 
         .item-prod{
+            margin-top: 20%;
             margin-left: 20%;
         }
 
-
-
-     
-
-        .col-6 h2{
+        .item-prod h2{
+            font-size: 1em;
             color: #7a7a7a;
-            font-size: 18px;
-            font-weight: 600;            
-            margin-bottom: 15px;
+            margin-bottom: 5%;
         }
-        .col-6 h1{
+    
+        .item-prod h1{
+            font-size: 1.2em;
             color: #7a7a7a;
-            font-size: 22px;
+            line-height: 140%;
             font-weight: 500;  
             margin-bottom: 15px;
         }
-        .col-6 p{
+        .item-prod p{
             color: #7a7a7a;
-            font-size: 24px;
+            font-size: 1.8em;
             font-weight: 600;  
             margin-bottom: 15px;
         }
@@ -138,159 +116,278 @@
             background-repeat: no-repeat, repeat;
         }
         
-        /* .option {
-            appearance: none;
-            background: #fff;
-            position: absolute;
-            } */
-
-
         .price-but{
+            font-size: 16px;
+            color: #7a7a7a;
             width: 265px;
-            height: 2.5em;
+            height: 2.25em;
             background-color: transparent;
             border: #7a7a7a 1px solid;
             margin: 0 0 15px 0;
             padding: 5px;
-
+            transition: .5s;
         }
 
-        .price-but a{
-            font-size: 16px;
+        .price-but:hover{
+            background-color:rgba(187, 150, 103,0.8);
+            color: #fff;
+        }
+ 
+
+        .more h2{
             color: #7a7a7a;
-            text-decoration: none;           
-        }
-
-        .col-12{
-            margin: -15px;
-        }
-
-        .col-12 h2{
-            color: #7a7a7a;
-            font-size: 24px;
+            font-size: 1.4em;
             font-weight: 600;
             margin-top: 100px;
-            margin-bottom: 30px;
+            margin-bottom: 40px;
         }
-
-        
-
-        .col-12 img {
-            width: 100%;
-
-        }
-
 
         .pic-1 img{
             width: 100%;
+            vertical-align: middle;
+            border: 1px rgba(224, 205, 176, 0.7) solid;
         }
 
         .pic-2 img{
             width: 100%;
+            vertical-align: middle;
+            border: 1px rgba(224, 205, 176, 0.7) solid;
         }
 
+        .pic-3 img{
+            width: 100%;
+            vertical-align: middle;
+            border: 1px rgba(224, 205, 176, 0.7) solid;
+        }
+
+        
+
+        /*-----共用-----*/
+
+		#menu-control{
+			display: none;
+		}
+
+
+		/*--------手機--------*/
+
+        @media screen and (max-width:767px){
+
+            .item-prod{
+                margin-top: 0%;
+                margin-left: 0%;
+            }
+
+            .item-prod h2{
+                font-size: 0.8em;
+                margin-bottom: 2%;
+            }
     
+            .item-prod h1{
+                font-size: 1em;
+            }
+            .item-prod p{
+                font-size: 1.2em;
+            }
+
+            .item-filter select {
+                font-size: 0.9em;
+                margin: 5px 0 10px 0;
+                width: 100%;
+                height: 2em;
+            }
         
-         
+            .price-but{
+                font-size: 0.9em;
+                width: 100%;
+                height: 2em;
+            }
+
+            .pic-3{
+                display: none;
+            }
         
-
-
-
-
-
-
-         /* footer選單 */
-
-
-
-        footer{
-            border-top: #ab7738 1.5px solid;
-            margin-top: 150px;
+           
         }
-
-
-
-        .footer-content{
-            width: 1000px;
-            margin: auto;
-            margin-top: 20px;
-            margin-bottom: 120px;
-            font-size: 24px;
-            color: #ab7738;
-            font-size: 24px;
-            display: flex;
-            justify-content: space-between;
-        }
-
-
-        .footer-row{
-            display: flex;            
-        }
-
-
-        .soc-media{
-            display:flex;
-        }
-
-        .soc-media img{
-            width: 70%;
-        }
-
-        .info{
-            margin: 0 100px 0 0;
-        }
-
-   
- 
-
-        .info ul{
-            list-style: none;
-        }
-
-        .info a{
-            color: #caae88;
-            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-            font-size: 18px;
-            text-decoration: none;
             
-        }
+        /*--------平板、手機--------*/
+		@media screen and (max-width: 1024px){
+			.hb{
+				width: 40px;
+				height: 40px;
+				position: relative;
+			}
+			.hb span{
+				width: 32px;
+				height: 2px;
+				background-color: #ab7738;
+				position: absolute;
+				right: 0;
+				left: 0;
+				margin: auto;
+				transition: top       .5s .2s, 
+							bottom    .5s .2s, 
+							opacity   .5s, 
+							transform .2s;
+			}
+			.hb span:first-child{
+				transform: rotate(0deg);
+				top: 10px;
+			}
+			.hb span:last-child{
+				transform: rotate(0deg);
+				bottom: 10px;
+			}
+			.hb span:nth-child(2){
+				top: 0;
+				bottom: 0;
+			}
+
+			#menu-control:checked ~ .main-header .hb span:first-child{
+				top: 19px;
+				transform: rotate(225deg);
+				transition: top       .5s, 
+							bottom    .5s, 
+							opacity   .5s, 
+							transform .2s .5s;
+			}
+			#menu-control:checked ~ .main-header .hb span:last-child{
+				bottom: 19px;
+				transform: rotate(-225deg);
+				transition: top       .5s, 
+							bottom    .5s, 
+							opacity   .5s, 
+							transform .2s .5s;
+			}
+
+			.hb span:nth-child(2){
+				opacity: 1;
+			}
+			#menu-control:checked ~ .main-header .hb span:nth-child(2){
+				opacity: 0;
+			}
+
+			.main-nav{
+				position: absolute;
+                z-index: 1;
+				background-color:rgba(224, 205, 176, 0.95);
+				top: 100%;
+				left: -80%;
+				width: 80%;
+				height: calc(100vh - 50px);
+				transition: left 1s;
+			}
+
+            .nav-wrap{
+                margin-left: 60%;
+                margin-top: 10%;
+            }
+
+			.nav-wrap a{
+				display: block;
+                font-size: 1.5em;
+                padding-bottom: 40px;  
+			}
+
+            .mem{
+                margin-left: 60%;
+                display: flex;     
+            }
+
+            .mem img{
+                width: 45px;
+            }
+
+            
+			#menu-control:checked ~ .main-header .main-nav{
+				left: 0;
+			}
+
+            .row{
+                justify-content: center;
+            }
+
+            .col-3{
+                display:none;
+            }
+
+ 
+            
+            .main-header{
+                padding-bottom: 5px;
+                box-shadow: 0 0.5px 5px rgba(156, 85, 19, 0.2);    
+            }
 
 
-        .about ul{
-            list-style: none;
-        }
 
-        .about a{
-            color: #caae88;
-            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-            font-size: 16px;
-            text-decoration: none;
-        }
+
+
+            
+            .footer-content{
+                display: flex;
+                flex-direction: column;
+            }
+
+            .soc-media{
+                margin-top: 8%;
+                margin-left: -12px;
+                padding-left: 10%;
+            }
+
+            .soc-media img{
+                width: 40px;
+                padding-left: 10px;
+            }
+		}
+
+		/*-------------電腦-------------*/
+
+		@media screen and (min-width: 1025px){
+			.hb{
+				display: none;
+			}
+            .main-nav{
+                display: flex;
+                align-items: center;
+            }
+		}
 
 
     
     </style>
 </head>
 <body>
-    <section class="banner">   
-        <div class="header">
-            <div class="logo">
-                <a href="https://tpjpvup.github.io/oh-man/"><img src="image/logo.png" alt="oh-man"></a>
-                </div>
-            <nav class="header-nav">
+    <input type="checkbox" name="" id="menu-control">
+	<header class="main-header">
+		<!-- logo -->
+		<div class="logo">
+            <a href="https://tpjpvup.github.io/oh-man/"><img src="image/logo.png" alt="oh-man"></a>
+        </div>
+		<!-- 漢堡 -->
+		<label for="menu-control" class="hb">
+			<span></span>
+			<span></span>
+			<span></span>
+		</label>
+		<!-- 選單 -->
+
+        <nav class="main-nav">
+            <div class="nav-wrap">
                 <a href="https://tpjpvup.github.io/oh-man/oh,man-01.html">特選歐物</a>
                 <a href="https://tpjpvup.github.io/oh-man/oh,man-01.html">商品分類</a>
-                <a href="https://tpjpvup.github.io/oh-man/oh,man-03.html">戶外筆記</a>
-                <a href="https://tpjpvup.github.io/oh-man/oh,man-04.html">歐人故事</a>
-                <a href="https://tpjpvup.github.io/oh-man/oh,man-05.html">主題開團</a>
+                <a href="https://tpjpvup.github.io/oh-man/oh,man-03.html">毆人故事</a>
+                <a href="https://tpjpvup.github.io/oh-man/oh,man-04.html">主題開團</a>
+                <a href="https://tpjpvup.github.io/oh-man/oh,man-05.html">歐地開發</a>
                 <a href="https://tpjpvup.github.io/oh-man/oh,man-06.html">#oh,man.</a>
-            </nav>
-            <div class="member">
-                <a href="#"><img src="image/sign2.png" alt="singn"></a>
+            </div>
+            <div class="mem">
+                <a href="#"><img src="image/sign2.png" alt="sign"></a>
                 <a href="#"><img src="image/shopping.png" alt="shopping"></a>
             </div>
-        </div>              
-    </section>
+        </nav>
+        
+        
+	</header>
 
     <section>
         <div class="container">
@@ -304,9 +401,9 @@
         <div class="row">
             <div class="col-3">
                 <ul class="type"><h3>歐人故事</h3>
-                    <li><a href="#">0928 十元-山女孩</a></li>
-                    <li><a href="#">0820 大發哥-團長</a></li>
-                    <li><a href="#">0707 阿銘-嚮導</a></li>
+                    <li><a href="#">第一期 / Sue-山女孩</a></li>
+                    <li><a href="#">第二期 / 大發哥-團長</a></li>
+                    <li><a href="#">第三期 / 阿銘-嚮導</a></li>
                 </ul> 
                 <ul class="type"><a href="#"> <h3>熱銷補貨</h3></a></ul>
                 <ul class="type"><h3>產品</h3>
@@ -327,8 +424,15 @@
                         </ul>
                     </li>
                 </ul>
-                <ul class="type"><a href="#"><h3> 帽/配件</h3></a></ul>
-                <ul class="type"><a href="#"><h3>登山杖</h3></a></ul>
+                <ul class="type"><h3> 帽/配件</h3>
+                    <li><a href="#">帽子/頭巾</a></li>
+                    <li><a href="#">其他配件</a></li>
+
+                </ul>
+                <ul class="type"><h3>登山杖</h3>
+                    <li><a href="#">可調式登山杖</a></li>
+                    <li><a href="#">快拆式登山杖</a></li>
+                </ul>
                 <ul class="type"><h3>品牌</h3>
                     <li><a href="#">Black Diamond </a></li>
                     <li><a href="#">BUFF</a></li>
@@ -339,25 +443,26 @@
                     <li><a href="#">Outdoor Research</a></li>
                     <li><a href="#">SmartWool</a></li>                    
                 </ul>
+
             </div>
             <div class="col-9">
                 <div class="row">
-                    <div class="col-6">
+                    <div class="col-12 col-md-6">
                         <div class="prod-pic"><img src="image/KAVU-KV17604.jpg"></div>
                         <div class="row">
                             <div class="col-6">
-                                <div class="pic-1"><img src="image/p0104178951036-item-4d43xf4x1000x1000-m.jpg"></div></div>
+                                <div class="pic-1"><img src="image/hat-02.jpg"></div></div>
                             <div class="col-6">
                                 <div class="pic-1">
-                                    <img src="image/22580894-1-blackout.jfif">
+                                    <img src="image/hat-1-03.jpg">
                                 </div>                                
                             </div>                  
                         </div>
                     </div>
-                    <div class="col-6">
+                    <div class="col-12 col-md-6">
                         <div class="item-prod">
                             <h2>[KAVU]</h2>
-                            <h1>Fishermans Chillba 漁夫帽<br>/黃鐵礦Pyrite</h1>
+                            <h1>Fishermans Chillba <br>漁夫帽/黃鐵礦Pyrite</h1>
                             <p>NT$780</p>
                             <div class="item-filter">
                                 <select name="item" id="">
@@ -374,25 +479,24 @@
                                 <option value="10件以上，揪團價 value">10件以上，揪團價</option>
                                 </select>                            
                             </div>
-                            <button class="price-but"><a href="#">放入購物車</a></button>
+                            <button class="price-but">放入購物車<a href="#"></a></button>
                         </div>
-                        
                     </div>
                 </div>
-                <div class="col-12">
+                <div class="more">
                     <h2>更多搭配</h2>
                     <div class="row">
-                        <div class="col-3">
+                        <div class="col-md-3">
                             <div class="pic-2"><img src="image/prod-1-02.jpg"></div>
                         </div>
-                        <div class="col-3">
-                            <div class="pic-2"><img src="image/prod-1-03.jpg"></div>
+                        <div class="col-md-3">
+                            <div class="pic-3"><img src="image/prod-1-03.jpg"></div>
                         </div>
-                        <div class="col-3">
-                            <div class="pic-2"><img src="image/prod-1-04.jpg"></div>
+                        <div class="col-md-3">
+                            <div class="pic-3"><img src="image/prod-1-04.jpg"></div>
                         </div>
-                        <div class="col-3">
-                            <div class="pic-2"><img src="image/prod-1-05.jpg"></div>
+                        <div class="col-md-3">
+                            <div class="pic-3"><img src="image/prod-1-05.jpg"></div>
                         </div>
                     </div>
                 </div>
@@ -401,9 +505,7 @@
     </div>
    
 
-
-
-    <footer class="footer">
+    <footer>
         <div class="footer-content">
             <div class="footer-row">
                 <div class="info">

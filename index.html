@@ -6,175 +6,258 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>oh,man</title>
     <link rel="stylesheet" href="reset.css">
-    <!-- <link rel="stylesheet" href="grid.css"> -->
+    <link rel="stylesheet" href="grid.css">
+    <link rel="stylesheet" href="header.js">
     <style>
         section{
             width: auto;
             font-family: 'Noto Sans', '微軟正黑體', sans-serif;
         }
 
-        .header{
-            width: 1200px;
-            margin: auto;
+        /*-------header------- */
+
+        .main-header{
+            background-color:rgb(238, 238, 238,0.8);
+            padding-left: 10%;
+            padding-right: 10%;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            position: relative;
-            top: 20px;  
+            font-family: 'Noto Sans','微軟正黑體', sans-serif;
+            position:sticky;
+            top: 0; 
+            z-index: 2;      
         }
 
-        .header-nav a{
-            color: #ab7738;
+        .main-nav{
+            transition: .5s;
+        }
+
+        .main-nav a{
             font-size: 18px;
+            color: #ab7738;
             text-decoration: none;
-            padding: 0 25px;      
+            padding: 0 10px;      
         }
 
-        .member{ 
-            display: flex;           
+        .main-nav a:hover{
+            color:  rgba(156, 85, 19, 0.4);
         }
 
-        .member img{
-            width: 70%;
+        .mem img{
+            width: 36px;
             vertical-align: top;
-            
+            margin-right: -10px;    
         }
 
         .logo img{
             width: 70%;
             vertical-align: top;
         }
-
-
-
+        
+        .banner-wrap{
+            position: relative;
+        }
+    
         .banner-bg{
             position: relative;
-            top: -50px;
-            z-index: -1;
-            
+            z-index: -1;           
         }
-
         .banner-bg img{
             width: 100%;
+            vertical-align:middle;
         }
 
-        .banner-slog{
+        .banner-txt{
             position: absolute;
-            bottom: 100px;
-            left: 50px;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 45%;        
+            z-index: 1;
+        }
+        .banner-txt h2{
+            font-size:5.5em;
+            color:#fff;
+            font-family: Century Gothic,Georgia, Times, 'Times New Roman', serif;
+        }
+
+        .banner-txt p{
+            font-size:1.2em;
+            color:#fff;
+            font-family: Century Gothic,Georgia, Times, 'Times New Roman', serif;
         }
 
 
 
-        .banner-slog p{
-            font-size: 55px;
-            color: rgba(255,255, 255, 0.5) ;
-            line-height: 70px;
-            padding: 0 0 50px 0;
-            font-family: Lora, serif
+        /*特選歐物*/
+
+        .good-product{
+            background-image: url(image/intro-bg.png);
+            background-repeat: no-repeat;
+            background-position:right top;
         }
-
-   
-
-        .banner-button{
-            background-color:transparent;
-            font-size: 30px;
-            border: rgba(255,255, 255, 0.3) 1.5px solid;
-            padding: 5px;
-        }
-
-        .banner-button a{
-            color: rgba(255,255, 255, 0.3) ;
-            text-decoration: none;
-        }
-
-
-     
 
 
 
         .gd-wrap{
-            margin-top: -53px;
             display: flex;
+        }
+
+        .author-pic{
+            width: 45%;
+        }
+
+        .author-pic img{
+            width: 100%;
+            position: sticky;
+            top:0;
+            object-fit: cover;
+        } 
+
+
+        .gd-content{
+            width: 55%;
+        }
+
+        .gd-intro-row{
+            background-color: #f5eadd;
+            width: 65%;
+            margin-top: 150px;
+            padding: 50px;
             position: relative;
         }
 
-        .auther-pic{
-            width: 50%;
-        }
-
-
-
-        .auther-pic img{
-            width: 100%;
-            position: sticky;
-            top:-60px;
-        }
-
-        .gd-row{
-            width: 600px;
-            margin-top: 150px;
-            padding: 180px 0px 200px 100px;
-            display: flex;
-        }
-
-        .gd-title h3{
-            font-size: 22px;
-            color: #7a7a7a;
+        .item h4{
+            font-size:1.2em;
+            color: #ab7738;
+            font-weight: 600;
             margin-bottom: 15px;
         }
-        
-        .gd-title h4{
-            font-size: 16px;
-            color: #7a7a7a;
+
+        .txt{
+            width: 80%;
         }
 
-        .gd-pic img{
+        .txt p{
+            font-size:1em;
+            line-height:150%;
+            margin-bottom: 50px;
+            
+        }
+
+        .item-point h4{
+            font-size: 1.2em;
+            font-weight: 600;
+            line-height: 180%;
+            margin-bottom: 20px;
+            display:inline-block;
+           ;
+        }
+     
+
+        .txt ul li{
+            font-size: 1em;
+            display:inline;
+        }
+
+
+        .intro-pic{
+            position: absolute;
+            z-index: 1;
+            right: -50px;
+            bottom: -200px;
+        }
+
+        .intro-pic img{
             width: 100%;
         }
 
-        
-
-        .gd-price h4{
-            font-size: 30px;
-            color: #7a7a7a;
-            margin-bottom: 20px;
-            margin-top: 20px;
-
-        }
-        .gd-price p{
-            font-size: 24px;
-            color: #7a7a7a;
-        }
-
-
-        .col-pic{
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;           
-        }
-
-        .col-intro{
-            padding: 0 0 0 30px;
-
-        }
-
-
-
-        .intro h3{
-            font-size: 20px;
+        .name h3{
+            font-size:5em;
             color: #ab7738;
+            font-family: Century Gothic,Georgia, Times, 'Times New Roman', serif;
+            position: absolute;
+            right: -100px;
+            top: -50px;
+        }
+        .gd-intro{
+            margin-bottom: 400px;
+        }
+
+    
+        /* .intro-pic:after{
+            content:"";
+            width: 170%;
+            height: 300px;
+            border: 5px #ab7738 solid;
+            position: absolute;
+            z-index: -1;
+            top:-100px;
+            right: 0px;
+        }
+        */
+        .gd-content h2{
+            font-size:1.8em;
+            color: #fff;
+            background-color: #caae88;
+            width: 180px;
+            text-align: center;
+            padding: 15px 0;
+            margin-bottom: 100px;
+        }
+
+      
+
+
+        /*--特選歐物--*/   
+      
+
+        .gd-row{
+            width: 60%;
+            margin: 100px 0;
+            display: flex;
+         
+        }
+
+        .gd-product{
+            margin-left: 50px;
+        }
+        .gd-txt{
+            margin-left: 20px;
+        }
+        
+        .gd-product h4{
+            font-size: 1em;
+            font-weight: 600;
+        }
+        .gd-product p{
+            font-size: 1.8em;
+            font-weight: 600;
+        }
+
+        .gd-product .pic{
+            width: 150px;
+            margin:15px 0;
+        }
+        .gd-product .pic img{
+            width: 100%;
+        }
+
+        .gd-think h3{
+            font-size: 1.2em;
             font-weight: 600;
             margin-bottom: 10px;
         }
 
-        .intro p{
-            font-size: 18px;
-            color: #7a7a7a;
-            line-height: 36px;
-            padding: 0 30px 0 0;
+        .gd-think p{
+            font-size: 1em;
+            line-height: 150%;
+            margin-bottom: 20px;
         }
 
+        .gd-think ul li{
+            display: inline-block;
+        }
 
         .item-price{
             width: 260px;
@@ -183,18 +266,20 @@
         }
 
         .price-but{
+            width: 120px;
             background-color: #ab7738;
-            border: #ab7738 1px solid;
+            border: #ab7738 1px solid;  
             padding: 5px;
             margin-top: 10px;
         }
 
         .price-but a{
-            font-size: 20px;
+            font-size: 1.2em;
             color: #fff;
             text-decoration: none;
         }
         .want-but{
+            width: 120px;
             background-color: transparent;
             border: #ab7738 1px solid;
             padding: 5px;
@@ -202,21 +287,16 @@
         }
 
         .want-but a{
-            font-size: 16px;
+            font-size: 1.2em;
             color: #ab7738;
             text-decoration: none;
         }
 
-
-
-
-
-
         .item-filter select {
-            border: 1.5px #ab7738 solid;
-            font-size: 16px;
+            border: 1px #ab7738 solid;
+            font-size: 1em;
             color:#ab7738;
-            margin: 55px 0 0 0;
+            margin-top:15px;
             width: 260px;
             height: 2.25em;
             padding: 5px;
@@ -230,23 +310,34 @@
             background-repeat: no-repeat, repeat;
         }
 
+        /*背景圖*/
+
+        /* .place-wrap{            
+            background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+        } */
+
+
+
+
+        /*商品分類*/
+
+        .all-product{
+            background-image: linear-gradient(225deg, #fdfcfb 0%, #e2d1c3 120%);
+        }
+
 
         .all-prod-wrap{
-            padding: 120px 0;
-        }
-
-        
+            width: 70%;
+            margin: auto;
+            padding: 70px 0 70px 0;
+  
+        }   
     
-   
-    
-     
 
         .all-prd-icon{
-            width: 1200px;
-            margin: auto;
             display: flex;
+            justify-content: center;
         }
-
 
         .icon{
             display: flex;
@@ -254,74 +345,71 @@
             align-items: center;         
         }
 
-
         .icon .pic img{
             width: 100%;
         }
 
         .icon h3{
-            font-size: 30px;
+            font-size: 1.5em;
             color: #575757;
         }
 
         .all-product h2{
             color: #575757;
-            font-size: 36px;
+            font-size: 2em;
             font-weight: 600;
             margin-bottom: 50px;
             text-align: center;
         }
 
-
-
-
+        /*--歐地開發--*/
+        .note{
+            width: 80%;
+            margin: auto;
+        }
 
         .note-row{
             display: flex;
             align-items: center;
         }
 
+        .note-pic{
+            width: 75%;
+        }
+        .note-pic img{
+            width: 100%;
+        }
+
         .note h2{
-            color: #575757;
-            font-size: 36px;
+            font-size: 2em;
             font-weight: 600;
             text-align: center;
             margin: 200px 0 80px 0;
-
-        }
-
-        .nav-area{
-            text-align: center;
-            margin: 0 0 80px 0;
-        }
-
-        .nav-area a{
-            text-decoration: none;
-            font-size: 20px;
-            color: #7a7a7a;
-            font-weight:normal;
-            padding: 0 100px;
         }
 
         .note-container{
-            width: 1200px;
             margin: auto;
         }
 
         .note-txt{
             margin: auto;
-            font-size: 20px;
             font-weight: lighter;
-            color:#9e5f13;
             text-align: center;
-            line-height: 45px;
-
+            line-height: 180%;
         }
 
         .note-txt h3{
-            font-size: 30px;
+            font-size: 1.5em;
             color: #ab7738;
-            font-weight: 400;
+            font-weight: 600;
+            line-height: 180%;
+            margin-bottom: 20px;
+        }
+
+        .note-txt p{
+            font-size: 1.2em;
+            color: #ab7738;
+            line-height: 180%;
             margin-bottom: 20px;
         }
 
@@ -333,27 +421,32 @@
             margin-top: 30px;
         }
 
+
         .note-btu a{
             font-size: 18px;
             color: #ab7738;
             text-decoration: none;
-
         }
 
 
 
+        /*主題開團*/     
+
+
         .trip{
-            width: 1200px;
+            width: 80%;
             margin: auto;
         }
 
         .trip h2{
-            color: #575757;
-            font-size: 36px;
+            font-size: 2em;
             font-weight: 600;
             text-align: center;
-            margin: 250px 0 80px 0;
+            margin: 200px 0 80px 0;
+        }
 
+        .trip-pic img{
+            width: 100%;
         }
 
         .trip-content .title{
@@ -361,18 +454,16 @@
             align-items: center;
         }
 
-       .title h3{
-            color: #575757;
-            font-size: 30px;
-            font-weight: normal;
+        .title h3{
+            font-size: 1.5em;
+            font-weight:600;
             text-align: center;
             padding: 0 15px;
             margin: 10px 0;
         }
 
         .title-more a{
-            font-size: 18px;
-            font-weight: bolder;
+            font-size: 1.2em;
             color: #ab7738;
             text-decoration: none;
         }
@@ -383,9 +474,8 @@
 
         .trip-p{
             width: 80%;
-            font-size: 18px;
-            line-height: 34px;
-            color:#7a7a7a;
+            font-size: 1.2em;
+            line-height: 150%;
             padding: 10px;
         }
 
@@ -394,17 +484,16 @@
         }
 
         .trip-price{
-            font-size: 36px;
+            font-size:2em;
             font-weight: bold;
             color: #ab7738;
             display: flex;
             flex-direction: column;
-            width: 20%;
             align-items: center;            
         }
 
         .trip-price-but{
-            width: 160px;
+            width: 100%;
             background-color: transparent;
             border: #ab7738 1px solid;
             padding: 5px;
@@ -417,26 +506,35 @@
             text-decoration: none;  
         }
 
-        .slog{
-            width: 1200px;
-            margin: auto;
+
+
+        .slog{             
             text-align: center;
-            margin: 300px 0 200px 0;
+            border: 1px #ab7738 solid;
+            padding: 30px;
+            width: 500px;
+            margin:auto;
+            margin-top: 250px;
         }
 
-        .slog span{
-            font-size: 20px;
-            color:#ab7738;           
+        .slog a{
+            text-decoration: none;
+            font-size: 1.2em;
+            color:#ab7738;
         }
 
+
+        /*--#oh,man--*/
+
+        
         .social{
-            width: 1200px;
+            width: 80%;
             margin: auto;
         }
 
         .social h2{
+            font-size: 3em;
             color: #ab7738;
-            font-size: 50px;
             font-weight: 600;
             text-align: center;
             margin: 250px 0 0 0;
@@ -451,14 +549,20 @@
             
         }
 
-        .soc-pic{
+        .soc-content{
             display: flex; 
-            justify-content: center;          
+            justify-content: center;        
         }
+
+        .soc-pic{
+            margin: 0 5px;
+        }
+
+
         
         .soc-pic img{
-            padding: 0 10px;
-
+            width: 100%;
+                            
         }
 
         .soc-but{
@@ -480,10 +584,20 @@
             margin: 50px 0 0 0;
         }
 
+        /*--毆人故事--*/
+
+        .more-story{
+            width: 80%;
+            margin: auto;
+        }
+
+        .story-content{
+            margin: auto;
+        }
 
         .more-story h2{
+            font-size: 2em;
             color: #ab7738;
-            font-size: 36px;
             font-weight: 600;
             text-align: center;
             margin: 250px 0 80px 0;
@@ -491,67 +605,71 @@
         }
 
         .story-pic {
-            width: 1200px;
-            margin: auto;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-bottom: 10px;            
+            margin-bottom: 20px;            
+        }
+
+        .story-pic img{
+            width: 100%;
         }
 
         footer{
             border-top: #ab7738 1.5px solid;
             margin-top: 150px;
+            width:100%;
+            font-family: 'Noto Sans ', '微軟正黑體', sans-serif;
         }
 
 
-
         .footer-content{
-            width: 1000px;
             margin: auto;
             margin-top: 20px;
             margin-bottom: 120px;
-            font-size: 24px;
             color: #ab7738;
-            font-size: 24px;
+            font-size: 1.5em;
             display: flex;
             justify-content: space-between;
         }
 
 
         .footer-row{
+            margin-left: 10%;
             display: flex;            
         }
 
 
         .soc-media{
             display:flex;
+            margin-right: 10%;
         }
 
         .soc-media img{
-            width: 70%;
+            width: 50px;
+            padding-left: 10px;   
         }
 
         .info{
             margin: 0 100px 0 0;
         }
 
-   
- 
+        .info h4{
+            font-size: 1em;
+        }
+
+        .about h4{
+            font-size: 1em;
+        }
+
 
         .info ul{
             list-style: none;
         }
 
         .info a{
-            color: #caae88;
+            color:#caae88;
             font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-            font-size: 16px;
-            text-decoration: none;
-            
+            font-size: .7em;
+            text-decoration: none;  
         }
-
-
         .about ul{
             list-style: none;
         }
@@ -559,333 +677,955 @@
         .about a{
             color: #caae88;
             font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-            font-size: 16px;
+            font-size: .7em;
             text-decoration: none;
         }
+
+        /*-----共用-----*/
+
+		#menu-control{
+			display: none;
+		}
+
+
+        /*--------手機--------*/
+
+        @media screen and (max-width:767px){
+            .main-banner{
+                display: flex;
+                flex-direction: column;
+            }
+
+            .banner-txt h2{
+                font-size:1.5em;
+            }
+
+            .banner-txt p{
+                display: none;
+            }
+
+            .gd-md-intro{
+                display: none;
+            }
+            .author-pic{
+                width: 100%;
+            }
+
+    
+
+            .slog{
+                width: 170px;
+            }
+
+            .slog span{
+                font-size:0.8em
+
+            }
+
+            .price-but{
+                width: 100px;
+            }
+
+            .want-but{
+                width: 90px;
+                padding: 3px;
+            }
+
+            .item-filter select {
+                width: 200px;
+            }
+
+            .item-price{
+                width: 200px;
+            }
+
+
+
+            
+            
+
+       
+        }
+
+
+        /*--------平板、手機--------*/
+		@media screen and (max-width: 1024px){
+			.hb{
+				width: 40px;
+				height: 40px;
+				position: relative;
+			}
+			.hb span{
+				width: 32px;
+				height: 2px;
+				background-color: #ab7738;
+				position: absolute;
+				right: 0;
+				left: 0;
+				margin: auto;
+				transition: top       .5s .2s, 
+							bottom    .5s .2s, 
+							opacity   .5s, 
+							transform .2s;
+			}
+			.hb span:first-child{
+				transform: rotate(0deg);
+				top: 10px;
+			}
+			.hb span:last-child{
+				transform: rotate(0deg);
+				bottom: 10px;
+			}
+			.hb span:nth-child(2){
+				top: 0;
+				bottom: 0;
+			}
+
+			#menu-control:checked ~ .main-header .hb span:first-child{
+				top: 19px;
+				transform: rotate(225deg);
+				transition: top       .5s, 
+							bottom    .5s, 
+							opacity   .5s, 
+							transform .2s .5s;
+			}
+			#menu-control:checked ~ .main-header .hb span:last-child{
+				bottom: 19px;
+				transform: rotate(-225deg);
+				transition: top       .5s, 
+							bottom    .5s, 
+							opacity   .5s, 
+							transform .2s .5s;
+			}
+
+			.hb span:nth-child(2){
+				opacity: 1;
+			}
+			#menu-control:checked ~ .main-header .hb span:nth-child(2){
+				opacity: 0;
+			}
+
+			.main-nav{
+				position: absolute;
+                z-index: 1;
+				background-color:rgba(224, 205, 176, 0.95);
+				top: 100%;
+				left: -80%;
+				width: 80%;
+				height: calc(100vh - 50px);
+				transition: left 1s;
+			}
+
+            .nav-wrap{
+                margin-left: 60%;
+                margin-top: 10%;
+            }
+
+			.nav-wrap a{
+				display: block;
+                font-size: 1.5em;
+                padding-bottom: 40px;  
+			}
+
+            .mem{
+                margin-left: 60%;
+                display: flex;     
+            }
+
+            .mem img{
+                width: 45px;
+            }
+
+            
+			#menu-control:checked ~ .main-header .main-nav{
+				left: 0;
+			}
+    
+            .main-header{
+                padding-bottom: 5px;
+                box-shadow: 0 0.5px 5px rgba(156, 85, 19, 0.2);    
+            }
+
+            
+            .footer-content{
+                display: flex;
+                flex-direction: column;
+            }
+
+            .soc-media{
+                margin-top: 8%;
+                margin-left: -12px;
+                padding-left: 10%;
+            }
+
+            .soc-media img{
+                width: 40px;
+                padding-left: 10px;
+            }
+
+            /*內容*/
+
+    
+            
+
+            /*特選歐物--md*/
+            .gd-intro{
+                display: none;
+            }
+
+            .gd-content{
+                display: none;
+            }
+            .name{
+                display: none;
+            }
+            .intro-pic img{
+                display: none;
+            }
+            .author-pic img{
+                width: 100%;
+                position: relative;
+            }/*取消黏貼*/
+
+
+            .txt{
+                width: 100%;
+            }         
+            .txt p{
+                font-size:0.8em;
+                line-height:150%; 
+                margin-bottom: 20px;          
+            }
+            .item h4{
+                font-size:1em;
+            }
+
+            .item-point h4{
+                font-size:1em;
+                margin-bottom: 5px;
+            }
+            
+
+            .gd-md-intro{
+                width: 50%;
+                margin-top: 0;
+            }
+
+            .gd-intro-row{
+                width: 100%;
+                margin-top:0;
+                padding: 20px;
+            }
+            
+            .product-md-wrap{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                width: 100%;
+                margin: auto;
+            }
+    
+
+          
+            .gd-product .pic{
+                width: 150px;
+            }
+            .gd-product h4{
+                font-size:1em
+  
+            }
+            .gd-product p{
+                font-size:1.5em;
+            }
+
+            .product-md-container h2{
+                font-size: 1.5em;
+                color: #ab7738;
+                font-weight:600;
+                text-align:center;
+                margin-top: 50px;
+                margin-bottom:-50px;
+            }
+            .gd-product{
+                margin-left: 30px;
+            }
+
+            .gd-think p{
+                font-size: 1em;
+                line-height: 150%;
+                margin-bottom: 20px;
+                width: 100%;                
+            }
+            
+            .price-but{
+                width: 45%;
+                /* margin-left:-15px; */
+            }
+            .price-but a{
+                font-size:0.8em;
+            }
+
+
+            .want-but{
+                width: 40%;
+                padding: 3px;
+
+            }
+            .want-but a{
+                font-size:0.8em;
+            }
+
+            .item-filter select {
+                width: 160px;
+                font-size: 0.8em;
+            }
+
+            .item-price{
+                width: 160px;
+
+                
+            }     
+
+            .gd-row{
+                width: 90%;          
+                margin: 70px 0;
+            }
+            .good-product{
+                background-repeat: repeat;
+            }
+
+            /*商品分類*/
+
+            .all-product h2{
+                font-size: 1.2em;
+                margin-bottom: 15px;
+            }
+
+            .icon h3{
+                font-size:1em;
+            }
+
+            /*歐地開發*/
+
+            .note{
+                margin-top: -150px;
+            }
+            .note-row{
+                flex-wrap: wrap;
+            }
+
+            .note-pic{
+                width: 100%;
+            }
+
+            .note h2{
+                font-size: 1.2em;
+                margin-bottom: 30px;
+            }
+
+            .note-txt h3{
+                font-size: 1em;
+            }
+
+            .note-txt p{
+                font-size: 0.8em;
+                margin-bottom:0;
+            }
+
+            /*主題開團*/  
+            .trip h2{
+                font-size: 1.2em;
+                margin-bottom: 30px;
+                margin-top: 50px;
+            }
+            
+            .trip-txt{
+                flex-wrap: wrap;
+            }
+
+            .trip-p{
+                font-size: 1em;
+            }
+
+            .title h3{
+                font-size:1.2em;
+            }
+
+            .slog{
+                margin-top:80px;
+            }
+
+            /*oh,man*/
+
+            .social h2{
+                margin-top: 80px;
+                font-size: 2em;
+            }
+
+            .social p{
+                font-size:1em;
+                margin-bottom: 40px;
+            }
+
+            .more-story h2{
+                margin-top: 80px;
+            }
+
+            .social button{
+            font-size: 1.2em;
+            }
+
+            .more-story h2{
+                font-size: 1.2em;
+                margin-bottom: 30px;
+                margin-top: 50px;
+            }
+
+
+
+
+
+                      
+
+        
+
+    
+        }
+
+		
+	/*-------------電腦-------------*/
+
+		@media screen and (min-width: 1025px){
+			.hb{
+				display: none;
+			}
+            .main-nav{
+                display: flex;
+                align-items: center;
+            }
+            .gd-md-intro{
+                display: none;
+            }
+            .product-md-wrap{
+                display: none;
+            }
+            .product-md-container h2{
+                display: none;
+            }
+		}
 
     </style>
 </head>
 <body>
     
-    <section class="banner">   
-        <div class="header">
-            <div class="logo">
-                <a href="https://tpjpvup.github.io/oh-man/"><img src="image/logo.png" alt="oh-man"></a>
-                </div>
-            <nav class="header-nav">
+    <input type="checkbox" name="" id="menu-control">
+    
+	<header class="main-header">
+		<!-- logo -->
+		<div class="logo">
+            <a href="https://tpjpvup.github.io/oh-man/"><img src="image/logo.png" alt="oh-man"></a>
+        </div>
+		<!-- 漢堡 -->
+		<label for="menu-control" class="hb">
+			<span></span>
+			<span></span>
+			<span></span>
+		</label>
+		<!-- 選單 -->
+
+        <nav class="main-nav">
+            <div class="nav-wrap">
                 <a href="https://tpjpvup.github.io/oh-man/oh,man-01.html">特選歐物</a>
                 <a href="https://tpjpvup.github.io/oh-man/oh,man-01.html">商品分類</a>
-                <a href="https://tpjpvup.github.io/oh-man/oh,man-03.html">戶外筆記</a>
-                <a href="https://tpjpvup.github.io/oh-man/oh,man-04.html">歐人故事</a>
-                <a href="https://tpjpvup.github.io/oh-man/oh,man-05.html">主題開團</a>
+                <a href="https://tpjpvup.github.io/oh-man/oh,man-03.html">毆人故事</a>
+                <a href="https://tpjpvup.github.io/oh-man/oh,man-04.html">主題開團</a>
+                <a href="https://tpjpvup.github.io/oh-man/oh,man-05.html">歐地開發</a>
                 <a href="https://tpjpvup.github.io/oh-man/oh,man-06.html">#oh,man.</a>
-            </nav>
-            <div class="member">
-                <a href="#"><img src="image/sign2.png" alt="singn"></a>
+            </div>
+            <div class="mem">
+                <a href="#"><img src="image/sign2.png" alt="sign"></a>
                 <a href="#"><img src="image/shopping.png" alt="shopping"></a>
             </div>
-        </div>
-        <div class="banner-bg">
-            <img src="image/index-banner.png" alt="oh-man">
-            <div class="banner-slog">
-                <p>To get more lucky<br>
-                    and more impressed</p>
-                <!-- <button class="banner-button"><a href="https://tpjpvup.github.io/oh-man/oh,man-02.html">shop</a></button> -->
-            </div>          
+        </nav>
+	</header>
+    <section>
+        <div class="banner-wrap">
+            <div class="banner-bg">
+                <img src="image/Frame 46.jpg" alt="oh-man">
+            </div>
+            <div class="banner-txt">
+                <h2 class="m13">oh,man.</h2>
+                <p class="m13">Choose anyone you want and like.</p>
+            </div>                      
         </div>                
     </section>
 
-
-
     <section class="good-product">
         <div class="gd-wrap">
-            <div class="auther-pic">
-                <img src="image/005.jpg" alt="good-product">
+            <div class="author-pic">
+                <img src="image/Frame 47.jpg" alt="good-product">
+            </div>
+            <div class="gd-md-intro">
+                <div class="gd-intro-row">
+                    <div class="name">
+                        <h3>I'm Sue.</h3>
+                    </div>
+                    <div class="item">
+                        <h4>厲害的裝備是什麼?重要的是合適自己。</h4>
+                        <div class="txt">
+                            <p>
+                                登山資歷算淺，可被台灣美景感動的心不亞於他人，曾運氣爆棚的抽中山屋，登上奇萊南華感受難以忘懷的黃金大草原美景。憶起自己在爬了半年的中級山後，才下定決心投資專業登山包。喜愛和山友們收集登山好物的資訊，憑著精打細算小資女的心態慢慢的建構屬於自己的登山裝備。
+
+                            </p>
+                    </div>
+                    </div>
+                    <div class="item">
+                        <h4>買裝備量力而為不一定樣樣都需買頂規品項!</h4>
+                        <div class="txt">
+                            <p>
+                                很多登山新手們有時會因裝備高價而不敢下手，其實裝備可隨著經驗能力逐步更新，例如:機車兩節式雨衣在新手防雨裝就很好用；反之有些裝備卻可好好投資，如:適合自己的登山包，不僅好看，更是讓自己能有一場舒適的登山體驗，不會想半路丟包。
+
+                            </p>
+                        </div>
+                    </div>
+                    <div class="item-point">
+                        <h4>選物要點</h4>
+                        <div class="txt">
+                            <ul>
+                                <li>#高CP值 / </li>
+                                <li>#便利性 / </li>
+                                <li>#潮流感</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="gd-content">
-                <div class="gd-row">
-                    <div class="col-pic">
-                        <div class="gd-pic">
-                            <img src="image/bag-1.jpg" alt="登山包">
+                <div class="gd-intro">
+                    <div class="gd-intro-row">
+                        <div class="name">
+                            <h3>I'm Sue.</h3>
                         </div>
-                        <div class="gd-title">
-                            <h3>Mystery Ranch</h3>
-                            <h4>Coulee 25 登山背包 </h4>
+                        <div class="item">
+                            <h4>厲害的裝備是什麼?重要的是合適自己。</h4>
+                            <div class="txt">
+                                <p>
+                                    登山資歷算淺，可被台灣美景感動的心不亞於他人，曾運氣爆棚的抽中山屋，登上奇萊南華感受難以忘懷的黃金大草原美景。憶起自己在爬了半年的中級山後，才下定決心投資專業登山包。喜愛和山友們收集登山好物的資訊，憑著精打細算小資女的心態慢慢的建構屬於自己的登山裝備。
+    
+                                </p>
+                            </div>
                         </div>
-                        <div class="gd-price">
-                            <h4>NT$5860</h4>
-                            <p>推薦指數 ● ● ● ● ◐</p>                            
-                         </div>
+                        <div class="item">
+                            <h4>買裝備量力而為不一定樣樣都需買頂規品項!</h4>
+                            <div class="txt">
+                                <p>
+                                    很多登山新手們有時會因裝備高價而不敢下手，其實裝備可隨著經驗能力逐步更新，例如:機車兩節式雨衣在新手防雨裝就很好用；反之有些裝備卻可好好投資，如:適合自己的登山包，不僅好看，更是讓自己能有一場舒適的登山體驗，不會想半路丟包。
+    
+                                </p>
+                            </div>
+                        </div>
+                        <div class="item-point">
+                            <h4>選物要點</h4>
+                            <div class="txt">
+                                <ul>
+                                    <li>#高CP值 / </li>
+                                    <li>#便利性 / </li>
+                                    <li>#潮流感</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="intro-pic">
+                            <img src="/image/IMG_0083 1.jpg" alt="">
+                        </div> 
                     </div>
-                    <div class="col-intro">
-                        <div class="intro">
-                            <h3>毆人真心說</h3>
-                            <p>我踏入登山圈第一個剁手商品，買到現在不後悔!<br>
-                                最講究耐用、實用和美觀，超好用的Y字拉鏈，就算把筷子放在包底，也不用翻出所有家當，全場第一個安心吃泡麵。<br>
-                            包型日常戶外雙情境都可使用，肩膀省力又時尚，
-                            一個好包包，舒服又能賺到他人稱讚，何樂不為?<br>
-                            </p>
+                </div>
+                <h2>特選歐物</h2>
+                <div class="product-wrap">
+                    <div class="gd-row">
+                        <div class="gd-product">
+                            <h4>Mystery Ranch<br>Coulee 25 登山背包</h4>
+                            <div class="pic">
+                                <img src="image/Rectangle 13.png" alt="登山包">
+                            </div>
+                            <p>NT$5860</p>
                         </div>
-                        <div class="shopping">
-                            <div class="item-filter">
-                                <select name="item" id="">
-                                <option value="數量 value">數量</option>
-                                <option value="1 value">1</option>
-                                <option value="2 value">2</option>
-                                <option value="3 value">3</option>
-                                <option value="4 value">4</option>
-                                <option value="5 value">5</option>
-                                <option value="6 value">6</option>
-                                <option value="7 value">7</option>
-                                <option value="8 value">8</option>
-                                <option value="9 value">9</option>
-                                <option value="10件以上，揪團價 value">10件以上，揪團價<option>
-                                </select>                            
+                        <div class="gd-txt">
+                            <div class="gd-think">
+                                <h3>毆人真心說</h3>
+                                <p>踏入登山圈第一個高價商品，買到現在不後悔!
+                                    講究耐用、實用和美觀，超好用的Y字拉鏈，就算把筷子放在包底，也不用翻出所有家當，全場第一個安心吃泡麵，，外觀不會太機能感，日常也可用。</p>
+                                <h3>推薦關鍵字</h3>
+                                <ul>
+                                    <li>#CP值高</li>
+                                    <li>#多用途</li>
+                                    <li>#外型美</li>
+                                </ul>
+    
+                            </div>
+                            <div class="shopping">
+                                <div class="item-filter">
+                                    <select name="item" id="">
+                                    <option value="數量 value">數量</option>
+                                    <option value="1 value">1</option>
+                                    <option value="2 value">2</option>
+                                    <option value="3 value">3</option>
+                                    <option value="4 value">4</option>
+                                    <option value="5 value">5</option>
+                                    <option value="6 value">6</option>
+                                    <option value="7 value">7</option>
+                                    <option value="8 value">8</option>
+                                    <option value="9 value">9</option>
+                                    <option value="10件以上，揪團價 value">10件以上，揪團價<option>
+                                    </select>                            
+                                    </div>
+                                <div class="item-price">
+                                    <button class="want-but"><a href="#">放入清單</a></button>
+                                    <button class="price-but"><a href="#">放入購物車</a></button>
                                 </div>
-                            <div class="item-price">
-                                <button class="want-but"><a href="#">放入慾望清單</a></button>
-                                <button class="price-but"><a href="#">放入購物車</a></button>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="gd-row">
-                    <div class="col-pic">
-                        <div class="gd-pic">
-                            <img src="image/bag-1.jpg" alt="登山包">
+    
+                    <div class="gd-row">
+                        <div class="gd-product">
+                        <h4>Fjällräven<br>High Coast Hydratic Jacket 防水外套 女</h4>
+                        <div class="pic">
+                            <img src="image/Frame-50.jpg" alt="登山包">
                         </div>
-                        <div class="gd-title">
-                            <h3>Mystery Ranch</h3>
-                            <h4>Coulee 25 登山背包 </h4>
+                        <p>NT$4800</p>
                         </div>
-                        <div class="gd-price">
-                            <h4>NT$5860</h4>
-                            <p>推薦指數 ● ● ● ● ◐</p>                            
-                         </div>
-                    </div>
-                    <div class="col-intro">
-                        <div class="intro">
+                        <div class="gd-txt">
+                        <div class="gd-think">
                             <h3>毆人真心說</h3>
-                            <p>我踏入登山圈第一個剁手商品，買到現在不後悔!<br>
-                                最講究耐用、實用和美觀，超好用的Y字拉鏈，就算把筷子放在包底，也不用翻出所有家當，全場第一個安心吃泡麵。<br>
-                            包型日常戶外雙情境都可使用，肩膀省力又時尚，
-                            一個好包包，舒服又能賺到他人稱讚，何樂不為?<br>
-                            </p>
-                        </div>
-                        <div class="shopping">
-                            <div class="item-filter">
-                                <select name="item" id="">
-                                <option value="數量 value">數量</option>
-                                <option value="1 value">1</option>
-                                <option value="2 value">2</option>
-                                <option value="3 value">3</option>
-                                <option value="4 value">4</option>
-                                <option value="5 value">5</option>
-                                <option value="6 value">6</option>
-                                <option value="7 value">7</option>
-                                <option value="8 value">8</option>
-                                <option value="9 value">9</option>
-                                <option value="10件以上，揪團價 value">10件以上，揪團價<option>
-                                </select>                            
-                                </div>
-                            <div class="item-price">
-                                <button class="want-but"><a href="#">放入慾望清單</a></button>
-                                <button class="price-but"><a href="#">放入購物車</a></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="gd-row">
-                    <div class="col-pic">
-                        <div class="gd-pic">
-                            <img src="image/bag-1.jpg" alt="登山包">
-                        </div>
-                        <div class="gd-title">
-                            <h3>Mystery Ranch</h3>
-                            <h4>Coulee 25 登山背包 </h4>
-                        </div>
-                        <div class="gd-price">
-                            <h4>NT$5860</h4>
-                            <p>推薦指數 ● ● ● ● ◐</p>                            
-                         </div>
-                    </div>
-                    <div class="col-intro">
-                        <div class="intro">
-                            <h3>毆人真心說</h3>
-                            <p>我踏入登山圈第一個剁手商品，買到現在不後悔!<br>
-                                最講究耐用、實用和美觀，超好用的Y字拉鏈，就算把筷子放在包底，也不用翻出所有家當，全場第一個安心吃泡麵。<br>
-                            包型日常戶外雙情境都可使用，肩膀省力又時尚，
-                            一個好包包，舒服又能賺到他人稱讚，何樂不為?<br>
-                            </p>
-                        </div>
-                        <div class="shopping">
-                            <div class="item-filter">
-                                <select name="item" id="">
-                                <option value="數量 value">數量</option>
-                                <option value="1 value">1</option>
-                                <option value="2 value">2</option>
-                                <option value="3 value">3</option>
-                                <option value="4 value">4</option>
-                                <option value="5 value">5</option>
-                                <option value="6 value">6</option>
-                                <option value="7 value">7</option>
-                                <option value="8 value">8</option>
-                                <option value="9 value">9</option>
-                                <option value="10件以上，揪團價 value">10件以上，揪團價<option>
-                                </select>                            
-                                </div>
-                            <div class="item-price">
-                                <button class="want-but"><a href="#">放入慾望清單</a></button>
-                                <button class="price-but"><a href="#">放入購物車</a></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="gd-row">
-                    <div class="col-pic">
-                        <div class="gd-pic">
-                            <img src="image/bag-1.jpg" alt="登山包">
-                        </div>
-                        <div class="gd-title">
-                            <h3>Mystery Ranch</h3>
-                            <h4>Coulee 25 登山背包 </h4>
-                        </div>
-                        <div class="gd-price">
-                            <h4>NT$5860</h4>
-                            <p>推薦指數 ● ● ● ● ◐</p>                            
-                         </div>
-                    </div>
-                    <div class="col-intro">
-                        <div class="intro">
-                            <h3>毆人真心說</h3>
-                            <p>我踏入登山圈第一個剁手商品，買到現在不後悔!<br>
-                                最講究耐用、實用和美觀，超好用的Y字拉鏈，就算把筷子放在包底，也不用翻出所有家當，全場第一個安心吃泡麵。<br>
-                            包型日常戶外雙情境都可使用，肩膀省力又時尚，
-                            一個好包包，舒服又能賺到他人稱讚，何樂不為?<br>
-                            </p>
-                        </div>
-                        <div class="shopping">
-                            <div class="item-filter">
-                                <select name="item" id="">
-                                <option value="數量 value">數量</option>
-                                <option value="1 value">1</option>
-                                <option value="2 value">2</option>
-                                <option value="3 value">3</option>
-                                <option value="4 value">4</option>
-                                <option value="5 value">5</option>
-                                <option value="6 value">6</option>
-                                <option value="7 value">7</option>
-                                <option value="8 value">8</option>
-                                <option value="9 value">9</option>
-                                <option value="10件以上，揪團價 value">10件以上，揪團價<option>
-                                </select>                            
-                                </div>
-                            <div class="item-price">
-                                <button class="want-but"><a href="#">放入慾望清單</a></button>
-                                <button class="price-but"><a href="#">放入購物車</a></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="gd-row">
-                    <div class="col-pic">
-                        <div class="gd-pic">
-                            <img src="image/bag-1.jpg" alt="登山包">
-                        </div>
-                        <div class="gd-title">
-                            <h3>Mystery Ranch</h3>
-                            <h4>Coulee 25 登山背包 </h4>
-                        </div>
-                        <div class="gd-price">
-                            <h4>NT$5860</h4>
-                            <p>推薦指數 ● ● ● ● ◐</p>                            
-                         </div>
-                    </div>
-                    <div class="col-intro">
-                        <div class="intro">
-                            <h3>毆人真心說</h3>
-                            <p>我踏入登山圈第一個剁手商品，買到現在不後悔!<br>
-                                最講究耐用、實用和美觀，超好用的Y字拉鏈，就算把筷子放在包底，也不用翻出所有家當，全場第一個安心吃泡麵。<br>
-                            包型日常戶外雙情境都可使用，肩膀省力又時尚，
-                            一個好包包，舒服又能賺到他人稱讚，何樂不為?<br>
-                            </p>
-                        </div>
-                        <div class="shopping">
-                            <div class="item-filter">
-                                <select name="item" id="">
-                                <option value="數量 value">數量</option>
-                                <option value="1 value">1</option>
-                                <option value="2 value">2</option>
-                                <option value="3 value">3</option>
-                                <option value="4 value">4</option>
-                                <option value="5 value">5</option>
-                                <option value="6 value">6</option>
-                                <option value="7 value">7</option>
-                                <option value="8 value">8</option>
-                                <option value="9 value">9</option>
-                                <option value="10件以上，揪團價 value">10件以上，揪團價<option>
-                                </select>                            
-                                </div>
-                            <div class="item-price">
-                                <button class="want-but"><a href="#">放入慾望清單</a></button>
-                                <button class="price-but"><a href="#">放入購物車</a></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="gd-row">
-                    <div class="col-pic">
-                        <div class="gd-pic">
-                            <img src="image/bag-1.jpg" alt="登山包">
-                        </div>
-                        <div class="gd-title">
-                            <h3>Mystery Ranch</h3>
-                            <h4>Coulee 25 登山背包 </h4>
-                        </div>
-                        <div class="gd-price">
-                            <h4>NT$5860</h4>
-                            <p>推薦指數 ● ● ● ● ◐</p>                            
-                         </div>
-                    </div>
-                    <div class="col-intro">
-                        <div class="intro">
-                            <h3>毆人真心說</h3>
-                            <p>我踏入登山圈第一個剁手商品，買到現在不後悔!<br>
-                                最講究耐用、實用和美觀，超好用的Y字拉鏈，就算把筷子放在包底，也不用翻出所有家當，全場第一個安心吃泡麵。<br>
-                            包型日常戶外雙情境都可使用，肩膀省力又時尚，
-                            一個好包包，舒服又能賺到他人稱讚，何樂不為?<br>
-                            </p>
-                        </div>
-                        <div class="shopping">
-                            <div class="item-filter">
-                                <select name="item" id="">
-                                <option value="數量 value">數量</option>
-                                <option value="1 value">1</option>
-                                <option value="2 value">2</option>
-                                <option value="3 value">3</option>
-                                <option value="4 value">4</option>
-                                <option value="5 value">5</option>
-                                <option value="6 value">6</option>
-                                <option value="7 value">7</option>
-                                <option value="8 value">8</option>
-                                <option value="9 value">9</option>
-                                <option value="10件以上，揪團價 value">10件以上，揪團價<option>
-                                </select>                            
-                                </div>
-                            <div class="item-price">
-                                <button class="want-but"><a href="#">放入慾望清單</a></button>
-                                <button class="price-but"><a href="#">放入購物車</a></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                            <p>顏色好看，剪裁線條不會太過於刻劃腰線，但卻把身體修飾得很好，高透氣材質，雖是防水外套日間行動防風，不限制在山中雨天才能穿。除大雨之際，可使用場景多。</p>
+                            <h3>推薦關鍵字</h3>
+                            <ul>
+                                <li>#CP值高</li>
+                                <li>#多用途</li>
+                                <li>#外型美</li>
+                            </ul>
 
+                        </div>
+                        <div class="shopping">
+                            <div class="item-filter">
+                                <select name="item" id="">
+                                <option value="數量 value">數量</option>
+                                <option value="1 value">1</option>
+                                <option value="2 value">2</option>
+                                <option value="3 value">3</option>
+                                <option value="4 value">4</option>
+                                <option value="5 value">5</option>
+                                <option value="6 value">6</option>
+                                <option value="7 value">7</option>
+                                <option value="8 value">8</option>
+                                <option value="9 value">9</option>
+                                <option value="10件以上，揪團價 value">10件以上，揪團價<option>
+                                </select>                            
+                                </div>
+                            <div class="item-price">
+                                <button class="want-but"><a href="#">放入清單</a></button>
+                                <button class="price-but"><a href="#">放入購物車</a></button>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+
+                    <div class="gd-row">
+                        <div class="gd-product">
+                        <h4>Decathlon<br>防水防滑中筒登山鞋 女</h4>
+                        <div class="pic">
+                            <img src="image/Frame -51.jpg" alt="登山包">
+                        </div>
+                        <p>NT$1800</p>
+                        </div>
+                        <div class="gd-txt">
+                        <div class="gd-think">
+                            <h3>毆人真心說</h3>
+                            <p>進入專業登山鞋前的新手鞋，雖鞋型、外觀機能...等，無法跟大牌相比，可穿在腳上搭配羊毛襪差異不大，對於我來說；走上奇萊南華、征戰各個百岳，注意鞋子需大半號以上，以避免黑腳趾。</p>
+                            <h3>推薦關鍵字</h3>
+                            <ul>
+                                <li>#新手裝</li>
+                                <li>#多用途</li>
+                                <li>#耐用</li>
+                            </ul>
+
+                        </div>
+                        <div class="shopping">
+                            <div class="item-filter">
+                                <select name="item" id="">
+                                <option value="數量 value">數量</option>
+                                <option value="1 value">1</option>
+                                <option value="2 value">2</option>
+                                <option value="3 value">3</option>
+                                <option value="4 value">4</option>
+                                <option value="5 value">5</option>
+                                <option value="6 value">6</option>
+                                <option value="7 value">7</option>
+                                <option value="8 value">8</option>
+                                <option value="9 value">9</option>
+                                <option value="10件以上，揪團價 value">10件以上，揪團價<option>
+                                </select>                            
+                                </div>
+                            <div class="item-price">
+                                <button class="want-but"><a href="#">放入清單</a></button>
+                                <button class="price-but"><a href="#">放入購物車</a></button>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+
+                    <div class="gd-row">
+                        <div class="gd-product">
+                        <h4>Fjällräven<br>Hatfield G1000 遮陽帽</h4>
+                        <div class="pic">
+                            <img src="image/Rectangle-14.jpg" alt="登山包">
+                        </div>
+                        <p>NT$1500</p>
+                        </div>
+                        <div class="gd-txt">
+                        <div class="gd-think">
+                            <h3>毆人真心說</h3>
+                            <p>小狐狸，戶外圈界小有名氣，如果覺得衣服、包包門檻較高，但又想把品牌穿上身，推薦考慮帽子
+                                帽型好看硬挺不易變形，戴起來十分好看；日常、登山皆可使用。
+                            </p>
+                            <h3>推薦關鍵字</h3>
+                            <ul>
+                                <li>#外型美</li>
+                                <li>#多用途</li>
+                                <li>#潮流感</li>
+                            </ul>
+
+                        </div>
+                        <div class="shopping">
+                            <div class="item-filter">
+                                <select name="item" id="">
+                                <option value="數量 value">數量</option>
+                                <option value="1 value">1</option>
+                                <option value="2 value">2</option>
+                                <option value="3 value">3</option>
+                                <option value="4 value">4</option>
+                                <option value="5 value">5</option>
+                                <option value="6 value">6</option>
+                                <option value="7 value">7</option>
+                                <option value="8 value">8</option>
+                                <option value="9 value">9</option>
+                                <option value="10件以上，揪團價 value">10件以上，揪團價<option>
+                                </select>                            
+                                </div>
+                            <div class="item-price">
+                                <button class="want-but"><a href="#">放入清單</a></button>
+                                <button class="price-but"><a href="#">放入購物車</a></button>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+
+                </div>
             </div>
             
         </div>
+
+        <div class="product-md-container">
+            <h2>特選歐物</h2>
+            <div class="product-md-wrap">
+                
+                <div class="gd-row">
+                    <div class="gd-product">
+                        <h4>Mystery Ranch<br>Coulee 25 登山背包</h4>
+                        <div class="pic">
+                            <img src="image/Rectangle 13.png" alt="登山包">
+                        </div>
+                        <p>NT$5860</p>
+                    </div>
+                    <div class="gd-txt">
+                        <div class="gd-think">
+                            <h3>毆人真心說</h3>
+                            <p>踏入登山圈第一個高價商品，買到現在不後悔!
+                                講究耐用、實用和美觀，超好用的Y字拉鏈，就算把筷子放在包底，也不用翻出所有家當，全場第一個安心吃泡麵，，外觀不會太機能感，日常也可用。</p>
+                            <h3>推薦關鍵字</h3>
+                            <ul>
+                                <li>#CP值高</li>
+                                <li>#多用途</li>
+                                <li>#外型美</li>
+                            </ul>
+
+                        </div>
+                        <div class="shopping">
+                            <div class="item-filter">
+                                <select name="item" id="">
+                                <option value="數量 value">數量</option>
+                                <option value="1 value">1</option>
+                                <option value="2 value">2</option>
+                                <option value="3 value">3</option>
+                                <option value="4 value">4</option>
+                                <option value="5 value">5</option>
+                                <option value="6 value">6</option>
+                                <option value="7 value">7</option>
+                                <option value="8 value">8</option>
+                                <option value="9 value">9</option>
+                                <option value="10件以上，揪團價 value">10件以上，揪團價<option>
+                                </select>                            
+                                </div>
+                            <div class="item-price">
+                                <button class="want-but"><a href="#">放入清單</a></button>
+                                <button class="price-but"><a href="#">放入購物車</a></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gd-row">
+                    <div class="gd-product">
+                    <h4>Fjällräven<br>High Coast Hydratic Jacket 防水外套 女</h4>
+                    <div class="pic">
+                        <img src="image/Frame-50.jpg" alt="登山包">
+                    </div>
+                    <p>NT$4800</p>
+                    </div>
+                    <div class="gd-txt">
+                    <div class="gd-think">
+                        <h3>毆人真心說</h3>
+                        <p>顏色好看，剪裁線條不會太過於刻劃腰線，但卻把身體修飾得很好，高透氣材質，雖是防水外套日間行動防風，不限制在山中雨天才能穿。除大雨之際，可使用場景多。</p>
+                        <h3>推薦關鍵字</h3>
+                        <ul>
+                            <li>#CP值高</li>
+                            <li>#多用途</li>
+                            <li>#外型美</li>
+                        </ul>
+
+                    </div>
+                    <div class="shopping">
+                        <div class="item-filter">
+                            <select name="item" id="">
+                            <option value="數量 value">數量</option>
+                            <option value="1 value">1</option>
+                            <option value="2 value">2</option>
+                            <option value="3 value">3</option>
+                            <option value="4 value">4</option>
+                            <option value="5 value">5</option>
+                            <option value="6 value">6</option>
+                            <option value="7 value">7</option>
+                            <option value="8 value">8</option>
+                            <option value="9 value">9</option>
+                            <option value="10件以上，揪團價 value">10件以上，揪團價<option>
+                            </select>                            
+                            </div>
+                        <div class="item-price">
+                            <button class="want-but"><a href="#">放入清單</a></button>
+                            <button class="price-but"><a href="#">放入購物車</a></button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="gd-row">
+                    <div class="gd-product">
+                    <h4>Decathlon<br>防水防滑中筒登山鞋 女</h4>
+                    <div class="pic">
+                        <img src="image/Frame -51.jpg" alt="登山包">
+                    </div>
+                    <p>NT$1800</p>
+                    </div>
+                    <div class="gd-txt">
+                    <div class="gd-think">
+                        <h3>毆人真心說</h3>
+                        <p>進入專業登山鞋前的新手鞋，雖鞋型、外觀機能...等，無法跟大牌相比，可穿在腳上搭配羊毛襪差異不大，對於我來說；走上奇萊南華、征戰各個百岳，注意鞋子需大半號以上，以避免黑腳趾。</p>
+                        <h3>推薦關鍵字</h3>
+                        <ul>
+                            <li>#新手裝</li>
+                            <li>#多用途</li>
+                            <li>#耐用</li>
+                        </ul>
+
+                    </div>
+                    <div class="shopping">
+                        <div class="item-filter">
+                            <select name="item" id="">
+                            <option value="數量 value">數量</option>
+                            <option value="1 value">1</option>
+                            <option value="2 value">2</option>
+                            <option value="3 value">3</option>
+                            <option value="4 value">4</option>
+                            <option value="5 value">5</option>
+                            <option value="6 value">6</option>
+                            <option value="7 value">7</option>
+                            <option value="8 value">8</option>
+                            <option value="9 value">9</option>
+                            <option value="10件以上，揪團價 value">10件以上，揪團價<option>
+                            </select>                            
+                            </div>
+                        <div class="item-price">
+                            <button class="want-but"><a href="#">放入清單</a></button>
+                            <button class="price-but"><a href="#">放入購物車</a></button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="gd-row">
+                    <div class="gd-product">
+                    <h4>Fjällräven<br>Hatfield G1000 遮陽帽</h4>
+                    <div class="pic">
+                        <img src="image/Rectangle-14.jpg" alt="登山包">
+                    </div>
+                    <p>NT$1500</p>
+                    </div>
+                    <div class="gd-txt">
+                    <div class="gd-think">
+                        <h3>毆人真心說</h3>
+                        <p>小狐狸，戶外圈界小有名氣，如果覺得衣服、包包門檻較高，但又想把品牌穿上身，推薦考慮帽子
+                            帽型好看硬挺不易變形，戴起來十分好看；日常、登山皆可使用。
+                        </p>
+                        <h3>推薦關鍵字</h3>
+                        <ul>
+                            <li>#外型美</li>
+                            <li>#多用途</li>
+                            <li>#潮流感</li>
+                        </ul>
+
+                    </div>
+                    <div class="shopping">
+                        <div class="item-filter">
+                            <select name="item" id="">
+                            <option value="數量 value">數量</option>
+                            <option value="1 value">1</option>
+                            <option value="2 value">2</option>
+                            <option value="3 value">3</option>
+                            <option value="4 value">4</option>
+                            <option value="5 value">5</option>
+                            <option value="6 value">6</option>
+                            <option value="7 value">7</option>
+                            <option value="8 value">8</option>
+                            <option value="9 value">9</option>
+                            <option value="10件以上，揪團價 value">10件以上，揪團價<option>
+                            </select>                            
+                            </div>
+                        <div class="item-price">
+                            <button class="want-but"><a href="#">放入清單</a></button>
+                            <button class="price-but"><a href="#">放入購物車</a></button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                    
+            </div>
+        
+             </div>
+
+        </div>
+       
+
+
+            
+            
+            
+                    
+               
+                
+                
            
     </section>
-    <section class="all-product" style="background-color: #f5eadd;">
+    <section class="all-product">
         <div class="all-prod-wrap">
             <h2>商品分類</h2>
             <div class="all-prd-icon">
@@ -920,48 +1660,48 @@
             </div>
         </div>
     </section>
-    <section class="note">
-        <h2>戶外筆記</h2>
-        <nav class="nav-area">
-            <a href="#">北區</a>
-            <a href="#">中區</a>
-            <a href="#">南區</a>
-        </nav>
-        <div class="note-container">
-            <div class="note-row">
-                <div class="note-pic"><img src="image/fontpage-1007-切_29.jpg" alt="水社大山"></div>
-                <div class="note-txt">
-                    <h3>日月潭最高峰<br>
-                        水社大山</h3>
-                    <p>路線近況:優 <br>
-                        等級:中級山</p>
-                    <button class="note-btu"><a href="https://tpjpvup.github.io/oh-man/oh,man-03.html">more</a></button>
+    <div class="place-wrap">
+        <section class="note">
+            <h2>歐地開發</h2>
+            <div class="note-container">
+                <div class="note-row">
+                    <div class="note-pic"><img src="image/p03-1.jpg" alt="水社大山"></div>
+                    <div class="note-txt">
+                        <h3>日月潭最高峰<br>
+                            水社大山</h3>
+                        <p>路線近況:優 <br>
+                            等級:中級山</p>
+                        <button class="note-btu"><a href="https://tpjpvup.github.io/oh-man/oh,man-03.html">more</a></button>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <section class="trip">
-        <h2>主題開團</h2>
-        <div class="trip-pic"><img src="image/fontpage-1007-切_32.jpg" alt="加里山"></div>
-        <div class="trip-content">
-            <div class="title">
-                <h3>GOGO! 台版富士山-加里山</h3>
-                <div class="title-more">
-                    <a href="https://tpjpvup.github.io/oh-man/oh,man-05.html">more ></a>
+        </section>
+        <section class="trip">
+            <h2>主題開團</h2>
+            <div class="trip-pic"><img src="image/fontpage-1007-切_32.jpg" alt="加里山"></div>
+            <div class="trip-content">
+                <div class="title">
+                    <h3>GOGO! 台版富士山-加里山</h3>
+                    <div class="title-more">
+                        <a href="https://tpjpvup.github.io/oh-man/oh,man-05.html">more ></a>
+                    </div>
                 </div>
-            </div>
-            <div class="trip-txt">
-                <div class="trip-p">
-                    <p>加里山登山步道沿途為柳杉人工造林及闊葉林，風美溪從中穿越，有豐富的動植物生態。小百岳加里山為中北台名山，山頂一等三角點，視野遼闊，可遠眺氣勢磅礡的雪山聖稜線和鄰近的鹿場大山。盛產台灣特有一葉蘭，每年3、4月總吸引許多登山客尋芳賞花。</p>
-                </div>            
-                <div class="trip-price">
-                    <span>NT$1500</span>
-                    <button class="trip-price-but"><a href="#">放入購物車</a></button>
-                </div>
-            </div>  
-        </div>
-        <div class="slog"><span>深呼吸，走出戶外其實一點也不難。</span></div>
-    </section>
+                <div class="trip-txt">
+                    <div class="trip-p">
+                        <p>加里山登山步道沿途為柳杉人工造林及闊葉林，風美溪從中穿越，有豐富的動植物生態。小百岳加里山為中北台名山，山頂一等三角點，視野遼闊，可遠眺氣勢磅礡的雪山聖稜線和鄰近的鹿場大山。盛產台灣特有一葉蘭，每年3、4月總吸引許多登山客尋芳賞花。</p>
+                    </div>            
+                    <div class="trip-price">
+                        <span>NT$1500</span>
+                        <button class="trip-price-but"><a href="#">放入購物車</a></button>
+                    </div>
+                </div>  
+            </div>        
+        </section>
+    </div>
+    
+    <div class="slog"><a href=""><span>還在猶豫嗎? 走出戶外其實一點也不難。</span></a></div>
+
+    
 
         
     
@@ -970,25 +1710,33 @@
             <h2># oh,man.</h2>
             <p>沾沾歐氣，看看大家也都買了什麼?</p>
         </div>
-        <div class="soc-pic">
-            <div class="soc-pic-img"><a href="#"><img src="image/fontpage-1007_31.jpg" alt="#oh,man."></a>                
+        <div class="soc-content">
+            <div class="soc-pic">
+                <a href="#"><img src="image/fontpage-1007_31.jpg" alt="#oh,man."></a>                
+            </div>            
+            <div class="soc-pic">
+                <a href="#"><img src="image/fontpage-1007_33.jpg" alt="#oh,man."></a>
             </div>
-            
-            <div class="soc-pic-img"><a href="#"><img src="image/fontpage-1007_33.jpg" alt="#oh,man."></a></div>
-
-            <div class="soc-pic-img"><a href="#"><img src="image/fontpage-1007_35.jpg" alt="#oh,man."></a></div>            
+            <div class="soc-pic">
+                <a href="#"><img src="image/fontpage-1007_35.jpg" alt="#oh,man."></a>
+            </div>            
         </div>
-        <div class="soc-but"><button><a href="https://tpjpvup.github.io/oh-man/oh,man-06.html">more</button></a></div>      
+        <div class="soc-but">
+            <button><a href="https://tpjpvup.github.io/oh-man/oh,man-06.html">more</button></a>
+        </div>      
         
     </section>
     <section class="more-story">
         <h2>歐人故事</h2>
-        <div class="story-pic">
-            <a href="https://tpjpvup.github.io/oh-man/oh,man-04.html"><img src="image/fontpage-1007_41.jpg" alt="求婚記"></a>          
+        <div class="story-content">
+            <div class="story-pic">
+                <a href="https://tpjpvup.github.io/oh-man/oh,man-04.html"><img src="image/fontpage-1007_41.jpg" alt="求婚記"></a>          
+            </div>
+            <div class="story-pic">
+                <a href="https://tpjpvup.github.io/oh-man/oh,man-04.html"><img src="image/fontpage-1007-切_59.jpg" alt="遇見好夥伴"></a>
+            </div>
         </div>
-        <div class="story-pic">
-            <a href="https://tpjpvup.github.io/oh-man/oh,man-04.html"><img src="image/fontpage-1007-切_59.jpg" alt="遇見好夥伴"></a>
-        </div>
+        
     </section>
     <footer class="footer">
         <div class="footer-content">

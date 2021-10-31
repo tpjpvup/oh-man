@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,394 +8,606 @@
     <title>oh.man</title>
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="grid.css">
-</head>
+    <link rel="stylesheet" href="header.css">
     <style>
+    /* header */
     section{
-            max-width: 1200px;
+             width: 100%;
+             max-width: 1000px;
             margin: auto;
             font-family: 'Noto Sans', '微軟正黑體', sans-serif;
-    }
+        }
 
 
-    .header{
-            width: 1200px;
-            margin: auto;
-            margin-bottom: 40px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+        .container{
+            font-family: 'Noto Sans', '微軟正黑體', sans-serif;
+            width: 80%;
             position: relative;
-            top: 20px;           
-    }
-
-    .header-nav a{
-            color: #ab7738;
-            font-size: 18px;
-            text-decoration: none;
-            padding: 0 25px;      
-    }
-    .member{ 
-            display: flex;           
-    }
-
-    .member img{
-            width: 70%;
-            vertical-align: top;    
-    }
-    .logo img{
-            width: 70%;
-            vertical-align: top;
-    }
-     /* ----------------------------------------- */
-    
+        }       
 
 
-     .cont-title h1{
-        color: #ab7738;
-        font-size: 36px;
-        font-weight: 600;
-        text-align: center;
-        margin: 100px 0 50px 0;
-    }
+        /* banner */
 
-    .cont-nav {
-        margin: auto;
-        text-align: center;
-        margin: 50px 0 100px 0;
-    }
+        .main-banner-wrap{
+            width: 100%;
+        }
 
-
-
-    .cont-nav a{
-        color: #ab7738;
-        font-size: 24px;
-        text-decoration: none;
-        border-bottom: 2px #ab7738 solid;
-        padding: 0 5px 5px 5px;
-        margin: 0 50px;
-    }
-    
-
-
-     .cont-top{
-        display: flex;
-        margin: auto;            
-    }
-
-    .cont-top-pic::after{
-        content: '';
-        background-color:rgba(163, 115, 36, 0.2);
-        width: 400px;
-        height: 180px;
-        position: absolute;
-        right: -200px;
-        bottom: -120px;
-    }
-
-    
-    
-    .cont-top-pic{
-         position: relative;
-    }
-
-    .cont-top img{
-            width: 95%;
-    }
-
-    .cont-top-txt{
-        font-size: 26px;
-        color: #7a7a7a;
-        line-height: 70px;
-        padding: 0 30px 0 0;
-        margin: auto;
-        display: flex;
-        flex-direction: column;
-        -webkit-writing-mode: vertical-rl;
-        writing-mode: vertical-rl;             
-        font-family: 'Noto Serif TC', serif;
-    }
-
-    .cont-top-txt h2{
-        font-size: 32px;
-        font-weight: 600;
-        margin-bottom: 180px;
-    }
-
-    .cont-top-txt p{
-        font-size: 22px;
-        font-weight: 400;
-        margin-top: 180px;
-    }
-
-    
-    .cont-body{
-        display: flex;
-        flex-direction: column;
-    }
-
-
-    .wrap{
-        font-family: 'Noto Sans', '微軟正黑體', sans-serif;
-        margin-top: 200px;
-        display: flex;
-        align-items: center;
-    }
-
-    .cont-body span{
-        font-size: 30px;
-        color: #ab7738;
-        text-align: center;
-        margin-top: 200px;
-        
-    }
-    
-
-    .item-pic img{
-        width: 100%;
-    }
-
-    .item-txt{
-        width: 40%;
-        padding: 0 100px
-    }
-
-    .item-txt p{
-        font-size: 20px;
-        color: #7a7a7a;
-        line-height: 36px;
-    }
-
-    .wrap-auther{
-        margin-top: 200px;
-        margin-bottom: 150px;
-        display: flex;
-        align-items: flex-end;
-    }
-
-    .auther-item{
-        display: flex;
-        flex-direction: column;
-
-    }
-
-   
-
-    .auther-item-pic img{
-        width: 100%;
-    }
-    .auther-txt p{
-        font-size: 20px;
-        color: #7a7a7a;
-        line-height: 40px;
-        padding: 20px 0 0 50px;
-    }
-
-
-    .auther{
-        margin-left: 150px;
-    }
-
-    .auther-pic img{
-        width: 100%;
-    }
-
-
-    .contribute{
-        margin: auto;
-        display: flex;
-        flex-direction: column;
-        justify-items: center; 
-    }
-
-    .contribute p{
-        font-size: 16px;
-        color: #7a7a7a;
-        text-align: center;
-        line-height: 30px;
-        
-    }
-
-
-    .contri-but{
-        width: 200px;
-        height: 3em;
-        background-color: #ab7738;
-        border:#ab7738 1px solid;
-        margin: auto;
-        margin-bottom: 20px;
-
-    }
-
-
-    .contri-but a{
-        font-size: 20px;
-        color: #fff;
-        text-decoration: none;           
-    }
-
-
-
-
-    
-
-
-
-    /* ----------------------------------------- */
-
-    footer{
-            border-top: #ab7738 1.5px solid;
-            margin-top: 150px;
-    }
-
-
-
-    .footer-content{
-            width: 1000px;
-            margin: auto;
-            margin-top: 20px;
-            margin-bottom: 120px;
-            font-size: 24px;
-            color: #ab7738;
-            font-size: 24px;
+        .main-banner{
             display: flex;
-            justify-content: space-between;
-    }
+            margin: auto;
+            position: relative;            
+        }
 
 
-    .footer-row{
-            display: flex;            
-    }
+
+        .banner-pic:after{
+            content: 'This is \Areally\A a nice place.';
+            white-space: pre;
+            color: rgba(231, 174, 83, 0.8);
+            font-size:6em;
+            line-height:130%;
+            font-weight: 500;    
+            font-family:  Century Gothic,Georgia, Times, 'Times New Roman', serif;
+            display: flex;
+            justify-content:center;
+            align-items: center;
+            background-color:rgba(199, 199, 199, 0.6);
+            width: 223px;
+            height: 200px;
+            bottom: -100PX;
+            right: -120px;
+            position: absolute;
+        }
+
+        .banner-pic{
+            width: 65%;
+            position: relative;
+        }
+
+        .banner-pic img{
+            width: 100%;
+        }
+
+        .banner-txt{
+            color: #000; 
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            writing-mode: vertical-rl;             
+            font-family: 'Noto Serif TC', serif;
+        }
+        .banner-txt h1{
+            color: #8a6f4f;
+            font-size: 2.3em;
+            line-height: 125%;
+            font-weight: 700;
+        }
+
+        .banner-txt p{
+            color: #ab7738;
+            font-size:1.4em;
+            font-weight: 400;
+            line-height: 2em;
+            margin-top: 36px;
+            
+        }
+
+        /* container */
+
+        article{
+            display: flex;
+            font-family: 'Noto Sans', '微軟正黑體', sans-serif;
+        }
+
+        .slog{
+            font-size: 1.2em;
+            color: #ab7738;
+            text-align: center;
+            border: 1px #ab7738 solid;
+            padding: 2.5%;
+            width: 50%;
+            margin: auto;
+            display: block;
+            margin-top: 150px;
+            margin-bottom: 150px;
+        }
+
+        .point{
+            border-left: 3px #ab7738 solid;
+            margin-right: 15px;
+
+        }
+
+        .intro{
+            width: 85%;
+            margin: auto;
+            margin-top: 250px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .pic-author{
+            width: 450px;
+        }
+
+        .pic-author img{
+            width: 100%;
+        }
+
+        .title-wrap{
+            margin-right: 80px;
+        }
+        .title h1{
+            font-size: 1.6em;
+            font-weight: 600;
+            line-height: 150%;
+            padding-left: 15px;
+            border-left: 3px #ab7738 solid;
+        }
+        .title p{
+            font-size: 1.2em;
+            color: #7a7a7a;
+            line-height: 150%;
+            margin-top: 10px;
+        }
+
+        .txt p{
+            font-size:1.2em;
+            color: #000;
+            line-height: 180%;
+            margin-top: 15px;
+        }
+
+        .item-pic img{
+            width: 100%;
+        }
+
+        .item-txt{
+            width: 600px;
+            padding: 0 30px
+        }
+
+        .item-txt p{
+            font-size: 1.2em;
+            line-height: 180%;
+        }
 
 
-    .soc-media{
-            display:flex;
-    }
+        .item-feeling{
+            display: flex;
+            flex-direction: column;
+        }
+        
 
-    .soc-media img{
-            width: 70%;
-    }
+        .feeling-pic img{
+            width: 100%;
+        }
 
-    .info{
-            margin: 0 100px 0 0;
-    }
+
+        .feeling-txt p{
+            font-size:1.2em;
+            color: #000;
+            line-height: 180%;
+            margin-top: 15px;
+        }
+
+        .contribute{
+            margin: auto;
+            margin-top: 150px;
+            display: flex;
+            flex-direction: column;
+            justify-items: center; 
+        }
+
+        .contribute p{
+            font-size:1.2em;
+            color: #000;
+            line-height: 180%;
+            margin-top: 15px;
+            text-align: center;
+        
+        }
+
+
+        .contri-but{
+            width: 200px;
+            height: 3em;
+            background-color: #ab7738;
+            border:#ab7738 1px solid;
+            margin: auto;
+            margin-bottom: 20px;
+
+        } 
+
+
+        .contri-but a{
+            font-size: 20px;
+            color: #fff;
+            text-decoration: none;           
+        }
+
+
+
+
+    
+
+
+
+    /*-----共用-----*/
+
+		#menu-control{
+			display: none;
+		}
+
+        .md{
+            display: none;
+        }
+
+    /*--------手機--------*/
+
+    @media screen and (max-width:767px){
+        .main-banner{
+            display: flex;
+            flex-direction: column;
+        }
+
+        .banner-txt{
+            display: none;  
+        }
+
+        .banner-pic{
+            width: 100%;
+        } 
+        
+        .banner-pic:after{
+            display: none; 
+
+        }
 
    
+
+        .intro{
+            width: 100%;
+        }
+ 
+        .title h1{
+            font-size:1.5em;
+            margin-top: 20px;
+        }
+
+        .title p{
+            font-size: 1em;
+        }
+
+        .txt p{
+            font-size: 1em;
+        }
+
+        .item-txt{
+            width: 100%;
+        }
+
+        .item-txt p{
+            font-size:1em
+        }
+        .feeling-txt p{
+            font-size:1em;
+        }
+      
+        .slog{
+            font-size: 0.8em;
+            margin-top: 80px;
+            margin-bottom: 80px;
+        
+        }
+
+        .item-txt{
+            margin-bottom: 20px;
+            margin-top: 20px;
+        }
+
+        .md{
+            display:block;
+            font-size: 1.5em;
+            font-weight: 600;
+            text-align: center;
+            margin-top: 50px;
+            margin-bottom: -150px;
+        }
+
+        .contribute p{
+            font-size:1em;
+        }
+
+
+      
+
+       
  
 
-    .info ul{
-            list-style: none;
+
+
     }
 
-    .info a{
-            color: #caae88;
-            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-            font-size: 16px;
-            text-decoration: none;
+
+    /*--------平板、手機--------*/
+		@media screen and (max-width: 1024px){
+			.hb{
+				width: 40px;
+				height: 40px;
+				position: relative;
+			}
+			.hb span{
+				width: 32px;
+				height: 2px;
+				background-color: #ab7738;
+				position: absolute;
+				right: 0;
+				left: 0;
+				margin: auto;
+				transition: top       .5s .2s, 
+							bottom    .5s .2s, 
+							opacity   .5s, 
+							transform .2s;
+			}
+			.hb span:first-child{
+				transform: rotate(0deg);
+				top: 10px;
+			}
+			.hb span:last-child{
+				transform: rotate(0deg);
+				bottom: 10px;
+			}
+			.hb span:nth-child(2){
+				top: 0;
+				bottom: 0;
+			}
+
+			#menu-control:checked ~ .main-header .hb span:first-child{
+				top: 19px;
+				transform: rotate(225deg);
+				transition: top       .5s, 
+							bottom    .5s, 
+							opacity   .5s, 
+							transform .2s .5s;
+			}
+			#menu-control:checked ~ .main-header .hb span:last-child{
+				bottom: 19px;
+				transform: rotate(-225deg);
+				transition: top       .5s, 
+							bottom    .5s, 
+							opacity   .5s, 
+							transform .2s .5s;
+			}
+
+			.hb span:nth-child(2){
+				opacity: 1;
+			}
+			#menu-control:checked ~ .main-header .hb span:nth-child(2){
+				opacity: 0;
+			}
+
+			.main-nav{
+				position: absolute;
+                z-index: 1;
+				background-color:rgba(224, 205, 176, 0.95);
+				top: 100%;
+				left: -80%;
+				width: 80%;
+				height: calc(100vh - 50px);
+				transition: left 1s;
+			}
+
+            .nav-wrap{
+                margin-left: 60%;
+                margin-top: 10%;
+            }
+
+			.nav-wrap a{
+				display: block;
+                font-size: 1.5em;
+                padding-bottom: 40px;  
+			}
+
+            .mem{
+                margin-left: 60%;
+                display: flex;     
+            }
+
+            .mem img{
+                width: 45px;
+            }
+
             
-    }
-    .about ul{
-            list-style: none;
-    }
+			#menu-control:checked ~ .main-header .main-nav{
+				left: 0;
+			}
 
-    .about a{
-            color: #caae88;
-            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-            font-size: 16px;
-            text-decoration: none;
-    }
+            .row{
+                justify-content: center;
+            }
+
+            .col-3{
+                display:none;
+            }
+
+ 
+            
+            .main-header{
+                padding-bottom: 5px;
+                box-shadow: 0 0.5px 5px rgba(156, 85, 19, 0.2);    
+            }
+
+            
+            .footer-content{
+                display: flex;
+                flex-direction: column;
+            }
+
+            .soc-media{
+                margin-top: 8%;
+                margin-left: -12px;
+                padding-left: 10%;
+            }
+
+            .soc-media img{
+                width: 40px;
+                padding-left: 10px;
+            }
+
+            .banner-pic:after{
+                font-size: 4.5em;
+            }
+
+            .banner-txt h1{
+                font-size: 1.8em;
+            }
+
+            .banner-txt p{
+                font-size:1em;
+                position: relative;
+            }
+
+            article{
+                display: flex;
+                flex-direction:column-reverse;
+                align-items: center;
+            }
+
+            .pic-author{
+                width: 100%;
+            }
+            .title-wrap{
+                width: 100%;
+                margin: auto;
+            }
+            
+        }
+
+		
+	/*-------------電腦-------------*/
+
+		@media screen and (min-width: 1025px){
+			.hb{
+				display: none;
+			}
+            .main-nav{
+                display: flex;
+                align-items: center;
+            }
+		}
 
     </style>
+</head>
 
 <body>
-    <section class="banner">   
-        <div class="header">
-            <div class="logo">
-                <a href="https://tpjpvup.github.io/oh-man/"><img src="image/logo.png" alt="oh-man"></a>
-                </div>
-            <nav class="header-nav">
+    <input type="checkbox" name="" id="menu-control">
+	<header class="main-header">
+		<!-- logo -->
+		<div class="logo">
+            <a href="https://tpjpvup.github.io/oh-man/"><img src="image/logo.png" alt="oh-man"></a>
+        </div>
+		<!-- 漢堡 -->
+		<label for="menu-control" class="hb">
+			<span></span>
+			<span></span>
+			<span></span>
+		</label>
+		<!-- 選單 -->
+
+        <nav class="main-nav">
+            <div class="nav-wrap">
                 <a href="https://tpjpvup.github.io/oh-man/oh,man-01.html">特選歐物</a>
                 <a href="https://tpjpvup.github.io/oh-man/oh,man-01.html">商品分類</a>
-                <a href="https://tpjpvup.github.io/oh-man/oh,man-03.html">戶外筆記</a>
-                <a href="https://tpjpvup.github.io/oh-man/oh,man-04.html">歐人故事</a>
-                <a href="https://tpjpvup.github.io/oh-man/oh,man-05.html">主題開團</a>
+                <a href="https://tpjpvup.github.io/oh-man/oh,man-03.html">毆人故事</a>
+                <a href="https://tpjpvup.github.io/oh-man/oh,man-04.html">主題開團</a>
+                <a href="https://tpjpvup.github.io/oh-man/oh,man-05.html">歐地開發</a>
                 <a href="https://tpjpvup.github.io/oh-man/oh,man-06.html">#oh,man.</a>
-            </nav>
-            <div class="member">
-                <a href="#"><img src="image/sign2.png" alt="singn"></a>
+            </div>
+            <div class="mem">
+                <a href="#"><img src="image/sign2.png" alt="sign"></a>
                 <a href="#"><img src="image/shopping.png" alt="shopping"></a>
             </div>
-        </div>               
-    </section>
-    <div class="cont">
-        <div class="cont-title">
-            <h1>戶外筆記</h1>
-        </div>
-        <nav class="cont-nav">
-            <a href="#">北區</a>
-            <a href="#">中區</a>
-            <a href="#">南區</a>            
         </nav>
-        <div class="cont-top">
-            <div class="cont-top-pic">
-                <img src="image/p03-1.jpg" alt="水社大山"></div>
-                <div class="cont-top-txt">         
-                    <h2>日月潭最高峰</h2>
-                    <h2>水社大山</h2>
-                    <p>鐵腳勇夫--啾啾</p>
-                </div>    
-            </div>
+	</header>
+
+    <div class="main-banner">
+        <div class="banner-pic">
+            <img src="image/fontpage-29.jpg" alt="水社大山">
         </div>
-        <div class="cont-body">
-            <div class="wrap">
-                <div class="item-txt">
-                    <p> 出發日期   10-08 <br>
-                        回程日期   10-08 <br>
-                        相關山岳   水社大山登山步道 <br>
-                        難度  中高等<br>
-                        # 單日行程  #鐵腿<br><br></p>
-                        
-                    <p>注意事項<br>
-                        戶外活動皆有危險性<br>
-                        登山時盡量不應一人獨行<br>
-                        登山口前雖有入山QR碼登記<br>
-                        但，此處網路訊號不穩，請小心注意。</p>
+        <div class="banner-txt">
+           <h1>水社大山</h1>
+            <p>揮別枯水，再現美景 </p> 
+        </div>   
+    </div>
+    <h1 class="md">揮別枯水，再現美景</h1>
+
+    <section class="container">
+        <div class="content-wrap">
+            <article class="intro">
+                <div class="title-wrap">
+                    <div class="title">
+                        <h1>日月潭最高峰－ <br>水社大山
+                            
+                        </h1>
+                        <p>
+                        作者:鐵腳勇士 - 啾啾<br>
+                        #鐵腳警告 #挑戰自我 #中級山</p> 
+                    </div>
+                    <div class="txt">
+                        <P>
+                            出發日期:10-08 (單攻)<br>
+                            花費時間:8.5小時<br>
+                            難度:中高等<br>
+                            <br>
+                            注意事項<br>
+                            戶外活動皆有危險性<br>
+                            登山時盡量不應一人獨行<br>
+                            登山口前雖有入山QR碼登記<br>
+                            但，此處網路訊號不穩，請小心注意。
+                        </P> 
+                    </div>
                 </div>
-                <div class="item-pic"><img src="image/03-1.png" alt="水社大山"></div>
-            </div>
-            <span>一路上小黑陪伴，真開心</span>
-            <div class="wrap">
-                <div class="item-pic"><img src="image/03-2.png" alt="水社大山"></div>
-                <div class="item-txt">
-                    <p> 一路上，大家嘻笑歡樂上山，沿途還有小黑狗守護，果然是天天把跑山當便飯的人，
-                        小黑都來回跑了兩趟，一行人還在這氣喘吁吁。
-                        隨著走過一個個休息點，同行間開始有人承受不住，這時大家確認隊友狀態還可以後，讓其快快折返休息。而眼前這個休息點是最後的反悔處，等等會有「惡魔5km」在等待大家。<br>
-                        </p>
-                </div>
-            </div>
-            <span>爬山量力而為，不逞強才是重點。</span>
-            <div class="wrap">
+                <div class="pic-author">
+                    <img src="image/03-55.png" alt="水社大山">
+                </div>    
+            </article>
+            <span class="slog">富有挑戰性 ，值得一試</span>
+            <article>
+                <div class="item-pic"><img src="image/1149079701_x.jpg" alt="水社大山"></div>
                 <div class="item-txt">
                     <p> 
-                        最後的5km真的是考驗自己，想要撐一口氣一次登頂，還是敵不過前面積累的疲累，即使是同行中有運動習慣的夥伴們，也停在路邊，哀號不已，感覺腳已經快要離家出走了。</p>
-                </div>
-                <div class="item-pic"><img src="image/03-3.png" alt="水社大山"></div>
-            </div>
-            <span>雖三等三角點，還是值得一爬。</span>
-            <div class="wrap-auther">
-                <div class="auther-item">
-                    <div class="auther-item-pic">
-                        <img src="image/03-44.png" alt="水社大山"></div>
-                    <div class="auther-txt">
-                        <p> 水社大山曾是台灣小百岳之一，後因山高路遠而被除名；無論哪個登山口開始，都有超過1000多公尺的爬升，氣喘吁吁地上山後，等待的是三等三角點，想起來似乎很沒意義。但，征服一座大山，有著相互幫助的夥伴，沿途嘻笑拍照的回憶，說嘴一輩子驕傲，拍拍小胸，我棒棒!。</p>
-                        
+                        <span class="point"></span>水社大山
+                        ，位在日月潭青年活動中心餐廳旁。全長5.6K，前1.6K為石階，之後為原始野徑，全線水平上升達1,300公尺，來回約需8小時，是需要萬全準備與體力的健行路段，登頂可俯瞰日月潭、欣賞中央山脈景致。<br>
+                    因海拔上升較高，步道兩側林相經低海拔闊葉林到中海拔的針闊葉混合林，豐富多變，鳥類、昆蟲、動物生態豐富，是生態觀察的絕佳路徑</p>
                     </div>
                 </div>
-                <div class="auther">
-                    <div class="auther-pic">
-                        <img src="image/03-55.png" alt="水社大山">
+            </article>
+            <span class="slog">量力而為，不勉強自己</span>
+            <article>
+                <div class="item-txt">
+                    <p>
+                        <span class="point"></span>「爬山，量力而為是上策。」
+                    ，等等會有惡魔5km在等待大家。怎知同行陪伴的山狗小黑，已來回兩趟了，果然是天天在訓練的。<br>
+                    最後一段路，真的是考驗自己，想要撐一口氣一次登頂，仍敵不過前面積累的疲累，即使同行中的健腳夥伴們，也停在路邊哀號不已，感覺腳已經快要離家出走了。</p>
+                </div>
+                <div class="item-pic"><img src="image/03-44.png" alt="水社大山"></div>
+            </article> 
+            <span class="slog">雖很累，有同伴就甜甜的</span>
+            <article>
+                <div class="item-feeling">
+                    <div class="feeling-pic">
+                        <img src="image/03-3.png" alt="水社大山">
+                    </div>
+                    <div class="feeling-txt">
+                        <p> <span class="point"></span>水社大山曾是台灣小百岳之一，後因山高路遠而被除名；無論哪個登山口開始，都有超過1000多公尺的爬升，其難度不輸給百岳等級，果然名字有「大山」的都不容小覷。
+                        其中，最後一段路，真的是考驗自己，想要撐一口氣一次登頂，仍敵不過前面積累的疲累，即使同行中的健腳夥伴們，也停在路邊哀號不已，感覺腳已經快要離家出走。<br>
+                        氣喘吁吁地上山後，等待大家的是三等三角點，一個沒有展望，只有立牌等著大家的地方，想起來似乎很沒意義；但，其實留在自己心中的事，和夥伴沿途一起拍照玩樂，把千篇一律、樣貌相同的山景，紀錄上自己的味道。<br>
+                        「我征服一座大山!」，其實爬山的當下，自己的體能還無法負荷，靠著意志力跟夥伴的加油打氣，才讓自己進化完成挑戰，我想這是我說嘴一輩子驕傲，拍拍小胸，我棒棒!。</p>
                     </div>
                 </div>
-            </div>
+            </article>
+            
             <div class="contribute">
                 <button class="contri-but"><a href="#">投稿筆記</a></button>
                 <p>喜歡啾啾的分享嗎?<br>
@@ -404,7 +617,9 @@
                 更有可能成為下一期的歐人主人翁。</p>
             </div>
         </div>
-    </div>
+    </section>
+
+        
 
 
 

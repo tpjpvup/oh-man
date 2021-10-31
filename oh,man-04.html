@@ -7,440 +7,725 @@
     <title>oh.man</title>
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="grid.css">
-</head>
+    <link rel="stylesheet" href="header.css">
     <style>
-    section{
-        max-width: auto;
-        margin: auto;
-        font-family: 'Noto Sans ', '微軟正黑體', sans-serif;
-    }
+        /* header */
+        section{
+             width: 100%;
+             max-width: 1000px;
+            margin: auto;
+            font-family: 'Noto Sans', '微軟正黑體', sans-serif;
+        }
 
+        .container{
+            font-family: 'Noto Sans', '微軟正黑體', sans-serif;
+            width: 90%;
+            position: relative;
+        }      
 
-    .header{
-        width: 1200px;
-        margin: auto;
-        margin-bottom: 40px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        position: relative;
-        top: 20px;           
-    }
+        
+        /* banner */
 
-    .header-nav a{
-        color: #ab7738;
-        font-size: 18px;
-        text-decoration: none;
-        padding: 0 25px;      
-    }
-    .member{ 
-        display: flex;           
-    }
+        .main-banner-wrap{
+            width: 100%;   
+        }
 
-    .member img{
-        width: 70%;
-        vertical-align: top;    
-    }
-    .logo img{
-        width: 70%;
-        vertical-align: top;
-    }
-   /* ----------------------------------------- */
+        .main-banner{
+            display: flex;
+            margin: auto;
+            position: relative;         
+        }
 
-   .container{
-       max-width: 1100px;
-    }
-  
+        .banner-pic:after{
+            content: '';
+            background-color:rgba(218, 162, 73, 0.25);
+            width: 35%;
+            height: 30%;
+            bottom: -15%;
+            right: -20%;
+            position: absolute;
+        }
 
-   .wrap-1{
-       display: flex;
-       flex-direction: column;
-       margin-bottom: 200px;
-    }
+        .banner-pic{
+            width: 65%;
+            position: relative;
+        }
 
-   .bann-pic img{
-       width: 100%;
-    }
-    .bann-txt{
-        margin: auto;
-    }
+        .banner-pic img{
+            width: 100%;
+        }
 
-    .bann-txt h2{
-        font-size: 30px;
-        color: #ab7738;
-        font-weight: 550;
-        margin-top: 50px;
-        margin-bottom: 20px;
-    }
+        .banner-txt{
+            color: #000; 
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            writing-mode: vertical-rl;             
+            font-family: 'Noto Serif TC', serif;
+        }
+        .banner-txt h1{
+            font-size: 2.3em;
+            line-height: 125%;
+            font-weight: 700;
+        }
 
-    .bann-txt p{
-        font-size: 20px;
-        color: #757575;
-        line-height: 36px;
-    }
+        .banner-txt p{
+            font-size:1.4em;
+            font-weight: 400;
+            line-height: 2em;
+            margin-top: 36px;
+        }
 
+        .md{
+            display:block;
+            font-size: 1.5em;
+            font-weight: 600;
+            text-align: center;
+            margin-top: 50px;
+            margin-bottom: -150px;
+        }
 
-   .wrap-2{
-       display: flex;
-       justify-content: space-between;
-       margin-bottom: 200px;
-    }
-
-    .age-txt h2{
-        font-size: 30px;
-        color: #ab7738;
-        font-weight: 550;
-        margin-top: 20px;
-        margin-bottom: 20px;
-
-    }
-
-    .age-txt p{
-        font-size: 20px;
-        color: #757575;
-        line-height: 36px;
-        margin-bottom: 350px;
-
-    }
-
-
-    .smile-pic{
-        margin-top: 300px;
-        margin-left: 120px;
-        position: sticky;
-        top: 0;
-    }
-
-    .smile-pic img{
-        width: 100%;
-    }
-
-    .wrap-3{
-        margin: auto;
-        margin-bottom: 200px;
-        display: flex;
-        flex-direction: column;
-    }
-
-    .lucky-txt{
-        margin: auto;
-    }
-
-    .lucky-txt h2{
-        font-size: 30px;
-        color:#ab7738;
-        font-weight: 550;
-        margin-top: 20px;
-        margin-bottom: 20px;
-
-    }
-
-    .lucky-txt p{
-        font-size: 20px;
-        color: #757575;
-        line-height: 40px;
-
-    }
-
-    .lucky-pic{
-        width: 1100px;
-        margin: auto;
-        margin-bottom: 50px;
-
-    }
-
-    .wrap-4 h2{
-        font-size: 30px;
-        color:#ab7738;
-        font-weight: 550;
-        margin-top: 20px;
-        margin-bottom: 20px;
-
-    }
-
-    .col-12{
-        margin-left: -15px;
-    }
-
-    .row{
-        margin-right: -45px;      
-    }
-
-    .item{
-        display: flex;
-        flex-direction: column;
-    }
-    
-    .item-txt{
-        border:#ab7738 1px solid;
-        padding: 10px;
-        color: #8d8d8d;
-
-    }
-
-    .pic img{
-        width: 100%;
-    }
-
-    .prod-title{
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: 10px;
-    }
-
-
-    .shop-but{
-        background-color: transparent;
-        border: #ab7738 1px solid;
-        padding: 5px;
-        margin-top: 10px;
-    }
-
-    .shop-but a{
-        font-size: 20px;
-        color: #ab7738;
-        text-decoration: none;
-    }
-
-
-
-
-    
-
-
-    /* ----------------------------------------- */
-
-    footer{
-        border-top: #ab7738 1.5px solid;
-        margin-top: 150px;
-    }
-
-
-
-    .footer-content{
-        width: 1000px;
-        margin: auto;
-        margin-top: 20px;
-        margin-bottom: 120px;
-        font-size: 24px;
-        color: #ab7738;
-        font-size: 24px;
-        display: flex;
-        justify-content: space-between;
-    }
-
-
-    .footer-row{
-        display: flex;            
-    }
-
-
-    .soc-media{
-        display:flex;
-    }
-
-    .soc-media img{
-        width: 70%;
-    }
-
-    .info{
-        margin: 0 100px 0 0;
-    }
-
-   
- 
-
-    .info ul{
-        list-style: none;
-    }
-
-    .info a{
-        color: #caae88;
-        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        font-size: 16px;
-        text-decoration: none;
-            
-    }
-    .about ul{
-        list-style: none;
-    }
-
-    .about a{
-        color: #caae88;
-        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        font-size: 16px;
-        text-decoration: none;
-    }
-
-    </style>
-
-<body>
+        /*container*/
         
 
-    <section class="banner">   
-        <div class="header">
-            <div class="logo">
-                <a href="https://tpjpvup.github.io/oh-man/"><img src="image/logo.png" alt="oh-man"></a>
-                </div>
-            <nav class="header-nav">
+        .role-wrap{
+            display: flex;
+            margin: 350px 0;      
+        }
+
+        .role-pic{
+            width: 500px;
+            box-shadow: 70px 50px   rgba(202, 148, 61, 0.25) ;    
+        }
+        
+
+        .role-pic img{
+            width: 100%;
+            vertical-align: middle;
+        }
+
+
+
+        .role-txt{
+            width: 40%;
+            margin-top: -40px;
+            margin-left: 30px;
+        }
+
+        .role-txt h2{
+            font-size: 2em;
+            font-weight: 600;
+            line-height: 150%;
+            margin-bottom: 30px;
+        }
+
+        .role-txt p{
+            font-size:1.2em;
+            line-height: 180%;
+            font-weight: 500;
+        }
+
+        .keyword{
+            color: #757575;
+            font-weight:600;
+            margin-bottom: 30px;
+        }
+
+        .wrap-2{
+           display: flex;
+           justify-content: space-between;
+           margin-bottom: 200px;
+        }
+
+
+        .age-txt{
+            margin-left: 40px;
+            margin-bottom: 200px;
+        }
+
+
+    
+        .age-txt h2{
+            font-size: 2em;
+            font-weight: 600;
+            line-height: 150%;
+            border-left: 3px #ab7738 solid;
+            padding-left: 15px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+    
+        .age-txt p{
+            font-size:1.2em;
+            line-height: 180%;
+            font-weight: 500;
+            margin-bottom: 230px;    
+        }
+
+        .age-pic{
+            width: 750px;
+        }
+
+        .age-pic img{
+            width: 100%;
+        }
+
+        .wrap{
+            display: flex;
+            justify-content: space-between;
+        }
+    
+    
+        .smile-pic{
+            width: 230px;
+            position: sticky;
+            top: 30px;
+        }
+    
+        .smile-pic img{
+            width: 100%;
+        }
+    
+        .wrap-3{
+            border: 1px red solid;
+            margin: auto;
+            margin-bottom: 200px;
+            display: flex;
+            flex-direction: column;
+        }
+    
+        .lucky-txt{
+            margin: auto;
+        }
+    
+        .lucky-txt h2{
+            font-size: 2em;
+            font-weight: 600;
+            line-height: 150%;
+            border-left: 3px #ab7738 solid;
+            padding-left: 15px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+    
+        .lucky-txt p{
+            font-size:1.2em;
+            line-height: 180%;
+            font-weight: 500; 
+    
+        }
+    
+        .lucky-pic{
+            margin-bottom: 50px;
+        }
+
+        .lucky-pic img{
+            width: 100%;
+        }
+
+        .wrap-4{
+            margin-top: 400px;
+        }
+    
+        .wrap-4 h2{
+            font-size: 30px;
+            color:#ab7738;
+            font-weight: 550;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+    
+      
+    
+        .item{
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .item-txt{
+            border:#ab7738 1px solid;
+            padding: 10px;
+            color: #8d8d8d; 
+        }
+    
+        .pic img{
+            width: 100%;
+        }
+    
+        .prod-title{
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+    
+    
+        .shop-but{
+            background-color: transparent;
+            border: #ab7738 1px solid;
+            padding: 5px;
+            margin-top: 10px;
+        }
+    
+        .shop-but a{
+            font-size: 20px;
+            color: #ab7738;
+            text-decoration: none;
+        }
+
+        /*-----共用-----*/
+
+		#menu-control{
+			display: none;
+		}
+
+        .md{
+            display: none;
+        }
+
+        .slog{
+            display:none;
+        }
+
+
+
+    /*--------手機--------*/
+
+    @media screen and (max-width:767px){
+        .main-banner{
+            display: flex;
+            flex-direction: column;
+        }
+
+        .banner-txt{
+            display: none;  
+        }
+
+        .banner-pic{
+            width: 100%;
+            margin: auto;
+        } 
+        
+        .banner-pic:after{
+            display: none; 
+        }
+
+        .md{
+            display: block;
+            line-height:150%;         
+        }
+
+        .role-wrap{
+            margin-top: 200px;
+            margin-bottom: 150px;
+        }
+
+    
+        .role-pic{
+            width: 100%;
+        }
+
+        .item-2{
+            display: none; 
+        }
+     
+        .age-pic img{
+            width: 70%;
+        }
+
+        .role-pic{
+          width: 100%;
+          box-shadow: none;
+        }
+
+        .role-txt{
+            width: 100%;
+            margin: auto;
+        }
+
+        .slog{
+            font-size: 0.8em;
+            color: #ab7738;
+            text-align: center;
+            border: 1px #ab7738 solid;
+            padding: 2.5%;
+            width: 50%;
+            display: block;
+            margin:auto;
+            margin-bottom: 150px;
+        }
+
+        .wrap-4{
+            margin-top:200px
+        }
+
+        /*字體大小*/
+        .role-txt h2{
+            font-size:1.5em;
+            border-left:3px #ab7738 solid;
+            padding-left: 15px;
+        }
+
+        .role-txt p{
+            font-size:1em;
+        }
+
+        .age-txt{
+            margin-left: 0px;
+        }
+
+        .age-txt h2{
+            font-size:1.5em;
+            margin-left:0;
+        }
+
+        .age-txt p{
+            font-size:1em;
+        }
+
+        .lucky-txt{
+            margin-left:0;    
+        }
+
+        .lucky-txt h2{
+            font-size:1.5em;
+        }
+
+        .lucky-txt p{
+            font-size:1em;
+        }
+    }
+
+
+    /*--------平板、手機--------*/
+    @media screen and (max-width: 1024px){
+		.hb{
+			width: 40px;
+			height: 40px;
+			position: relative;
+		}
+		.hb span{
+			width: 32px;
+			height: 2px;
+			background-color: #ab7738;
+			position: absolute;
+			right: 0;
+			left: 0;
+			margin: auto;
+			transition: top       .5s .2s, 
+						bottom    .5s .2s, 
+						opacity   .5s, 
+						transform .2s;
+		}
+		.hb span:first-child{
+			transform: rotate(0deg);
+			top: 10px;
+		}
+		.hb span:last-child{
+			transform: rotate(0deg);
+			bottom: 10px;
+		}
+		.hb span:nth-child(2){
+			top: 0;
+			bottom: 0;
+		}
+
+		#menu-control:checked ~ .main-header .hb span:first-child{
+			top: 19px;
+			transform: rotate(225deg);
+			transition: top       .5s, 
+						bottom    .5s, 
+						opacity   .5s, 
+						transform .2s .5s;
+		}
+		#menu-control:checked ~ .main-header .hb span:last-child{
+			bottom: 19px;
+			transform: rotate(-225deg);
+			transition: top       .5s, 
+						bottom    .5s, 
+						opacity   .5s, 
+						transform .2s .5s;
+		}
+		.hb span:nth-child(2){
+			opacity: 1;
+		}
+		#menu-control:checked ~ .main-header .hb span:nth-child(2){
+			opacity: 0;
+		}
+		.main-nav{
+			position: absolute;
+            z-index: 1;
+			background-color:rgba(224, 205, 176, 0.95);
+			top: 100%;
+			left: -80%;
+			width: 80%;
+			height: calc(100vh - 50px);
+		transition: left 1s;
+	}
+        .nav-wrap{
+            margin-left: 60%;
+            margin-top: 10%;
+        }
+		.nav-wrap a{
+			display: block;
+            font-size: 1.5em;
+            padding-bottom: 40px;  
+		}
+        .mem{
+            margin-left: 60%;
+            display: flex;     
+        }
+        .mem img{
+            width: 45px;
+        }
+        
+		#menu-control:checked ~ .main-header .main-nav{
+			left: 0;
+		}
+        
+        .main-header{
+            padding-bottom: 5px;
+            box-shadow: 0 0.5px 5px rgba(156, 85, 19, 0.2);    
+        }
+
+
+        .age-pic{
+            display: none;
+        }
+
+        .role-wrap{
+            display: flex;
+            flex-direction: column;
+        }
+        .role-txt{
+            width: 100%;
+        }
+
+
+        /*--footer*--*/
+
+        .footer-content{
+            display: flex;
+            flex-direction: column;
+        }
+        .soc-media{
+            margin-top: 8%;
+            margin-left: -12px;
+            padding-left: 10%;
+        }
+        .soc-media img{
+            width: 40px;
+            padding-left: 10px;
+        }
+
+        
+        
+    
+	}
+	/*------------電腦-------------*/
+	@media screen and (min-width: 1025px){
+		.hb{
+			display: none;
+		}
+        .main-nav{
+            display: flex;
+            align-items: center;
+        }
+	}
+        </style>
+</head>
+    
+
+<body>
+    <input type="checkbox" name="" id="menu-control">
+	<header class="main-header">
+		<!-- logo -->
+		<div class="logo">
+            <a href="https://tpjpvup.github.io/oh-man/"><img src="image/logo.png" alt="oh-man"></a>
+        </div>
+		<!-- 漢堡 -->
+		<label for="menu-control" class="hb">
+			<span></span>
+			<span></span>
+			<span></span>
+		</label>
+		<!-- 選單 -->
+
+        <nav class="main-nav">
+            <div class="nav-wrap">
                 <a href="https://tpjpvup.github.io/oh-man/oh,man-01.html">特選歐物</a>
                 <a href="https://tpjpvup.github.io/oh-man/oh,man-01.html">商品分類</a>
-                <a href="https://tpjpvup.github.io/oh-man/oh,man-03.html">戶外筆記</a>
-                <a href="https://tpjpvup.github.io/oh-man/oh,man-04.html">歐人故事</a>
-                <a href="https://tpjpvup.github.io/oh-man/oh,man-05.html">主題開團</a>
+                <a href="https://tpjpvup.github.io/oh-man/oh,man-03.html">毆人故事</a>
+                <a href="https://tpjpvup.github.io/oh-man/oh,man-04.html">主題開團</a>
+                <a href="https://tpjpvup.github.io/oh-man/oh,man-05.html">歐地開發</a>
                 <a href="https://tpjpvup.github.io/oh-man/oh,man-06.html">#oh,man.</a>
-            </nav>
-            <div class="member">
-                <a href="#"><img src="image/sign2.png" alt="singn"></a>
+            </div>
+            <div class="mem">
+                <a href="#"><img src="image/sign2.png" alt="sign"></a>
                 <a href="#"><img src="image/shopping.png" alt="shopping"></a>
             </div>
-        </div>             
-    </section>
-    <div class="container">
-        <div class="wrap-1">
-            <div class="bann-pic"><img src="image/IMG_9974-p.png" alt="oh,man"></div>
-            <div class="bann-txt">
-                <h2>友誼的可貴</h2>
-                <span>文 / 山女孩-Sue</span>
-                <p><br>
-                    曾經我是個周末只想在家裡耍廢的人，<br>
-                    即使下班也在煩惱工作，<br>
-                    人生不知從何時起像個無趣齒輪，<br>
-                    只是不斷輪轉，<br>
-                    枯燥卻又停不下來，<br>
-                    但，我卻在某天被踢出門，<br>
-                    <br>
-                    原來是 「幸運」出的腳，<br>
-                    也因這樣，獲得難以取代的友誼。<br>
-                    人生中，<br>
-                    或許幸運是上天給予，<br>
-                    但能好好抓住卻是自己。<br>
-                </p>
-            </div>     
+        </nav>
+	</header>
+ 
+    <div class="main-banner">
+        <div class="banner-pic">
+            <img src="image/3-3-07.jpg" alt="主題開團-加里山">
         </div>
-        <div class="wrap-2">
-            <div class="item-1">
-                <div class="age-pic"><img src="image/man-1-o.png" alt="friend"></div>
-                <div class="age-txt">
-                    <h2>年紀在山林間，不重要。</h2>
-                    <p>行走中<br>
-                        耳中傳來的是迎面而來的問好聲，<br>
-                        一開始很不習慣，<br>
-                        生活中的冷漠，讓人忘記最基礎的問好<br>
-                        然而....<br>
-                        年紀、責任....   在這山林間，<br>
-                        卻早已被一顆顆鹽糖蓋過，<br>
-                        總擔心下一秒在社會中跌倒的自己，<br>
-                        現在一心只想到達休息點喘氣，<br>
-                        從包中拿出自己辛勞背上的食物<br>
-                        遠出傳來陣陣香氣<br>
-                        其實，晚餐吃到熱熱的泡麵就贏了!<br>
-                        這份滿足也是個「人生成功」。
+        <div class="banner-txt">
+            <h1>第一期</h1>
+            <p>山林間<br>體驗友誼的滋味</p>            
+        </div>   
+    </div>
+     
+
+    <section class="container">
+        <article>
+            <h1 class="md">第一期 /<br>
+                山林間體驗友誼的滋味</h1>  
+            <div class="role-wrap">                
+                <div class="role-pic">
+                    <img src="image/role-1.jpg" alt="oh,man">
+                </div>
+                <div class="role-txt">
+                    <h2>Hi,I'm Sue.<br>登山經歷1.5年，熱愛程度滿點</h2>
+                    <p class="keyword">選物喜好:#高cp值 #便利多用 #搭配潮流</p>
+                    <p> 
+                        曾經我是個周末只想在家裡耍廢的人，即使下班也在煩惱工作，人生不知從何時起像個無趣齒輪，只是不斷輪轉，枯燥卻又停不下來。<br>
+                        會開始爬山的起源視聽到有人加里山百登，而好奇起登山的魅力到底在哪裡?一樣的景色為何可以重複去百次仍樂此不疲。<br>
+                        當我第一次用盡全力登上加里山頂，並在回程為成功的自己歡呼鼓掌時心暖暖的開心，就是答案。<br>
+                        想像很困難，開始動身時才發其現實慢慢來，其實也還好；也開始讓我結交到一群相互幫助的朋友。
                     </p>
                 </div>
             </div>
-            <div class="item-2">
-                <div class="smile-pic">
-                    <img src="image/man-2-o.png" alt="smile">
+        </article>
+        <span class="slog">過程中是跟自己、自然、同伴間的對話</span>
+        <article>
+            <div class="wrap">
+                <div class="content">
+                    <div class="age-pic">
+                        <img src="image/man-1-o.png" alt="friend">
+                    </div>
+                    <div class="age-txt">
+                        <h2>年紀在山林間，不重要。</h2>
+                        <p>行走中<br>
+                            耳中傳來的是迎面而來的問好聲，<br>
+                            一開始很不習慣，<br>
+                            生活中的冷漠，讓人忘記最基礎的問好<br>
+                            然而....<br>
+                            年紀、責任....   在這山林間，<br>
+                            卻早已被一顆顆鹽糖蓋過，<br>
+                            總擔心下一秒在社會中跌倒的自己，<br>
+                            現在一心只想到達休息點喘氣，<br>
+                            從包中拿出自己辛勞背上的食物<br>
+                            遠出傳來陣陣香氣<br>
+                            其實，晚餐吃到熱熱的泡麵就贏了!<br>
+                            這份滿足也是個「人生成功」。
+                        </p>
+                    </div>
+                </div>
+                <div class="item-2">
+                    <div class="smile-pic">
+                        <img src="image/man-2-o.png" alt="smile">
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="wrap-3">
-            <div class="lucky-pic"><img src="image/man-3-2.jpg" alt="sunrise"></div>
-            <div class="lucky-txt">
-                <h2>幸福的享受歐氣滿滿的笑容</h2>
-                <p>相互從這裡開始，<br>
-                    走入戶外，其實很簡單。<br>
-                    到了林間，大家總是相互幫助，<br>
-                    最近挖到什麼好物，是一見面的話題，<br>
-                    想著當自己是個初心者在店內迷航時，<br>
-                    感恩帶著我到處找尋專屬歐物的好友們，<br>
-                    「不能只有我買」。<br>
-                    大家一起成為山頂上的潮流人。<br>
-                </p>
+        </article>
+        <article>
+            <div class="wrap-3">
+                <div class="lucky-pic"><img src="image/man-3-2.jpg" alt="sunrise"></div>
+                <div class="lucky-txt">
+                    <h2>幸福的享受歐氣滿滿的笑容</h2>
+                    <p>相互從這裡開始，<br>
+                        走入戶外，其實很簡單。<br>
+                        到了林間，大家總是相互幫助，<br>
+                        最近挖到什麼好物，是一見面的話題，<br>
+                        想著當自己是個初心者在店內迷航時，<br>
+                        感恩帶著我到處找尋專屬歐物的好友們，<br>
+                        「不能只有我買」。<br>
+                        大家一起成為山頂上的潮流人。<br>
+                    </p>
+                </div>
             </div>
-        </div>
+        </article>
+
+
         <div class="wrap-4">
             <h2>特選歐物</h2>
-            <div class="col-12">
-                <div class="row">
-                    <div class="col-3">
-                        <div class="item">
-                            <div class="item-txt">
-                                <div class="pic"><a href="#"><img src="image/prod-KAVU-KV17604.jpg" alt="kav漁夫帽"></a></div>
-                                <div class="txt">
-                                    <div class="prod-title">
-                                       <h3>[KAVU]</h3>
-                                       <div class="title-icon">
-                                           <img src="image/favorite_border_black_24dp.svg" alt="love">
-                                       </div>
-                                    </div>                                
-                                    <p>Fishermans Chillba 漁夫帽/黃鐵礦Pyrite</p>
-                                </div>
-                            </div>       
-                            <button class="shop-but"><a href="#">加入購物車</a></button>
-                        </div>
+            <div class="row">
+
+                <div class="col-6 col-md-3">
+                    <div class="item">
+                        <div class="item-txt">
+                            <div class="pic"><a href="#"><img src="image/prod-KAVU-KV17604.jpg" alt="kav漁夫帽"></a></div>
+                            <div class="txt">
+                                <div class="prod-title">
+                                   <h3>[KAVU]</h3>
+                                   <div class="title-icon">
+                                       <img src="image/favorite_border_black_24dp.svg" alt="love">
+                                   </div>
+                                </div>                                
+                                <p>Fishermans Chillba <br>漁夫帽/黃鐵礦Pyrite</p>
+                            </div>
+                        </div>       
+                        <button class="shop-but"><a href="#">加入購物車</a></button>
                     </div>
-                    <div class="col-3">
-                        <div class="item">
-                            <div class="item-txt">
-                                <div class="pic"><a href="#"><img src="image/16123192454124.jpg" alt="kav漁夫帽"></a></div>
-                                <div class="txt">
-                                    <div class="prod-title">
-                                       <h3>Mystery Ranch</h3>
-                                       <div class="title-icon">
-                                           <img src="image/favorite_border_black_24dp.svg" alt="love">
-                                       </div>
-                                    </div>                                
-                                    <p>In & Out 19 後背包<br>湖水藍</p>
-                                </div>
-                            </div>       
-                            <button class="shop-but"><a href="#">加入購物車</a></button>
-                        </div>
-                    </div>
-                    <div class="col-3">
-                        <div class="item">
-                            <div class="item-txt">
-                                <div class="pic"><a href="#"><img src="image/161638623810258.jpg" alt="kav漁夫帽"></a></div>
-                                <div class="txt">
-                                    <div class="prod-title">
-                                       <h3>Fjällräven</h3>
-                                       <div class="title-icon">
-                                           <img src="image/favorite_border_black_24dp.svg" alt="love">
-                                       </div>
-                                    </div>                                
-                                    <p>High Coast Hydratic Jacket 防水外套 女</p>
-                                </div>
-                            </div>       
-                            <button class="shop-but"><a href="#">加入購物車</a></button>
-                        </div>
-                    </div>
-                    
-                    <div class="col-3">
-                        <div class="item">
-                            <div class="item-txt">
-                                <div class="pic"><a href="#"><img src="image/162847907815555.jpg" alt="kav漁夫帽"></a></div>
-                                <div class="txt">
-                                    <div class="prod-title">
-                                       <h3>Nanga</h3>
-                                       <div class="title-icon">
-                                           <img src="image/favorite_border_black_24dp.svg" alt="love">
-                                       </div>
-                                    </div>                                
-                                    <p>Snow MT Logo Loose Fit Tee 印刷Logo T</p>
-                                </div>
-                            </div>       
-                            <button class="shop-but"><a href="#">加入購物車</a></button>
-                        </div>
-                    </div>
-                    
                 </div>
+
+                <div class="col-6 col-md-3">
+                    <div class="item">
+                        <div class="item-txt">
+                            <div class="pic"><a href="#"><img src="image/16123192454124.jpg" alt="kav漁夫帽"></a></div>
+                            <div class="txt">
+                                <div class="prod-title">
+                                   <h3>Mystery Ranch</h3>
+                                   <div class="title-icon">
+                                       <img src="image/favorite_border_black_24dp.svg" alt="love">
+                                   </div>
+                                </div>                                
+                                <p>In & Out 19 後背包<br>湖水藍</p>
+                            </div>
+                        </div>       
+                        <button class="shop-but"><a href="#">加入購物車</a></button>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-3">
+                    <div class="item">
+                        <div class="item-txt">
+                            <div class="pic"><a href="#"><img src="image/161638623810258.jpg" alt="kav漁夫帽"></a></div>
+                            <div class="txt">
+                                <div class="prod-title">
+                                   <h3>Fjällräven</h3>
+                                   <div class="title-icon">
+                                       <img src="image/favorite_border_black_24dp.svg" alt="love">
+                                   </div>
+                                </div>                                
+                                <p>High Coast Hydratic <br>防水外套 </p>
+                            </div>
+                        </div>       
+                        <button class="shop-but"><a href="#">加入購物車</a></button>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-3">
+                    <div class="item">
+                        <div class="item-txt">
+                            <div class="pic"><a href="#"><img src="image/162847907815555.jpg" alt="kav漁夫帽"></a></div>
+                            <div class="txt">
+                                <div class="prod-title">
+                                   <h3>Nanga</h3>
+                                   <div class="title-icon">
+                                       <img src="image/favorite_border_black_24dp.svg" alt="love">
+                                   </div>
+                                </div>                                
+                                <p>Snow MT Logo Loose <br>印刷Logo T</p>
+                            </div>
+                        </div>       
+                        <button class="shop-but"><a href="#">加入購物車</a></button>
+                    </div>
+                </div>  
             </div>
-        </div>
-    </div>
-       
-
-
+        </div> 
+    </section>
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-row">
@@ -468,9 +753,7 @@
                 <div class="media-icon"><a href="#"><img src="image/fontpage-1007_fb.jpg" alt="fb"></a></div>
                 <div class="media-icon"><a href="#"><img src="image/fontpage-1007_47-ilne.png" alt="line"></a></div>               
             </div>
-        </div>
-       
-        
+        </div>  
     </footer>
     
 </body>

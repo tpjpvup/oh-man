@@ -7,88 +7,78 @@
     <title>oh,man</title>
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="grid.css">
+    <link rel="stylesheet" href="header.css">
     <style>
-         section{
-            max-width: 1200px;
+        /* header */
+        section{
+             width: 100%;
+             max-width: 1000px;
             margin: auto;
             font-family: 'Noto Sans', '微軟正黑體', sans-serif;
         }
 
+        .container{
+            font-family: 'Noto Sans', '微軟正黑體', sans-serif;
+            width: 80%;
+            position: relative;
+        }      
 
-        .header{
-            width: 1200px;
+        /* banner */
+
+        .main-banner-wrap{
+            width: 100%;
+        }
+
+        .main-banner{
+            display: flex;
             margin: auto;
-            margin-bottom: 40px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: relative;
-            top: 20px;           
+            position: relative;            
         }
 
-        .header-nav a{
-            color: #ab7738;
-            font-size: 18px;
-            text-decoration: none;
-            padding: 0 25px;      
-        }
 
-        .member{ 
-            display: flex;           
-        }
 
-        .member img{
-            width: 70%;
-            vertical-align: top;
-            
-        }
-
-        .logo img{
-            width: 70%;
-            vertical-align: top;
-        }
-
-        /* header選單 */
-        .bg{
-            display: flex;
-            margin: auto;            
-        }
-
-        .bg-pic::after{
+        .banner-pic:after{
             content: '';
-            background-color:rgba(163, 115, 36, 0.2);
-            width: 400px;
-            height: 180px;
+            background-color:rgba(218, 162, 73, 0.25);
+            width: 50%;
+            height: 30%;
+            bottom: -15%;
+            right: -20%;
             position: absolute;
-            right: -200px;
-            bottom: -120px;
         }
 
-        .bg-pic{
+        .banner-pic{
+            width: 65%;
             position: relative;
         }
 
-        .bg-pic img{
-            width: 95%;
+        .banner-pic img{
+            width: 100%;
         }
 
-        .bg-txt{
-            font-size: 26px;
-            color: #7a7a7a;
-            line-height: 70px;
-            padding: 0 30px 0 0;
+        .banner-txt{
+            color: #000; 
             margin: auto;
             display: flex;
             flex-direction: column;
-            -webkit-writing-mode: vertical-rl;
             writing-mode: vertical-rl;             
             font-family: 'Noto Serif TC', serif;
         }
-        .bg-txt h1{
-            font-size: 32px;
-            font-weight: 600;
+        .banner-txt h1{
+            font-size: 2.3em;
+            line-height: 125%;
+            font-weight: 700;
         }
-/* -------------content--------------- */
+
+        .banner-txt p{
+            font-size:1.4em;
+            font-weight: 400;
+            line-height: 2em;
+            margin-top: 36px;
+        }
+
+        
+        /* container */    
 
         .content-wrap{
             display: flex;
@@ -97,53 +87,85 @@
         }
 
         .content-title{
-            width: 40%; 
-            color: #7a7a7a;
+            border-left: 2px #ab7738 solid;
+            margin-left: 15px;
+            width: 70%;
             font-weight: 500;
             display: flex;
             flex-direction: column;
             align-items: flex-start;
             margin-top: 200px; 
-            margin-bottom: 100px; 
+            margin-bottom: 30px; 
         }
 
         .content-title h3{
-            font-size: 24px;
+            font-size: 1em;
             color: #ab7738;
+            padding-left: 15px;
         }
-
-
         
         .title-slog{
-            margin-top: 30px;
-            display: flex;
-            align-items: center;
+            margin-top: 10px;
         }
         
         .title-slog h3{
-            color: #7a7a7a;
-            font-size: 30px;
+            color: #000;
+            font-size: 1.6em;
+            line-height: 140%;
+            font-weight:600;
             margin-right: 20px;           
         }
 
         .title-slog h4{
             color: #949494;
-            text-align: center;
+            font-size: 1em;
+            line-height:140%;
+            padding-left: 15px;
         }
 
 
         .content-txt p{
-            width: 60%;
-            font-size: 20px;
-            color: #575757;
-            line-height: 42px;
+            width: 70%;
+            font-size:1em;
+            line-height: 2em;
             margin: auto;
         }
+
+        .content-txt span{
+            font-size: 1.6em;
+            font-weight: 600;
+            line-height: 150%;
+            margin-left: 15px;
+            padding-left: 15px;
+            border-left: 2px #ab7738 solid ;
+            display: inline-block;
+        }
+
+
+        .leader-wrap{
+            width: 70%;
+            margin: auto;
+            margin-top: 100px;
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            align-items: end;
+        }
+
+        .leader{
+            width: 380px;
+            object-fit: cover;
+        }
+
+        .leader img{
+            width: 100%;
+        }
+
 
         .shopping{
             display: flex;
             margin-top: 100px;
-            margin-bottom: 350px;
+            margin-bottom: 150px;
         }
 
 
@@ -154,11 +176,11 @@
             margin-right: 50px;
         }
 
+
         .shop-btu a{
             font-size: 20px;
             color: #ab7738;
             text-decoration: none;
-
         }
 
         .sign-btu{
@@ -166,7 +188,11 @@
             background-color: #ab7738;
             border: #ab7738 1px solid;
             padding: 5px;
-            
+            transition: .5s;
+        }
+
+        .sign-but:hover{
+            background-color:#fff;
         }
 
         .sign-btu a{
@@ -175,41 +201,27 @@
             text-decoration: none;
         }
 
-
-        .col-12{
-            display: flex;
-        }
-
-        .col-6-pic{
-            width: 50%;
-        }     
-
-        .col-6-pic img{
+        .itine-pic img{
             width: 100%;
         }
 
-        .col-6-txt{
-            margin-left: 5%;
-            display: flex;
-            flex-direction: column;
-            align-items:flex-start;
-            justify-content: space-between;
-        
-        }
-
+    
+           
         .trip-txt h2{
-            font-size: 30px;
-            color:#575757;
-            font-weight: 500;
-            margin-bottom: 30px;
+            font-size: 1.6em;
+            font-weight: 600;
+            line-height: 150%;
+            border-left: 2px #ab7738 solid;
+            padding-left: 15px;
+            margin-bottom: 10px;
         }
 
         .trip-txt ul{
-            font-size: 20px;
+            font-size: 1.2em;
             color: #7a7a7a;
-            line-height: 35px;
+            line-height: 180%;
             margin: auto;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
         }
 
         .trip-btu{
@@ -224,6 +236,8 @@
             margin-right: 15px;
         }
 
+        
+
         .join-btu a{
             font-size: 20px;
             color: #ab7738;
@@ -234,113 +248,272 @@
         
 
 
+    /*-----共用-----*/
 
-/* ----------------------------------------- */
+		#menu-control{
+			display: none;
+		}
 
-footer{
-            border-top: #ab7738 1.5px solid;
-            margin-top: 150px;
-        }
+    /*--------手機--------*/
 
-
-
-        .footer-content{
-            width: 1000px;
-            margin: auto;
-            margin-top: 20px;
-            margin-bottom: 120px;
-            font-size: 24px;
-            color: #ab7738;
-            font-size: 24px;
+    @media screen and (max-width:767px){
+        .main-banner{
             display: flex;
-            justify-content: space-between;
+            flex-direction: column;
         }
 
-
-        .footer-row{
-            display: flex;            
+        .banner-txt{
+            display: none;  
         }
 
+        .banner-pic{
+            width: 100%;
+        } 
+        
+        .banner-pic:after{
+            display: none; 
 
-        .soc-media{
+        }
+        .content-title{
+            width: 100%;
+            margin-top: 80px;
+        }
+
+        .content-txt p{
+            width: 100%;
+        }
+        .leader-wrap{
+            width: 100%;
             display:flex;
+            flex-direction:column-reverse;
+            margin: auto;
+            align-items: start;
         }
 
-        .soc-media img{
-            width: 70%;
+        .leader-wrap span{
+            margin-left: 0;
         }
 
-        .info{
-            margin: 0 100px 0 0;
+        .leader{
+            width:100%;
+            object-fit: cover;
+            margin-top: 50px;
+            margin-bottom: 30px;
+        }
+        .itinerary{
+            margin-top: -150px;
         }
 
-   
- 
 
-        .info ul{
-            list-style: none;
+        .shop-btu{
+            display: none;
         }
 
-        .info a{
-            color: #caae88;
-            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-            font-size: 16px;
-            text-decoration: none;
+        .shopping .sign-btu{
+            display: none;
+        }
+
+        .join-btu{
+            display: none;
+        }
+
+
+
+     
+
+    }
+
+
+    /*--------平板、手機--------*/
+		@media screen and (max-width: 1024px){
+			.hb{
+				width: 40px;
+				height: 40px;
+				position: relative;
+			}
+			.hb span{
+				width: 32px;
+				height: 2px;
+				background-color: #ab7738;
+				position: absolute;
+				right: 0;
+				left: 0;
+				margin: auto;
+				transition: top       .5s .2s, 
+							bottom    .5s .2s, 
+							opacity   .5s, 
+							transform .2s;
+			}
+			.hb span:first-child{
+				transform: rotate(0deg);
+				top: 10px;
+			}
+			.hb span:last-child{
+				transform: rotate(0deg);
+				bottom: 10px;
+			}
+			.hb span:nth-child(2){
+				top: 0;
+				bottom: 0;
+			}
+
+			#menu-control:checked ~ .main-header .hb span:first-child{
+				top: 19px;
+				transform: rotate(225deg);
+				transition: top       .5s, 
+							bottom    .5s, 
+							opacity   .5s, 
+							transform .2s .5s;
+			}
+			#menu-control:checked ~ .main-header .hb span:last-child{
+				bottom: 19px;
+				transform: rotate(-225deg);
+				transition: top       .5s, 
+							bottom    .5s, 
+							opacity   .5s, 
+							transform .2s .5s;
+			}
+
+			.hb span:nth-child(2){
+				opacity: 1;
+			}
+			#menu-control:checked ~ .main-header .hb span:nth-child(2){
+				opacity: 0;
+			}
+
+			.main-nav{
+				position: absolute;
+                z-index: 1;
+				background-color:rgba(224, 205, 176, 0.95);
+				top: 100%;
+				left: -80%;
+				width: 80%;
+				height: calc(100vh - 50px);
+				transition: left 1s;
+			}
+
+            .nav-wrap{
+                margin-left: 60%;
+                margin-top: 10%;
+            }
+
+			.nav-wrap a{
+				display: block;
+                font-size: 1.5em;
+                padding-bottom: 40px;  
+			}
+
+            .mem{
+                margin-left: 60%;
+                display: flex;     
+            }
+
+            .mem img{
+                width: 45px;
+            }
+
             
-        }
-        .about ul{
-            list-style: none;
-        }
+			#menu-control:checked ~ .main-header .main-nav{
+				left: 0;
+			}
 
-        .about a{
-            color: #caae88;
-            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-            font-size: 16px;
-            text-decoration: none;
-        }
+            .row{
+                justify-content: center;
+            }
+
+            .col-3{
+                display:none;
+            }
+
+ 
+            
+            .main-header{
+                padding-bottom: 5px;
+                box-shadow: 0 0.5px 5px rgba(156, 85, 19, 0.2);    
+            }
+
+            
+            .footer-content{
+                display: flex;
+                flex-direction: column;
+            }
+
+            .soc-media{
+                margin-top: 8%;
+                margin-left: -12px;
+                padding-left: 10%;
+            }
+
+            .soc-media img{
+                width: 40px;
+                padding-left: 10px;
+            }
+		}
+
+	/*-------------電腦-------------*/
+
+		@media screen and (min-width: 1025px){
+			.hb{
+				display: none;
+			}
+            .main-nav{
+                display: flex;
+                align-items: center;
+            }
+		}
 
     </style>
 
 </head>
 <body>
   
-    <section class="banner">   
-        <div class="header">
-            <div class="logo">
-                <a href="https://tpjpvup.github.io/oh-man/"><img src="image/logo.png" alt="oh-man"></a>
-                </div>
-            <nav class="header-nav">
+    <input type="checkbox" name="" id="menu-control">
+	<header class="main-header">
+		<!-- logo -->
+		<div class="logo">
+            <a href="https://tpjpvup.github.io/oh-man/"><img src="image/logo.png" alt="oh-man"></a>
+        </div>
+		<!-- 漢堡 -->
+		<label for="menu-control" class="hb">
+			<span></span>
+			<span></span>
+			<span></span>
+		</label>
+		<!-- 選單 -->
+
+        <nav class="main-nav">
+            <div class="nav-wrap">
                 <a href="https://tpjpvup.github.io/oh-man/oh,man-01.html">特選歐物</a>
                 <a href="https://tpjpvup.github.io/oh-man/oh,man-01.html">商品分類</a>
-                <a href="https://tpjpvup.github.io/oh-man/oh,man-03.html">戶外筆記</a>
-                <a href="https://tpjpvup.github.io/oh-man/oh,man-04.html">歐人故事</a>
-                <a href="https://tpjpvup.github.io/oh-man/oh,man-05.html">主題開團</a>
+                <a href="https://tpjpvup.github.io/oh-man/oh,man-03.html">毆人故事</a>
+                <a href="https://tpjpvup.github.io/oh-man/oh,man-04.html">主題開團</a>
+                <a href="https://tpjpvup.github.io/oh-man/oh,man-05.html">歐地開發</a>
                 <a href="https://tpjpvup.github.io/oh-man/oh,man-06.html">#oh,man.</a>
-            </nav>
-            <div class="member">
-                <a href="#"><img src="image/sign2.png" alt="singn"></a>
+            </div>
+            <div class="mem">
+                <a href="#"><img src="image/sign2.png" alt="sign"></a>
                 <a href="#"><img src="image/shopping.png" alt="shopping"></a>
             </div>
-        </div>               
-    </section> 
+        </nav>
+	</header>
 
-    <div class="bg">
-        <div class="bg-pic">
+ 
+    <div class="main-banner">
+        <div class="banner-pic">
             <img src="image/LINE_ALBUM_2021926_210929.jpg" alt="主題開團-加里山">
         </div>
-            <div class="bg-txt">
-                <h1>加里山</h1>
-                <p>[台版富士山]<br>看見台灣的不同</p>
-            </div>            
-        </div>
+        <div class="banner-txt">
+            <h1>加里山</h1>
+            <p>[台版富士山]<br>看見台灣的不同</p>            
+        </div>   
     </div>
 
     <section class="container">
-        <div class="content-wrap">  
+        <div class="content-wrap"> 
             <div class="content-title">
                 <h3>10/23 開團</h3>
                 <div class="title-slog">
-                    <h3>視野開闊，心曠神怡</h3>
+                    <h3>加里山<br>百去不膩，視野開闊</h3>
                     <h4>#中級山 #一日行程</h4>  
                 </div>
             </div>
@@ -348,54 +521,57 @@ footer{
                 <p>加里山登山步道沿途為柳杉人工造林及闊葉林，風美溪從中穿越，有豐富的動植物生態。小百岳加里山為中北台名山，山頂一等三角點，視野遼闊，可遠眺氣勢磅礡的雪山聖稜線和鄰近的鹿場大山。盛產台灣特有一葉蘭，每年3、4月總吸引許多登山客尋芳賞花。<br>
                     沿途屬於原始森林步道，後半段路線陡峭，需由專業嚮導帶領較為安全，地形豐富，攻頂需耗費7-8小時，同時可訓練肌勵與耐力，推薦給平常有在運動的旅客！
                 </p>
+                <div class="leader-wrap">
+                    <span>還在猶豫嗎?<br>讓百登好手帶你一窺加里山魅力<br>NT$1500</span>
+                    <div class="leader">
+                        <img src="image/trip-1.jpg">
+                    </div>                   
+
+                </div>
             </div>
             <div class="shopping">
                 <button class="shop-btu"><a href="#">加入購物車</a></button>
                 <button class="sign-btu"><a href="#">立即報名</a></button>
             </div>  
         </div>
-        <div class="row">
-            <div class="col-12">
-                <div class="col-6-pic">
-                    <img src="image/LINE_ALBUM_2021926_211011.jpg" alt="加里山">
-                </div>
-                <div class="col-6-txt">
-                    <div class="trip-txt">
-                        <h2>行程內容</h2>
-                        <ul>
-                            <li> 中型遊覽車(15人成團)</li>
-                            <li> 午餐1份、礦泉水1瓶</li>
-                            <li> 紀念隊彩帶</li>
-                        </ul>
-                        <ul>
-                            <li>‒ 07:30 新竹高鐵站集合</li>
-                            <li>‒ 09:00 抵達加里山登山步道口</li>
-                            <li>‒ 09:10 - 16:20 享受加里山之美</li>
-                            <li>‒ 16:30回到登山口</li>
-                            <li>‒ 18:30 新竹高鐵站</li>
-                        </ul>
+        <div class="itinerary">
+            <div class="row">
+                    <div class="col-12 col-md-6">
+                        <div class="itine-pic">
+                            <img src="image/trip-2-02.jpg" alt="加里山">
+                        </div>
                     </div>
-                    
-                    <div class="trip-btu">
-                        <button class="join-btu"><a href="#">揪朋友</a></button>
-                        <button class="sign-btu"><a href="#">立即報名</a></button>
+                    <div class="col-12 col-md-6">
+                        <div class="trip-txt">
+                            <h2>行程內容</h2>
+                            <ul>
+                                <li> 中型遊覽車(15人成團)</li>
+                                <li> 午餐1份、礦泉水1瓶</li>
+                                <li> 紀念隊彩帶</li>
+                            </ul>
+                            <ul>
+                                <li>‒ 07:30 新竹高鐵站集合</li>
+                                <li>‒ 09:00 抵達加里山登山步道口</li>
+                                <li>‒ 09:10 - 16:20 享受加里山之美</li>
+                                <li>‒ 16:30回到登山口</li>
+                                <li>‒ 18:30 新竹高鐵站</li>
+                            </ul>
+                        </div> 
+                        <div class="trip-btu">
+                            <button class="join-btu"><a href="#">揪朋友</a></button>
+                            <button class="sign-btu"><a href="#">立即報名</a></button>
+                        </div>
                     </div>
-                </div>
-
+                </div>     
             </div>
 
-            <div class="col-6">
-                
-                
-            </div>        
         </div>
-
     </section>
 
 
 
 
-    <footer class="footer">
+    <footer>
         <div class="footer-content">
             <div class="footer-row">
                 <div class="info">

@@ -6,53 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>oh.man</title>
     <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="grid.css">
-</head>
+    <link rel="stylesheet" href="header.css">
     <style>
-    section{
-            max-width: 1200px;
+    /* header */
+        section{
+            width: 100%;
+            max-width: 1000px;
             margin: auto;
             font-family: 'Noto Sans', '微軟正黑體', sans-serif;
-    }
+        }
 
 
-    .header{
-            width: 1200px;
-            margin: auto;
-            margin-bottom: 40px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: relative;
-            top: 20px;           
-    }
+    /* container */
 
-    .header-nav a{
-            color: #ab7738;
-            font-size: 18px;
-            text-decoration: none;
-            padding: 0 25px;      
-    }
-    .member{ 
-            display: flex;           
-    }
-
-    .member img{
-            width: 70%;
-            vertical-align: top;    
-    }
-    .logo img{
-            width: 70%;
-            vertical-align: top;
-    }
-     /* ----------------------------------------- */
-    
     .container{
-        width: 1200px;
+        width: 80%;
+        margin: 0 auto;
+        position: relative;
         font-family: 'Noto Sans', '微軟正黑體', sans-serif;
         display: flex;
         flex-direction: column;
         align-items: center;
+        border: 1px red solid;
 
     }
 
@@ -79,144 +54,229 @@
     }
 
     .item-3{
-        display: flex;   
-    }
-
-    .item-2{
-
         display: flex;
+        flex-wrap: wrap;
+        justify-content: center;   
     }
+
 
     .pic{
         padding: 5px;
     }
 
-    /* .pic img{
+    .pic img{
         width: 100%;
-    } */
-
-
-
-    /* ----------------------------------------- */
-
-    footer{
-            border-top: #ab7738 1.5px solid;
-            margin-top: 150px;
     }
 
-
-
-    .footer-content{
-            width: 1000px;
-            margin: auto;
-            margin-top: 20px;
-            margin-bottom: 120px;
-            font-size: 24px;
-            color: #ab7738;
-            font-size: 24px;
-            display: flex;
-            justify-content: space-between;
+    .pic-join img{
+        width: 100%;
     }
+    
 
+    /*-----共用-----*/
 
-    .footer-row{
-            display: flex;            
-    }
+	#menu-control{
+		display: none;
+	}
 
+    /*--------手機--------*/
 
-    .soc-media{
-            display:flex;
-    }
+    @media screen and (max-width:767px){    
+        iframe{
+            display: none;
+        }
+        .wrap-1{
+            margin-bottom: 0;
+        }
 
-    .soc-media img{
-            width: 70%;
-    }
+        .wrap-2{
+            margin-top: 50px;
+        }
 
-    .info{
-            margin: 0 100px 0 0;
-    }
+        .pic-join{
+            margin-bottom: 50px;
+        }
+
 
    
- 
-
-    .info ul{
-            list-style: none;
     }
-
-    .info a{
-            color: #caae88;
-            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-            font-size: 16px;
-            text-decoration: none;
-            
-    }
-    .about ul{
-            list-style: none;
-    }
-
-    .about a{
-            color: #caae88;
-            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-            font-size: 16px;
-            text-decoration: none;
-    }
-
-    </style>
-
-<body>
+    /*-------平板、手機--------*/
+	@media screen and (max-width: 1024px){
+		.hb{
+			width: 40px;
+			height: 40px;
+			position: relative;
+		}
+		.hb span{
+			width: 32px;
+			height: 2px;
+			background-color: #ab7738;
+			position: absolute;
+			right: 0;
+			left: 0;
+			margin: auto;
+			transition: top       .5s .2s, 
+						bottom    .5s .2s, 
+						opacity   .5s, 
+						transform .2s;
+		}
+		.hb span:first-child{
+			transform: rotate(0deg);
+			top: 10px;
+		}
+		.hb span:last-child{
+			transform: rotate(0deg);
+			bottom: 10px;
+		}
+		.hb span:nth-child(2){
+			top: 0;
+			bottom: 0;
+		}
+		#menu-control:checked ~ .main-header .hb span:first-child{
+			top: 19px;
+			transform: rotate(225deg);
+			transition: top       .5s, 
+						bottom    .5s, 
+						opacity   .5s, 
+						transform .2s .5s;
+		}
+		#menu-control:checked ~ .main-header .hb span:last-child{
+			bottom: 19px;
+			transform: rotate(-225deg);
+			transition: top       .5s, 
+						bottom    .5s, 
+						opacity   .5s, 
+						transform .2s .5s;
+		}
+		.hb span:nth-child(2){
+			opacity: 1;
+		}
+		#menu-control:checked ~ .main-header .hb span:nth-child(2){
+			opacity: 0;
+		}
+		.main-nav{
+			position: absolute;
+            z-index: 1;
+			background-color:rgba(224, 205, 176, 0.95);
+			top: 100%;
+			left: -80%;
+			width: 80%;
+			height: calc(100vh - 50px);
+			transition: left 1s;
+		}
+        .nav-wrap{
+            margin-left: 60%;
+            margin-top: 10%;
+        }
+		.nav-wrap a{
+			display: block;
+            font-size: 1.5em;
+            padding-bottom: 40px;  
+		}
+        .mem{
+            margin-left: 60%;
+            display: flex;     
+        }
+        .mem img{
+            width: 45px;
+        }
+        
+		#menu-control:checked ~ .main-header .main-nav{
+			left: 0;
+		}
+        .main-header{
+            padding-bottom: 5px;
+            box-shadow: 0 0.5px 5px rgba(156, 85, 19, 0.2);    
+        }
+        
+        .footer-content{
+            display: flex;
+            flex-direction: column;
+        }
+        .soc-media{
+            margin-top: 8%;
+            margin-left: -12px;
+            padding-left: 10%;
+        }
+        .soc-media img{
+            width: 40px;
+            padding-left: 10px;
+        } 
+        
         
 
-    <section class="banner">   
-        <div class="header">
-            <div class="logo">
-                <a href="https://tpjpvup.github.io/oh-man/"><img src="image/logo.png" alt="oh-man"></a>
-                </div>
-            <nav class="header-nav">
+
+
+    }
+	
+	/*------------電腦-------------*/
+	@media screen and (min-width: 1025px){
+		.hb{
+			display: none;
+		}
+            .main-nav{
+                display: flex;
+                align-items: center;
+            }
+		}
+
+    </style>
+</head>
+
+<body>
+    <input type="checkbox" name="" id="menu-control">
+	<header class="main-header">
+		<!-- logo -->
+		<div class="logo">
+            <a href="https://tpjpvup.github.io/oh-man/"><img src="image/logo.png" alt="oh-man"></a>
+        </div>
+		<!-- 漢堡 -->
+		<label for="menu-control" class="hb">
+			<span></span>
+			<span></span>
+			<span></span>
+		</label>
+		<!-- 選單 -->
+
+        <nav class="main-nav">
+            <div class="nav-wrap">
                 <a href="https://tpjpvup.github.io/oh-man/oh,man-01.html">特選歐物</a>
                 <a href="https://tpjpvup.github.io/oh-man/oh,man-01.html">商品分類</a>
-                <a href="https://tpjpvup.github.io/oh-man/oh,man-03.html">戶外筆記</a>
-                <a href="https://tpjpvup.github.io/oh-man/oh,man-04.html">歐人故事</a>
-                <a href="https://tpjpvup.github.io/oh-man/oh,man-05.html">主題開團</a>
+                <a href="https://tpjpvup.github.io/oh-man/oh,man-03.html">毆人故事</a>
+                <a href="https://tpjpvup.github.io/oh-man/oh,man-04.html">主題開團</a>
+                <a href="https://tpjpvup.github.io/oh-man/oh,man-05.html">歐地開發</a>
                 <a href="https://tpjpvup.github.io/oh-man/oh,man-06.html">#oh,man.</a>
-            </nav>
-            <div class="member">
-                <a href="#"><img src="image/sign2.png" alt="singn"></a>
+            </div>
+            <div class="mem">
+                <a href="#"><img src="image/sign2.png" alt="sign"></a>
                 <a href="#"><img src="image/shopping.png" alt="shopping"></a>
             </div>
-        </div>               
-    </section>
+        </nav>
+	</header>
 
     <div class="container">
         <h1>#oh,man.</h1>
         <p>快來發現，哪個特選歐物被買爆呢?</p>
         <div class="wrap-1">
-            <div class="item-3">
+            <div class="col-md-12 item-3">
                 <div class="pic"><a href="#"><img src="image/ohman-1.png"></a></div>
                 <div class="pic"><a href="#"><img src="image/ohman-2.png"></a></div>
                 <div class="pic"><a href="#"><img src="image/ohman-3.png"></a></div>
-            </div>
-            <div class="item-2">
                 <div class="pic"><a href="#"><img src="image/ohman-4.png"></a></div>
                 
                 <div class="pic"><a href="#"><iframe width="510" height="250" src="https://www.youtube.com/embed/xFcKG1ynjGk?faature=oembed&mute=1&autoplay=1&loop=1&playlist=xFcKG1ynjGk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></a></div>
             </div>
         </div>
         <div class="wrap-2">
-            <div class="item-2">
-                <div class="pic"><a href="#"><img src="image/bg- 18.png"></a></div>
+            <div class="col-md-12 item-3">
+                <div class="pic-join"><a href="#"><img src="image/bg- 18.png"></a></div>
                 <div class="pic"><a href="#"><img src="image/ohman-5.png"></a></div>
-            </div>
-            <div class="item-3">
                 <div class="pic"><a href="#"><img src="image/ohman-6.png"></a></div>
                 <div class="pic"><a href="#"><img src="image/ohman-7.png"></a></div>
                 <div class="pic"><a href="#"><img src="image/ohman-8.png"></a></div>
             </div>
         </div>
     </div>
-
-       
-
-
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-row">
@@ -246,6 +306,7 @@
             </div>
         </div> 
     </footer>
+
     
 </body>
 </html>

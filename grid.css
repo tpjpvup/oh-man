@@ -191,8 +191,8 @@
 
 @media screen and (min-width:1200px) {
     .row-cols-xl > .col{
-        width: 0;
-        flex-grow: 1;
+        /* width: 0;
+        flex-grow: 1; */
         flex:1 0 0;
     }
     .row-cols-xl-1 > .col{

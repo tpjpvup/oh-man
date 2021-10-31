@@ -1,0 +1,125 @@
+/*section*/ 
+
+section{
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+    font-family: 'Noto Sans ', '微軟正黑體', sans-serif;
+}
+
+
+/* 選單 */
+.main-header{
+    background-color:#fff;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* position: relative;  */
+    position: sticky;
+    top:0;
+    z-index: 2;
+    font-family: 'Noto Sans', '微軟正黑體', sans-serif;        
+}
+
+.main-nav{
+    transition: .5s;
+}
+
+.main-nav a{
+    font-size: 18px;
+    color: #ab7738;
+    text-decoration: none;
+    padding: 0 10px;      
+}
+
+.main-nav a:hover{
+    color:  rgba(156, 85, 19, 0.4);
+}
+
+.mem img{
+    width: 36px;
+    vertical-align: top;
+    margin-right: -10px;    
+}
+
+.logo img{
+    width: 70%;
+    vertical-align: top;
+}
+
+
+/*footer*/
+
+footer{
+    border-top: #ab7738 1.5px solid;
+    margin-top: 150px;
+    width:100%;
+    font-family: 'Noto Sans ', '微軟正黑體', sans-serif;
+}
+
+
+.footer-content{
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 120px;
+    color: #ab7738;
+    font-size: 1.5em;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.footer-row{
+    margin-left: 10%;
+    display: flex;            
+}
+
+
+.soc-media{
+    display:flex;
+    margin-right: 10%;
+}
+
+.soc-media img{
+    width: 50px;
+    padding-left: 10px;   
+}
+
+.info{
+    margin: 0 100px 0 0;
+}
+
+.info h4{
+    font-size: 1em;
+}
+
+.about h4{
+    font-size: 1em;
+}
+
+
+.info ul{
+    list-style: none;
+}
+
+.info a{
+    color:#caae88;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: .7em;
+    text-decoration: none;  
+}
+.about ul{
+    list-style: none;
+}
+
+.about a{
+    color: #caae88;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: .7em;
+    text-decoration: none;
+}

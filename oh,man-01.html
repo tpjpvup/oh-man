@@ -7,59 +7,28 @@
     <title>Product-oh,man</title>
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="grid.css">
+    <link rel="stylesheet" href="header.css">
     <style>
-         section{
-            max-width: 1200px;
+        section{
+             width: 100%;
+             max-width: 1000px;
             margin: auto;
             font-family: 'Noto Sans', '微軟正黑體', sans-serif;
         }
 
-
-        .header{
-            width: 1200px;
-            margin: auto;
-            margin-bottom: 40px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: relative;
-            top: 20px;           
-        }
-
-        .header-nav a{
-            color: #ab7738;
-            font-size: 18px;
-            text-decoration: none;
-            padding: 0 25px;      
-        }
-
-        .member{ 
-            display: flex;           
-        }
-
-        .member img{
-            width: 70%;
-            vertical-align: top;
-            
-        }
-
-        .logo img{
-            width: 70%;
-            vertical-align: top;
-        }
-
-/* ----------------------------------------- */
+/* ---------------內容----------------- */
   
         .container{
             font-family: 'Noto Sans', '微軟正黑體', sans-serif;
+            width: 80%;
             position: relative;
         }
+        
 
-       .pic{
-           width: 100%;
-       }
+        .pic{
+            width: 100%;
+        }
       
-
         .pic img{
             width: 100%;
         }
@@ -69,9 +38,6 @@
             font-weight: 600;
             margin: 0 0 5px 0;
         }
-
-    
-
 
 
         .col-3 ul{
@@ -100,122 +66,241 @@
 
 
         .item{
-            border: rgba(156, 85, 19, 0.2) 1px solid;
-            /* box-shadow:1px 1px 2px #bebebe; */
+            border: rgba(156, 85, 19, 0.2) 1.5px solid;
             padding: 10px;
             color: #8d8d8d;
+        }
 
+        .title-icon img{
+            width: 25px;
         }
 
 
         .prod-title{
             display: flex;
             justify-content: space-between;
-            margin-bottom: 10px;
-        }
-        
-
-
-
-
-
-
-/* ----------------------------------------- */
-
-        footer{
-            border-top: #ab7738 1.5px solid;
-            margin-top: 150px;
+            margin-bottom: -5px;
         }
 
-
-
-        .footer-content{
-            width: 1000px;
-            margin: auto;
-            margin-top: 20px;
-            margin-bottom: 120px;
-            font-size: 24px;
+        .prod-title h3{
             color: #ab7738;
-            font-size: 24px;
-            display: flex;
-            justify-content: space-between;
+            font-size: 1em;
+            font-weight: 600;
+        }
+
+        .txt p{
+            color: #8d8d8d;
+            font-size: .9em;
+            line-height:1.2em;
+
+        }
+
+        .type li{
+            transition:.5s;
+        }
+        .type li a:hover{
+            color: rgba(156, 85, 19, 0.4);
         }
 
 
-        .footer-row{
-            display: flex;            
-        }
+
+    /*-----共用-----*/
+
+		#menu-control{
+			display: none;
+		}
 
 
-        .soc-media{
-            display:flex;
-        }
+	/*--------平板、手機--------*/
 
-        .soc-media img{
-            width: 70%;
-        }
+		@media screen and (max-width: 1024px){
+			.hb{
+				width: 40px;
+				height: 40px;
+				position: relative;
+			}
+			.hb span{
+				width: 32px;
+				height: 2px;
+				background-color: #ab7738;
+				position: absolute;
+				right: 0;
+				left: 0;
+				margin: auto;
+				transition: top       .5s .2s, 
+							bottom    .5s .2s, 
+							opacity   .5s, 
+							transform .2s;
+			}
+			.hb span:first-child{
+				transform: rotate(0deg);
+				top: 10px;
+			}
+			.hb span:last-child{
+				transform: rotate(0deg);
+				bottom: 10px;
+			}
+			.hb span:nth-child(2){
+				top: 0;
+				bottom: 0;
+			}
 
-        .info{
-            margin: 0 100px 0 0;
-        }
+			#menu-control:checked ~ .main-header .hb span:first-child{
+				top: 19px;
+				transform: rotate(225deg);
+				transition: top       .5s, 
+							bottom    .5s, 
+							opacity   .5s, 
+							transform .2s .5s;
+			}
+			#menu-control:checked ~ .main-header .hb span:last-child{
+				bottom: 19px;
+				transform: rotate(-225deg);
+				transition: top       .5s, 
+							bottom    .5s, 
+							opacity   .5s, 
+							transform .2s .5s;
+			}
 
-   
- 
+			.hb span:nth-child(2){
+				opacity: 1;
+			}
+			#menu-control:checked ~ .main-header .hb span:nth-child(2){
+				opacity: 0;
+			}
 
-        .info ul{
-            list-style: none;
-        }
+			.main-nav{
+				position: absolute;
+                z-index: 1;
+				background-color:rgba(224, 205, 176, 0.95);
+				top: 100%;
+				left: -80%;
+				width: 80%;
+				height: calc(100vh - 50px);
+				transition: left 1s;
+			}
 
-        .info a{
-            color: #caae88;
-            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-            font-size: 16px;
-            text-decoration: none;
+            .nav-wrap{
+                margin-left: 60%;
+                margin-top: 10%;
+            }
+
+			.nav-wrap a{
+				display: block;
+                font-size: 1.5em;
+                padding-bottom: 40px;  
+			}
+
+            .mem{
+                margin-left: 60%;
+                display: flex;     
+            }
+
+            .mem img{
+                width: 45px;
+            }
+
             
-        }
-        .about ul{
-            list-style: none;
-        }
+			#menu-control:checked ~ .main-header .main-nav{
+				left: 0;
+			}
 
-        .about a{
-            color: #caae88;
-            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-            font-size: 16px;
-            text-decoration: none;
-        }
+            .row{
+                justify-content: center;
+            }
+
+            .col-3{
+                display:none;
+            }
+            .main-header{
+                padding-bottom: 5px;
+                box-shadow: 0 0.5px 5px rgba(156, 85, 19, 0.2);   
+            }
+
+            
+            .footer-content{
+                display: flex;
+                flex-direction: column;
+            }
+
+            .soc-media{
+                margin-top: 8%;
+                margin-left: -12px;
+                padding-left: 10%;
+            }
+
+            .soc-media img{
+                width: 40px;
+                padding-left: 10px;
+            }
+		}
+
+		/*-------------電腦-------------*/
+
+		@media screen and (min-width: 1025px){
+			.hb{
+				display: none;
+			}
+            .main-nav{
+                display: flex;
+                align-items: center;
+            }
+		}
+
 
     </style>
+
+
+
+
 </head>
 <body>
 
 
-    <section class="banner">   
-        <div class="header">
-            <div class="logo">
-                <a href="https://tpjpvup.github.io/oh-man/"><img src="image/logo.png" alt="oh-man"></a>
-                </div>
-            <nav class="header-nav">
+    <input type="checkbox" name="" id="menu-control">
+	<header class="main-header">
+		<!-- logo -->
+		<div class="logo">
+            <a href="https://tpjpvup.github.io/oh-man/"><img src="image/logo.png" alt="oh-man"></a>
+        </div>
+		<!-- 漢堡 -->
+		<label for="menu-control" class="hb">
+			<span></span>
+			<span></span>
+			<span></span>
+		</label>
+		<!-- 選單 -->
+
+        <nav class="main-nav">
+            <div class="nav-wrap">
                 <a href="https://tpjpvup.github.io/oh-man/oh,man-01.html">特選歐物</a>
                 <a href="https://tpjpvup.github.io/oh-man/oh,man-01.html">商品分類</a>
-                <a href="https://tpjpvup.github.io/oh-man/oh,man-03.html">戶外筆記</a>
-                <a href="https://tpjpvup.github.io/oh-man/oh,man-04.html">歐人故事</a>
-                <a href="https://tpjpvup.github.io/oh-man/oh,man-05.html">主題開團</a>
+                <a href="https://tpjpvup.github.io/oh-man/oh,man-03.html">毆人故事</a>
+                <a href="https://tpjpvup.github.io/oh-man/oh,man-04.html">主題開團</a>
+                <a href="https://tpjpvup.github.io/oh-man/oh,man-05.html">歐地開發</a>
                 <a href="https://tpjpvup.github.io/oh-man/oh,man-06.html">#oh,man.</a>
-            </nav>
-            <div class="member">
+            </div>
+            <div class="mem">
                 <a href="#"><img src="image/sign2.png" alt="singn"></a>
                 <a href="#"><img src="image/shopping.png" alt="shopping"></a>
             </div>
-        </div>              
-    </section>
+        </nav>
+        
+        
+	</header>
+
+
+
+    <div class="sec-wrap"></div>
+
 
     <section class="container">
         <div class="row">
             <div class="col-3">
                 <ul class="type"><h3>歐人故事</h3>
-                    <li><a href="#">0928 十元-山女孩</a></li>
-                    <li><a href="#">0820 大發哥-團長</a></li>
-                    <li><a href="#">0707 阿銘-嚮導</a></li>
+                    <li><a href="#">第一期 / Sue-山女孩</a></li>
+                    <li><a href="#">第二期 / 大發哥-團長</a></li>
+                    <li><a href="#">第三期 / 阿銘-嚮導</a></li>
                 </ul> 
                 <ul class="type"><a href="#"> <h3>熱銷補貨</h3></a></ul>
                 <ul class="type"><h3>產品</h3>
@@ -236,8 +321,15 @@
                         </ul>
                     </li>
                 </ul>
-                <ul class="type"><a href="#"><h3> 帽/配件</h3></a></ul>
-                <ul class="type"><a href="#"><h3>登山杖</h3></a></ul>
+                <ul class="type"><h3> 帽/配件</h3>
+                    <li><a href="#">帽子/頭巾</a></li>
+                    <li><a href="#">其他配件</a></li>
+
+                </ul>
+                <ul class="type"><h3>登山杖</h3>
+                    <li><a href="#">可調式登山杖</a></li>
+                    <li><a href="#">快拆式登山杖</a></li>
+                </ul>
                 <ul class="type"><h3>品牌</h3>
                     <li><a href="#">Black Diamond </a></li>
                     <li><a href="#">BUFF</a></li>
@@ -252,7 +344,7 @@
             </div>
             <div class="col-9">
                 <class class="row">
-                    <div class="col-4">
+                    <div class="col-12 col-md-6 col-lg-4 ">
                         <div class="item">
                             <div class="pic"><a href="https://tpjpvup.github.io/oh-man/oh,man-02.html"><img src="image/prod-KAVU-KV17604.jpg" alt="kav漁夫帽"></a></div>
                             <div class="txt">
@@ -262,12 +354,12 @@
                                        <img src="image/favorite_border_black_24dp.svg" alt="love">
                                    </div>
                                 </div>                                
-                                <p>Fishermans Chillba 漁夫帽/黃鐵礦Pyrite</p>
+                                <p>Fishermans Chillba<br> 漁夫帽/黃鐵礦Pyrite</p>
                             </div>
                         </div>
                     </div>
                     
-                    <div class="col-4">
+                    <div class="col-12 col-md-6 col-lg-4">
                         <div class="item">
                             <div class="pic"><a href="https://tpjpvup.github.io/oh-man/oh,man-02.html"><img src="image/155790354221715.jpg" alt="kav漁夫帽"></a></div>
                             <div class="txt">
@@ -277,12 +369,12 @@
                                        <img src="image/favorite_border_black_24dp.svg" alt="love">
                                    </div>
                                 </div>                                
-                                <p>Hatfield G1000 遮陽帽  </p>
+                                <p>Hatfield G1000 <br>遮陽帽  </p>
                             </div>
                         </div>
                     </div>
                     
-                    <div class="col-4">
+                    <div class="col-12 col-md-6 col-lg-4">
                         <div class="item">
                             <div class="pic"><a href="https://tpjpvup.github.io/oh-man/oh,man-02.html"><img src="image/155791280825852.jpg" alt="kav漁夫帽"></a></div>
                             <div class="txt">
@@ -292,12 +384,12 @@
                                        <img src="image/favorite_border_black_24dp.svg" alt="love">
                                    </div>
                                 </div>                                
-                                <p>Sphinx 60 登山背包 女版</p>
+                                <p>Sphinx 60 <br>登山背包 女版</p>
                             </div>
                         </div>
                     </div>
                     
-                    <div class="col-4">
+                    <div class="col-12 col-md-6 col-lg-4">
                         <div class="item">
                             <div class="pic"><a href="https://tpjpvup.github.io/oh-man/oh,man-02.html"><img src="image/c692d2a4-5793-433f-ab80-45182064a598_md.jpg" alt="kav漁夫帽"></a></div>
                             <div class="txt">
@@ -307,12 +399,12 @@
                                        <img src="image/favorite_border_black_24dp.svg" alt="love">
                                    </div>
                                 </div>                                
-                                <p>Ull 20L 輕量多功能後背包</p>
+                                <p>Ull 20L<br> 輕量多功能後背包</p>
                             </div>
                         </div>
                     </div>
                     
-                    <div class="col-4">
+                    <div class="col-12 col-md-6 col-lg-4">
                         <div class="item">
                             <div class="pic"><a href="https://tpjpvup.github.io/oh-man/oh,man-02.html"><img src="image/16123192454124.jpg" alt="kav漁夫帽"></a></div>
                             <div class="txt">
@@ -322,11 +414,11 @@
                                        <img src="image/favorite_border_black_24dp.svg" alt="love">
                                    </div>
                                 </div>                                
-                                <p>In & Out 19 後背包</p>
+                                <p>In & Out 19 <br>後背包</p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-4">
+                    <div class="col-12 col-md-6 col-lg-4">
                         <div class="item">
                             <div class="pic"><a href="https://tpjpvup.github.io/oh-man/oh,man-02.html"><img src="image/BUFF-BF122618-404-600x600.jpg" alt="kav漁夫帽"></a></div>
                             <div class="txt">
@@ -336,11 +428,11 @@
                                        <img src="image/favorite_border_black_24dp.svg" alt="love">
                                    </div>
                                 </div>                                
-                                <p>可收納圓盤帽-國家地理</p>
+                                <p>可收納圓盤帽-<br>國家地理</p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-4">
+                    <div class="col-12 col-md-6 col-lg-4">
                         <div class="item">
                             <div class="pic"><a href="#"><img src="image/163402253926716.jpg" alt="kav漁夫帽"></a></div>
                             <div class="txt">
@@ -350,11 +442,11 @@
                                        <img src="image/favorite_border_black_24dp.svg" alt="love">
                                    </div>
                                 </div>                                
-                                <p>NY66 Inner Jacket 保暖夾克</p>
+                                <p>NY66 Inner Jacket <br>保暖夾克</p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-4">
+                    <div class="col-12 col-md-6 col-lg-4">
                         <div class="item">
                             <div class="pic"><a href="#"><img src="image/158277612017304.jpg" alt="kav漁夫帽"></a></div>
                             <div class="txt">
@@ -364,11 +456,11 @@
                                        <img src="image/favorite_border_black_24dp.svg" alt="love">
                                    </div>
                                 </div>                                
-                                <p>Abisko Wool Fox SS 羊毛短袖排汗衣</p>
+                                <p>Abisko Wool Fox SS <br>羊毛短袖排汗衣</p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-4">
+                    <div class="col-12 col-md-6 col-lg-4">
                         <div class="item">
                             <div class="pic"><a href="#"><img src="image/16092263352010.jpg" alt="kav漁夫帽"></a></div>
                             <div class="txt">
@@ -378,11 +470,11 @@
                                        <img src="image/favorite_border_black_24dp.svg" alt="love">
                                    </div>
                                 </div>                                
-                                <p>Barents Pro Trousers G1000 雙色褲 男 / 長版</p>
+                                <p>Barents Pro Trousers G1000<br> 雙色褲 男 / 長版</p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-4">
+                    <div class="col-12 col-md-6 col-lg-4">
                         <div class="item">
                             <div class="pic"><a href="#"><img src="image/161638623810258.jpg" alt="kav漁夫帽"></a></div>
                             <div class="txt">
@@ -392,11 +484,11 @@
                                        <img src="image/favorite_border_black_24dp.svg" alt="love">
                                    </div>
                                 </div>                                
-                                <p>High Coast Hydratic Jacket 防水外套 女</p>
+                                <p>High Coast Hydratic Jacket<br> 防水外套 女</p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-4">
+                    <div class="col-12 col-md-6 col-lg-4">
                         <div class="item">
                             <div class="pic"><a href="#"><img src="image/162847907815555.jpg" alt="kav漁夫帽"></a></div>
                             <div class="txt">
@@ -410,7 +502,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-4">
+                    <div class="col-12 col-md-6 col-lg-4">
                         <div class="item">
                             <div class="pic"><a href="#"><img src="image/15635281963245.jpg" alt="kav漁夫帽"></a></div>
                             <div class="txt">
@@ -428,8 +520,9 @@
             </div>
         </div>
     </div>
+    </section>
 
-    <footer class="footer">
+    <footer>
         <div class="footer-content">
             <div class="footer-row">
                 <div class="info">
@@ -460,6 +553,8 @@
        
         
     </footer>
+    
+
     
 </body>
 </html>
